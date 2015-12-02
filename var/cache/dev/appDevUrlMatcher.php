@@ -100,13 +100,38 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // homepage
+        // app_user_index
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+                return $this->redirect($pathinfo.'/', 'app_user_index');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::indexAction',  '_route' => 'app_user_index',);
+        }
+
+        // app_user_update
+        if (0 === strpos($pathinfo, '/update') && preg_match('#^/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_update')), array (  '_controller' => 'AppBundle\\Controller\\UserController::updateAction',));
+        }
+
+        // app_user_doUpdate
+        if ($pathinfo === '/do-update') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::doUpdateAction',  '_route' => 'app_user_doUpdate',);
+        }
+
+        // app_user_insert
+        if ($pathinfo === '/insert') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::insertAction',  '_route' => 'app_user_insert',);
+        }
+
+        // app_user_doInsert
+        if ($pathinfo === '/do-insert') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::doInsertAction',  '_route' => 'app_user_doInsert',);
+        }
+
+        // app_user_remove
+        if (0 === strpos($pathinfo, '/remove') && preg_match('#^/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_remove')), array (  '_controller' => 'AppBundle\\Controller\\UserController::removeAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

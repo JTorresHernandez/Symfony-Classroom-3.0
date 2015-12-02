@@ -1,2 +1,16 @@
 e16b80,127.0.0.1,GET,http://localhost:8000/,1449046366,,200
 031450,127.0.0.1,GET,http://localhost:8000/,1449046541,,200
+d2ac8c,127.0.0.1,GET,http://localhost:8000/,1449048300,e1de1e,200
+e1de1e,127.0.0.1,GET,http://localhost:8000/,1449048300,,500
+2cbd74,127.0.0.1,GET,http://localhost:8000/,1449048431,,200
+7f4b12,127.0.0.1,GET,http://localhost:8000/update/9,1449048438,,200
+f5d585,127.0.0.1,POST,http://localhost:8000/do-update,1449048444,,302
+e1c6dd,127.0.0.1,GET,http://localhost:8000/,1449048444,,200
+195eed,127.0.0.1,GET,http://localhost:8000/insert,1449048453,,200
+808e65,127.0.0.1,POST,http://localhost:8000/do-insert,1449048469,,302
+ba9378,127.0.0.1,GET,http://localhost:8000/,1449048469,,200
+7de7fb,127.0.0.1,GET,http://localhost:8000/update/11,1449048474,,200
+83ffe2,127.0.0.1,POST,http://localhost:8000/do-update,1449048478,,302
+7ee3ae,127.0.0.1,GET,http://localhost:8000/,1449048478,,200
+35a6b2,127.0.0.1,GET,http://localhost:8000/remove/11,1449048480,,302
+a5a5f8,127.0.0.1,GET,http://localhost:8000/,1449048480,,200

@@ -1,3 +1,4 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+app.user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type: annotation
+
