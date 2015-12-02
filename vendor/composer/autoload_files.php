@@ -13,5 +13,6 @@ return array(
     $vendorDir . '/symfony/polyfill-php56/bootstrap.php',
     $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     $vendorDir . '/symfony/polyfill-intl-icu/bootstrap.php',
+    $vendorDir . '/ircmaxell/password-compat/lib/password.php',
     $baseDir . '/app/AppKernel.php',
 );

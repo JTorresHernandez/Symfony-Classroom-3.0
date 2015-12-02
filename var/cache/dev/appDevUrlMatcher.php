@@ -100,13 +100,92 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // app_security_login
+                if ($pathinfo === '/login') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginAction',  '_route' => 'app_security_login',);
+                }
+
+                // app_security_check
+                if ($pathinfo === '/login_check') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginCheckAction',  '_route' => 'app_security_check',);
+                }
+
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            // app_security_logout
+            if ($pathinfo === '/logout') {
+                return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::logoutAction',  '_route' => 'app_security_logout',);
+            }
+
+        }
+
+        // app_user_menu
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'app_user_menu');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::menuAction',  '_route' => 'app_user_menu',);
+        }
+
+        // app_user_index
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::indexAction',  '_route' => 'app_user_index',);
+        }
+
+        // app_user_register
+        if ($pathinfo === '/register') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::registerAction',  '_route' => 'app_user_register',);
+        }
+
+        // app_user_doRegister
+        if ($pathinfo === '/do-register') {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_app_user_doRegister;
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::doRegisterAction',  '_route' => 'app_user_doRegister',);
+        }
+        not_app_user_doRegister:
+
+        // app_user_insert
+        if ($pathinfo === '/insert') {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::insertAction',  '_route' => 'app_user_insert',);
+        }
+
+        // app_user_doInsert
+        if ($pathinfo === '/do-insert') {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_app_user_doInsert;
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::doInsertAction',  '_route' => 'app_user_doInsert',);
+        }
+        not_app_user_doInsert:
+
+        // app_user_update
+        if (0 === strpos($pathinfo, '/update') && preg_match('#^/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_update')), array (  '_controller' => 'AppBundle\\Controller\\UserController::updateAction',));
+        }
+
+        // app_user_doUpdate
+        if (0 === strpos($pathinfo, '/do-update') && preg_match('#^/do\\-update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_app_user_doUpdate;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_doUpdate')), array (  '_controller' => 'AppBundle\\Controller\\UserController::doUpdateAction',));
+        }
+        not_app_user_doUpdate:
+
+        // app_user_remove
+        if (0 === strpos($pathinfo, '/remove') && preg_match('#^/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_remove')), array (  '_controller' => 'AppBundle\\Controller\\UserController::removeAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
