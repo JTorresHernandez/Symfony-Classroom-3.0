@@ -1,0 +1,13 @@
+layout:
+
+app:
+    translator:
+        test1:
+            msg1: Hello %name%
+            msg2:
+    security:
+        login:
+            login:
+
+
+

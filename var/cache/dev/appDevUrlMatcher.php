@@ -100,13 +100,28 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
+        // app_translator_index
+        if (preg_match('#^/(?P<_locale>en|es)/?$#s', $pathinfo, $matches)) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+                return $this->redirect($pathinfo.'/', 'app_translator_index');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_translator_index')), array (  '_controller' => 'AppBundle\\Controller\\TranslatorController::indexAction',));
+        }
+
+        // app_translator_test1
+        if (preg_match('#^/(?P<_locale>en|es)/test1$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_translator_test1')), array (  '_controller' => 'AppBundle\\Controller\\TranslatorController::test1Action',));
+        }
+
+        // app_translator_test2
+        if (preg_match('#^/(?P<_locale>en|es)/test2$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_translator_test2')), array (  '_controller' => 'AppBundle\\Controller\\TranslatorController::test2Action',));
+        }
+
+        // _profiler_save_translations
+        if (0 === strpos($pathinfo, '/_profiler') && preg_match('#^/_profiler/(?P<token>[^/]++)/translation/save$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => '_profiler_save_translations')), array (  '_controller' => 'AppBundle\\Controller\\ProfilerController::saveAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

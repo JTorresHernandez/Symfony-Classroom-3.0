@@ -10,3 +10,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 417be53028e45ad49ecee09455abd6eb72a12b33
+    translation_loco_password: bo123456

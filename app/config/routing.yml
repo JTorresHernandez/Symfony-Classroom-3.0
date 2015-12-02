@@ -1,3 +1,6 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+app.translator:
+    resource: "@AppBundle/Controller/TranslatorController.php"
+    type: annotation
+    prefix: /{_locale}
+    requirements:
+        _locale: en|es
