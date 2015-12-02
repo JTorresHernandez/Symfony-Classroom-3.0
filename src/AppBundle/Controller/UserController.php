@@ -81,6 +81,7 @@ class UserController extends Controller
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
+        $form->remove('roles');
 
         $form->handleRequest($request);
 
@@ -99,6 +100,7 @@ class UserController extends Controller
             [
                 'form'      => $form->createView(),
                 'action'    => $this->generateUrl('app_user_doRegister'),
+                'register'  => true,
             ]
         );
     }
