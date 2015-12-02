@@ -9,9 +9,6 @@ security:
         db_users:
             entity:
                 class: AppBundle:User
-                property: username
-                # if I remove property to use the repository I take an error: "Authentication request could not be processed due to a system problem."
-                # http://symfony.com/doc/current/cookbook/security/entity_provider.html#security-config-entity-provider
 
     firewalls:
         main:

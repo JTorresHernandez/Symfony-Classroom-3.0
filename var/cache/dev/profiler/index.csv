@@ -21,3 +21,9 @@ e654c7,127.0.0.1,GET,http://localhost:8000/,1449071306,,200
 da46b5,127.0.0.1,GET,http://localhost:8000/,1449071648,,200
 2552cc,127.0.0.1,GET,http://localhost:8000/index,1449071658,,200
 390466,127.0.0.1,GET,http://localhost:8000/index,1449071689,,200
+8ca917,127.0.0.1,GET,http://localhost:8000/index,1449076024,,200
+dc0450,127.0.0.1,GET,http://localhost:8000/logout,1449076030,,302
+293f21,127.0.0.1,GET,http://localhost:8000/,1449076031,,200
+43c9e5,127.0.0.1,GET,http://localhost:8000/login,1449076033,,200
+56bc7c,127.0.0.1,POST,http://localhost:8000/login_check,1449076039,,302
+823dc0,127.0.0.1,GET,http://localhost:8000/,1449076039,,200
