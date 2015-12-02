@@ -1,4 +1,4 @@
 Symfony-Classroom-3.0
 =====================
 
-Symfony Course
+Session 1 - Calculator

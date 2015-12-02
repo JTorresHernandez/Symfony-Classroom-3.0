@@ -100,13 +100,23 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // homepage
+        // app_calculator_index
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+                return $this->redirect($pathinfo.'/', 'app_calculator_index');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\CalculatorController::indexAction',  '_route' => 'app_calculator_index',);
+        }
+
+        // app_calculator_sum
+        if ($pathinfo === '/sum') {
+            return array (  '_controller' => 'AppBundle\\Controller\\CalculatorController::sumAction',  '_route' => 'app_calculator_sum',);
+        }
+
+        // app_calculator_doSum
+        if ($pathinfo === '/do-sum') {
+            return array (  '_controller' => 'AppBundle\\Controller\\CalculatorController::doSumAction',  '_route' => 'app_calculator_doSum',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

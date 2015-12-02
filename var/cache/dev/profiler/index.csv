@@ -1,2 +1,5 @@
 e16b80,127.0.0.1,GET,http://localhost:8000/,1449046366,,200
 031450,127.0.0.1,GET,http://localhost:8000/,1449046541,,200
+d9be1c,127.0.0.1,GET,http://localhost:8000/,1449047571,,200
+c0642d,127.0.0.1,GET,http://localhost:8000/sum,1449047576,,200
+a73665,127.0.0.1,POST,http://localhost:8000/do-sum,1449047582,,200
