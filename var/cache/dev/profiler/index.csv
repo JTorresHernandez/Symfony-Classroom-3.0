@@ -38,3 +38,5 @@ f28ae1,127.0.0.1,POST,http://localhost:8000/do-update/9,1449052371,,200
 2c0597,127.0.0.1,POST,http://localhost:8000/do-update/9,1449052382,,200
 8d3494,127.0.0.1,POST,http://localhost:8000/do-update/9,1449052393,,302
 0cd28c,127.0.0.1,GET,http://localhost:8000/,1449052393,,200
+79ed08,127.0.0.1,GET,http://localhost:8000/update/9,1449053021,,200
+0040c1,127.0.0.1,GET,http://localhost:8000/update/9,1449053107,,200
