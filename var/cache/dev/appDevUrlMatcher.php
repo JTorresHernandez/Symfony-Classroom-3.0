@@ -300,6 +300,37 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\IndexController::sendEmailAction',  '_route' => 'app_index_sendEmail',);
         }
 
+        if (0 === strpos($pathinfo, '/articles')) {
+            // app_article_articles
+            if (rtrim($pathinfo, '/') === '/articles') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'app_article_articles');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesAction',  '_route' => 'app_article_articles',);
+            }
+
+            // app_article_addArticle
+            if ($pathinfo === '/articles/add-article') {
+                return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::addArticleAction',  '_route' => 'app_article_addArticle',);
+            }
+
+            // app_article_doAddArticle
+            if ($pathinfo === '/articles/do-add-article') {
+                return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::doAddArticleAction',  '_route' => 'app_article_doAddArticle',);
+            }
+
+        }
+
+        // app_tags_tags
+        if (rtrim($pathinfo, '/') === '/tags') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'app_tags_tags');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

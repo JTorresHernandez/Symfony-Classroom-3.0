@@ -16,7 +16,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Table(name="`user`")
+ * @ORM\Table(name="app_user")
  * @ORM\Entity(repositoryClass="Trascastro\UserBundle\Entity\UserRepository")
  */
 class User extends BaseUser
