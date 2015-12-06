@@ -17,7 +17,7 @@ use AppBundle\Entity\Article;
 use AppBundle\Entity\Tag;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Trascastro\TUserBundle\Entity\User;
+use Trascastro\UserBundle\Entity\User;
 
 class LoadData implements FixtureInterface
 {
@@ -29,6 +29,7 @@ class LoadData implements FixtureInterface
             ->setPlainPassword('1234')
             ->setEmail('ismael@email.com')
             ->setRoles(['ROLE_USER'])
+            ->setEnabled(true)
         ;
         $m->persist($user1);
 
@@ -38,6 +39,7 @@ class LoadData implements FixtureInterface
             ->setPlainPassword('1234')
             ->setEmail('admin@email.com')
             ->setRoles(['ROLE_ADMIN'])
+            ->setEnabled(true)
         ;
         $m->persist($user2);
 

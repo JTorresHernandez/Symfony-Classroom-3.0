@@ -22,10 +22,10 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
-    <parameter key="app_name">Symfony</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">symfony-doctrine</parameter>
@@ -322,7 +322,7 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.from_email" type="collection">
-      <parameter key="symfonyclassroom@gmail.com">Symfony</parameter>
+      <parameter key="symfonyclassroom@gmail.com">Symfony Classroom</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.enabled">true</parameter>
     <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
@@ -338,7 +338,7 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="fos_user.resetting.email.from_email" type="collection">
-      <parameter key="symfonyclassroom@gmail.com">Symfony</parameter>
+      <parameter key="symfonyclassroom@gmail.com">Symfony Classroom</parameter>
     </parameter>
     <parameter key="fos_user.resetting.token_ttl">86400</parameter>
     <parameter key="fos_user.resetting.form.type">FOS\UserBundle\Form\Type\ResettingFormType</parameter>
@@ -1883,7 +1883,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5664981f25ce16.28770390</argument>
+            <argument>5664b5e8784016.89450208</argument>
           </service>
         </argument>
       </argument>
@@ -2172,7 +2172,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5664981f25ce16.28770390</argument>
+            <argument>5664b5e8784016.89450208</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3302,10 +3302,10 @@
         <argument key="resetting.template">FOSUserBundle:Resetting:email.txt.twig</argument>
         <argument key="from_email" type="collection">
           <argument key="confirmation" type="collection">
-            <argument key="symfonyclassroom@gmail.com">Symfony</argument>
+            <argument key="symfonyclassroom@gmail.com">Symfony Classroom</argument>
           </argument>
           <argument key="resetting" type="collection">
-            <argument key="symfonyclassroom@gmail.com">Symfony</argument>
+            <argument key="symfonyclassroom@gmail.com">Symfony Classroom</argument>
           </argument>
         </argument>
       </argument>

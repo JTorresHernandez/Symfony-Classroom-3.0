@@ -81,4 +81,4 @@ fos_user:
             enabled: true
     from_email:
         address:        symfonyclassroom@gmail.com
-        sender_name:    "%app_name%"
+        sender_name:    Symfony Classroom
