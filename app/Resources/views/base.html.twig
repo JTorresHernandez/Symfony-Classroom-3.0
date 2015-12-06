@@ -12,8 +12,8 @@
 
     {# This must be rewritten for symfony 3#}
     {% block stylesheets %}
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/jumbotron.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/jumbotron.css" />
     {% endblock %}
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -85,13 +85,13 @@
 
 {# This must be rewritten for symfony 3#}
 {% block javascripts %}
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 {% endblock %}
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
 </body>
 </html>
