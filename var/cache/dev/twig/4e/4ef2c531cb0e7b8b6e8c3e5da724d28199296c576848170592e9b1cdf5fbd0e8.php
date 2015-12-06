@@ -1,6 +1,6 @@
 <?php
 
-/* @FOSUser/Profile/edit_content.html.twig */
+/* FOSUserBundle:Profile:edit_content.html.twig */
 class __TwigTemplate_cdec99efcb9689e2cac2a0d484c50ef82fb5ae952987fb7f6603fc251f7c806c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_cdec99efcb9689e2cac2a0d484c50ef82fb5ae952987fb7f6603fc251f7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1572d7273b3a8d234acb735383ae063813e153bdd5986d544ee01df6ac144411 = $this->env->getExtension("native_profiler");
-        $__internal_1572d7273b3a8d234acb735383ae063813e153bdd5986d544ee01df6ac144411->enter($__internal_1572d7273b3a8d234acb735383ae063813e153bdd5986d544ee01df6ac144411_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/edit_content.html.twig"));
+        $__internal_d3723f80227129349fadaca9fef803feaeacdd1015d04f4d35840f9495e57177 = $this->env->getExtension("native_profiler");
+        $__internal_d3723f80227129349fadaca9fef803feaeacdd1015d04f4d35840f9495e57177->enter($__internal_d3723f80227129349fadaca9fef803feaeacdd1015d04f4d35840f9495e57177_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:edit_content.html.twig"));
 
         // line 2
         echo "
@@ -40,13 +40,13 @@ class __TwigTemplate_cdec99efcb9689e2cac2a0d484c50ef82fb5ae952987fb7f6603fc251f7
         echo "
 ";
         
-        $__internal_1572d7273b3a8d234acb735383ae063813e153bdd5986d544ee01df6ac144411->leave($__internal_1572d7273b3a8d234acb735383ae063813e153bdd5986d544ee01df6ac144411_prof);
+        $__internal_d3723f80227129349fadaca9fef803feaeacdd1015d04f4d35840f9495e57177->leave($__internal_d3723f80227129349fadaca9fef803feaeacdd1015d04f4d35840f9495e57177_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@FOSUser/Profile/edit_content.html.twig";
+        return "FOSUserBundle:Profile:edit_content.html.twig";
     }
 
     public function isTraitable()
