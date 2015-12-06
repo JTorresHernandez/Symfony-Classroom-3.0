@@ -1,2 +1,12 @@
-e16b80,127.0.0.1,GET,http://localhost:8000/,1449046366,,200
-031450,127.0.0.1,GET,http://localhost:8000/,1449046541,,200
+99b468,127.0.0.1,GET,http://localhost:8000/send-email,1449405913,,200
+cb9df1,127.0.0.1,GET,http://localhost:8000/register,1449405931,,301
+11dca1,127.0.0.1,GET,http://localhost:8000/register/,1449405932,,200
+31fd1b,127.0.0.1,GET,http://localhost:8000/register,1449405932,,301
+79457d,127.0.0.1,GET,http://localhost:8000/register/,1449405932,,200
+763568,127.0.0.1,POST,http://localhost:8000/register/,1449405953,,302
+4cb06c,127.0.0.1,GET,http://localhost:8000/register/check-email,1449405953,,200
+6695e0,127.0.0.1,GET,http://localhost:8000/register/confirm/DTiDQIgsJL6Tvqx8l8qewevN4Pr13w5nGtBpuZVYPqk,1449405962,,302
+f1725a,127.0.0.1,GET,http://localhost:8000/register/confirmed,1449405963,,200
+659957,127.0.0.1,GET,http://localhost:8000/register,1449405975,,301
+846178,127.0.0.1,GET,http://localhost:8000/register/,1449405976,,200
+d821d3,127.0.0.1,GET,http://localhost:8000/,1449405976,,200
