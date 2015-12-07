@@ -12,6 +12,7 @@
 
 namespace Trascastro\UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -43,12 +44,23 @@ class User extends BaseUser
      */
     private $updatedAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Article", mappedBy="author")
+     */
+    private $articles;
+
     public function __construct()
     {
         parent::__construct();
 
         $this->createdAt = new \DateTime();
         $this->updatedAt = $this->createdAt;
+        $this->articles = new ArrayCollection();
+    }
+
+    public function setCreatedAt()
+    {
+        // never used
     }
 
     /**
@@ -82,5 +94,29 @@ class User extends BaseUser
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    public function __toString()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArticles()
+    {
+        return $this->articles;
+    }
+
+    /**
+     * @param mixed $articles
+     * @return $this
+     */
+    public function setArticles($articles)
+    {
+        $this->articles = $articles;
+
+        return $this;
     }
 }

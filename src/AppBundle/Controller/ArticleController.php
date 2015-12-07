@@ -13,14 +13,18 @@ class ArticleController extends Controller
     /**
      * @Route("/", name="app_article_articles")
      */
-    public function articlesAction()
+    public function articlesAction(Request $request)
     {
         $m = $this->getDoctrine()->getManager();
 
         $articleRepo = $m->getRepository('AppBundle:Article');
 
         // $articles = $articleRepo->findAll() ---> Does lazy loading and it produces extra queries from the templates
-        $articles = $articleRepo->findAllArticles();
+
+        $query = $articleRepo->queryAllArticles();
+
+        $paginator = $this->get('knp_paginator');
+        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), 2);
 
         return $this->render(':article:articles.html.twig', [
             'articles' => $articles,
@@ -54,6 +58,7 @@ class ArticleController extends Controller
             $m = $this->getDoctrine()->getManager();
             $tagRepo = $m->getRepository('AppBundle:Tag');
             $tagRepo->addTagsIfAreNew($a);
+            $a->setAuthor($this->getUser());
             $m->persist($a);
             $m->flush();
 

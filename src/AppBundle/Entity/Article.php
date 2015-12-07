@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\ArticleRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Article
 {
@@ -30,6 +31,11 @@ class Article
     private $title;
 
     /**
+     * @ORM\Column(name="content", type="text")
+     */
+    private $content;
+
+    /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Tag", cascade={"persist"}, inversedBy="articles")
      */
     private $tags;
@@ -39,9 +45,26 @@ class Article
      */
     private $newTags;
 
+    /**
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Trascastro\UserBundle\Entity\User", inversedBy="articles")
+     */
+    private $author;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = $this->createdAt;
     }
 
 
@@ -137,5 +160,75 @@ class Article
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 
+    /**
+     * @param mixed $author
+     * @return $this
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     *
+     */
+    public function setCreatedAt()
+    {
+        // never used
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function setUpdatedAt()
+    {
+        $this->updatedAt = new \DateTime();
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     * @return $this
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
 }

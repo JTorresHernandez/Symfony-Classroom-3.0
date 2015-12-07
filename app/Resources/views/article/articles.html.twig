@@ -4,12 +4,19 @@
 
 {% block body %}
     {% for article in articles %}
-        <h1>{{ article.title }}</h1>
-        <div style="padding: 5px 20px">
+        <h1>{{ article.title }}</h1> <strong>Author:</strong> {{ article.author }}
+        <div style="padding: 20px;font-size: medium">
+            {{ article.content }}
+        </div>
+        <div>
             <strong>Tags:</strong>
             {% for tag in article.tags %}
                 {{ tag }},
             {% endfor %}
         </div>
+        <div><strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} | <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
     {% endfor %}
+    <div class="navigation">
+        {{ knp_pagination_render(articles) }}
+    </div>
 {% endblock %}

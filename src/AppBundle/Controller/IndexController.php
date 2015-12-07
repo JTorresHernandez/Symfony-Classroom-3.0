@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     /**
      * http://symfony.com/doc/current/bundles/FOSUserBundle/user_manager.html
-     * 
+     *
      * @Route(
      *     path="/",
      *     name="app_index_index"
@@ -24,7 +24,7 @@ class IndexController extends Controller
         $userManager = $this->get('fos_user.user_manager');
         $user = $userManager->findUserByUsername('ismael');
 
-        $user->setPlainPassword('123456');
+        $user->setPlainPassword('1234');
         $userManager->updateUser($user, false);
         $m->flush();
         //var_dump($userRepository->myFindOneByUsernameOrEmail('i.trascastro@gmail.com'));
