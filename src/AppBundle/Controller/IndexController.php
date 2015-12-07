@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class IndexController extends Controller
 {
     /**
+     * http://symfony.com/doc/current/bundles/FOSUserBundle/user_manager.html
+     * 
      * @Route(
      *     path="/",
      *     name="app_index_index"
@@ -19,7 +21,12 @@ class IndexController extends Controller
         $users = $user_manager->findUsers();
         var_dump($users);die;*/
         $m = $this->getDoctrine()->getManager();
-        $userRepository = $m->getRepository('UserBundle:User');
+        $userManager = $this->get('fos_user.user_manager');
+        $user = $userManager->findUserByUsername('ismael');
+
+        $user->setPlainPassword('123456');
+        $userManager->updateUser($user, false);
+        $m->flush();
         //var_dump($userRepository->myFindOneByUsernameOrEmail('i.trascastro@gmail.com'));
         return $this->render(':index:index.html.twig');
     }
