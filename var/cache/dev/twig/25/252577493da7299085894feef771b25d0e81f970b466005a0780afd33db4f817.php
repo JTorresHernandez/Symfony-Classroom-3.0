@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Group:edit_content.html.twig */
+/* @FOSUser/Group/edit_content.html.twig */
 class __TwigTemplate_d30ed4fa74bb24678981407bb0017e18277b735c5c111c9742163a7a2142eb5e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_d30ed4fa74bb24678981407bb0017e18277b735c5c111c9742163a7a214
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_91dbb65927e0364953feafb0f2795a6cc8367f7b79f01425945578a94376b67b = $this->env->getExtension("native_profiler");
-        $__internal_91dbb65927e0364953feafb0f2795a6cc8367f7b79f01425945578a94376b67b->enter($__internal_91dbb65927e0364953feafb0f2795a6cc8367f7b79f01425945578a94376b67b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:edit_content.html.twig"));
+        $__internal_632cf3e13dface4e96d302de5a61674c90e8f7d5a8fa50109ea9a944d29ae677 = $this->env->getExtension("native_profiler");
+        $__internal_632cf3e13dface4e96d302de5a61674c90e8f7d5a8fa50109ea9a944d29ae677->enter($__internal_632cf3e13dface4e96d302de5a61674c90e8f7d5a8fa50109ea9a944d29ae677_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Group/edit_content.html.twig"));
 
         // line 2
         echo "
@@ -40,13 +40,13 @@ class __TwigTemplate_d30ed4fa74bb24678981407bb0017e18277b735c5c111c9742163a7a214
         echo "
 ";
         
-        $__internal_91dbb65927e0364953feafb0f2795a6cc8367f7b79f01425945578a94376b67b->leave($__internal_91dbb65927e0364953feafb0f2795a6cc8367f7b79f01425945578a94376b67b_prof);
+        $__internal_632cf3e13dface4e96d302de5a61674c90e8f7d5a8fa50109ea9a944d29ae677->leave($__internal_632cf3e13dface4e96d302de5a61674c90e8f7d5a8fa50109ea9a944d29ae677_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Group:edit_content.html.twig";
+        return "@FOSUser/Group/edit_content.html.twig";
     }
 
     public function isTraitable()

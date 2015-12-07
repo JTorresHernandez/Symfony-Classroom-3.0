@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Profile:show_content.html.twig */
+/* @FOSUser/Profile/show_content.html.twig */
 class __TwigTemplate_da576b0dd23e1d24dc1abd3c8a85d5d377288c670e8acf25ac4b383905132890 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_da576b0dd23e1d24dc1abd3c8a85d5d377288c670e8acf25ac4b3839051
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_25a73d5008fc501f2ed6281370aaff42346e71e4e4e573c75cb520c889ef0490 = $this->env->getExtension("native_profiler");
-        $__internal_25a73d5008fc501f2ed6281370aaff42346e71e4e4e573c75cb520c889ef0490->enter($__internal_25a73d5008fc501f2ed6281370aaff42346e71e4e4e573c75cb520c889ef0490_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_0d7f9c699b1bec4abe47beeabccd2157dd4893da160769d5c142bb61d59c9e34 = $this->env->getExtension("native_profiler");
+        $__internal_0d7f9c699b1bec4abe47beeabccd2157dd4893da160769d5c142bb61d59c9e34->enter($__internal_0d7f9c699b1bec4abe47beeabccd2157dd4893da160769d5c142bb61d59c9e34_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
         // line 2
         echo "
@@ -36,13 +36,13 @@ class __TwigTemplate_da576b0dd23e1d24dc1abd3c8a85d5d377288c670e8acf25ac4b3839051
 </div>
 ";
         
-        $__internal_25a73d5008fc501f2ed6281370aaff42346e71e4e4e573c75cb520c889ef0490->leave($__internal_25a73d5008fc501f2ed6281370aaff42346e71e4e4e573c75cb520c889ef0490_prof);
+        $__internal_0d7f9c699b1bec4abe47beeabccd2157dd4893da160769d5c142bb61d59c9e34->leave($__internal_0d7f9c699b1bec4abe47beeabccd2157dd4893da160769d5c142bb61d59c9e34_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Profile:show_content.html.twig";
+        return "@FOSUser/Profile/show_content.html.twig";
     }
 
     public function isTraitable()

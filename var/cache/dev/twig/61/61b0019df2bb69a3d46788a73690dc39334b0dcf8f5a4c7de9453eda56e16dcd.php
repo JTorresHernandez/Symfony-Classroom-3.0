@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:ChangePassword:changePassword_content.html.twig */
+/* @FOSUser/ChangePassword/changePassword_content.html.twig */
 class __TwigTemplate_cb20fd1329de886a0e9cbb8f3e4f43802ee0d8a22b786e5c0990e058b9ca04f2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_cb20fd1329de886a0e9cbb8f3e4f43802ee0d8a22b786e5c0990e058b9c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0f7ecf0aac1d448828adf9f745eaae765222b7be8b677cc7662841e986caa14b = $this->env->getExtension("native_profiler");
-        $__internal_0f7ecf0aac1d448828adf9f745eaae765222b7be8b677cc7662841e986caa14b->enter($__internal_0f7ecf0aac1d448828adf9f745eaae765222b7be8b677cc7662841e986caa14b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:ChangePassword:changePassword_content.html.twig"));
+        $__internal_85ac1229d361a3d054acb51ba05003fc8dd97a2db85b2ca5988ae7ef34de4fdc = $this->env->getExtension("native_profiler");
+        $__internal_85ac1229d361a3d054acb51ba05003fc8dd97a2db85b2ca5988ae7ef34de4fdc->enter($__internal_85ac1229d361a3d054acb51ba05003fc8dd97a2db85b2ca5988ae7ef34de4fdc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/ChangePassword/changePassword_content.html.twig"));
 
         // line 2
         echo "
@@ -40,13 +40,13 @@ class __TwigTemplate_cb20fd1329de886a0e9cbb8f3e4f43802ee0d8a22b786e5c0990e058b9c
         echo "
 ";
         
-        $__internal_0f7ecf0aac1d448828adf9f745eaae765222b7be8b677cc7662841e986caa14b->leave($__internal_0f7ecf0aac1d448828adf9f745eaae765222b7be8b677cc7662841e986caa14b_prof);
+        $__internal_85ac1229d361a3d054acb51ba05003fc8dd97a2db85b2ca5988ae7ef34de4fdc->leave($__internal_85ac1229d361a3d054acb51ba05003fc8dd97a2db85b2ca5988ae7ef34de4fdc_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:ChangePassword:changePassword_content.html.twig";
+        return "@FOSUser/ChangePassword/changePassword_content.html.twig";
     }
 
     public function isTraitable()

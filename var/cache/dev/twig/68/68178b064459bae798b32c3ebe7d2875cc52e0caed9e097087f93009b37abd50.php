@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Resetting:passwordAlreadyRequested.html.twig */
+/* @FOSUser/Resetting/passwordAlreadyRequested.html.twig */
 class __TwigTemplate_4b77edffd51161294672c75f74fb457afbd6d30d482005b4afd2bd31b1ae75bb extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_4b77edffd51161294672c75f74fb457afbd6d30d482005b4afd2bd31b1a
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "FOSUserBundle:Resetting:passwordAlreadyRequested.html.twig", 1);
+        $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "@FOSUser/Resetting/passwordAlreadyRequested.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -21,20 +21,20 @@ class __TwigTemplate_4b77edffd51161294672c75f74fb457afbd6d30d482005b4afd2bd31b1a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_27bfb7b6e2b57701ae791ec6563a8f718ce4e7b440c96ca33cadf435cac7eb94 = $this->env->getExtension("native_profiler");
-        $__internal_27bfb7b6e2b57701ae791ec6563a8f718ce4e7b440c96ca33cadf435cac7eb94->enter($__internal_27bfb7b6e2b57701ae791ec6563a8f718ce4e7b440c96ca33cadf435cac7eb94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Resetting:passwordAlreadyRequested.html.twig"));
+        $__internal_535d2fc9b205610bd3278d0cf761d5edc45e9c278a61d3414ede348a8142bd16 = $this->env->getExtension("native_profiler");
+        $__internal_535d2fc9b205610bd3278d0cf761d5edc45e9c278a61d3414ede348a8142bd16->enter($__internal_535d2fc9b205610bd3278d0cf761d5edc45e9c278a61d3414ede348a8142bd16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Resetting/passwordAlreadyRequested.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_27bfb7b6e2b57701ae791ec6563a8f718ce4e7b440c96ca33cadf435cac7eb94->leave($__internal_27bfb7b6e2b57701ae791ec6563a8f718ce4e7b440c96ca33cadf435cac7eb94_prof);
+        $__internal_535d2fc9b205610bd3278d0cf761d5edc45e9c278a61d3414ede348a8142bd16->leave($__internal_535d2fc9b205610bd3278d0cf761d5edc45e9c278a61d3414ede348a8142bd16_prof);
 
     }
 
     // line 5
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_a6aa6109a876211dc74eaba389998b86700c9a472617c36b8de3e06b654edb27 = $this->env->getExtension("native_profiler");
-        $__internal_a6aa6109a876211dc74eaba389998b86700c9a472617c36b8de3e06b654edb27->enter($__internal_a6aa6109a876211dc74eaba389998b86700c9a472617c36b8de3e06b654edb27_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_5fe697c750ce56920a11ee711d87b985a2eaa631a9b11270336a7d1273a882dd = $this->env->getExtension("native_profiler");
+        $__internal_5fe697c750ce56920a11ee711d87b985a2eaa631a9b11270336a7d1273a882dd->enter($__internal_5fe697c750ce56920a11ee711d87b985a2eaa631a9b11270336a7d1273a882dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 6
         echo "<p>";
@@ -42,13 +42,13 @@ class __TwigTemplate_4b77edffd51161294672c75f74fb457afbd6d30d482005b4afd2bd31b1a
         echo "</p>
 ";
         
-        $__internal_a6aa6109a876211dc74eaba389998b86700c9a472617c36b8de3e06b654edb27->leave($__internal_a6aa6109a876211dc74eaba389998b86700c9a472617c36b8de3e06b654edb27_prof);
+        $__internal_5fe697c750ce56920a11ee711d87b985a2eaa631a9b11270336a7d1273a882dd->leave($__internal_5fe697c750ce56920a11ee711d87b985a2eaa631a9b11270336a7d1273a882dd_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Resetting:passwordAlreadyRequested.html.twig";
+        return "@FOSUser/Resetting/passwordAlreadyRequested.html.twig";
     }
 
     public function isTraitable()

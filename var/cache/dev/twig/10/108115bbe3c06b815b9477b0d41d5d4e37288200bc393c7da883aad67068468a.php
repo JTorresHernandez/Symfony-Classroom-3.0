@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Registration:register.html.twig */
+/* @FOSUser/Registration/register.html.twig */
 class __TwigTemplate_0038cd17f05e0303f5747f09e6ed8dcee9fd8a09557fe761fc8600776cfb91ed extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_0038cd17f05e0303f5747f09e6ed8dcee9fd8a09557fe761fc8600776cf
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "FOSUserBundle:Registration:register.html.twig", 1);
+        $this->parent = $this->loadTemplate("FOSUserBundle::layout.html.twig", "@FOSUser/Registration/register.html.twig", 1);
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
         );
@@ -21,31 +21,31 @@ class __TwigTemplate_0038cd17f05e0303f5747f09e6ed8dcee9fd8a09557fe761fc8600776cf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ce38e050fa24ee8114e8575e2451d20aa4e77f7881c98abd4c5a6735f6403e1a = $this->env->getExtension("native_profiler");
-        $__internal_ce38e050fa24ee8114e8575e2451d20aa4e77f7881c98abd4c5a6735f6403e1a->enter($__internal_ce38e050fa24ee8114e8575e2451d20aa4e77f7881c98abd4c5a6735f6403e1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register.html.twig"));
+        $__internal_a29c58df405f3f7c63142fce28e6de52a8fe9562fd952ed88dbe920f48ae0f80 = $this->env->getExtension("native_profiler");
+        $__internal_a29c58df405f3f7c63142fce28e6de52a8fe9562fd952ed88dbe920f48ae0f80->enter($__internal_a29c58df405f3f7c63142fce28e6de52a8fe9562fd952ed88dbe920f48ae0f80_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ce38e050fa24ee8114e8575e2451d20aa4e77f7881c98abd4c5a6735f6403e1a->leave($__internal_ce38e050fa24ee8114e8575e2451d20aa4e77f7881c98abd4c5a6735f6403e1a_prof);
+        $__internal_a29c58df405f3f7c63142fce28e6de52a8fe9562fd952ed88dbe920f48ae0f80->leave($__internal_a29c58df405f3f7c63142fce28e6de52a8fe9562fd952ed88dbe920f48ae0f80_prof);
 
     }
 
     // line 3
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_7db948bb69a55e4cc1b21a633bcb10c04b0e4f34d1f792605e57c348728b668f = $this->env->getExtension("native_profiler");
-        $__internal_7db948bb69a55e4cc1b21a633bcb10c04b0e4f34d1f792605e57c348728b668f->enter($__internal_7db948bb69a55e4cc1b21a633bcb10c04b0e4f34d1f792605e57c348728b668f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_64ece68d4b1be91e97bf35331227ecf648fd93409cfa63985a995e5db90b0ad2 = $this->env->getExtension("native_profiler");
+        $__internal_64ece68d4b1be91e97bf35331227ecf648fd93409cfa63985a995e5db90b0ad2->enter($__internal_64ece68d4b1be91e97bf35331227ecf648fd93409cfa63985a995e5db90b0ad2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 4
-        $this->loadTemplate("FOSUserBundle:Registration:register_content.html.twig", "FOSUserBundle:Registration:register.html.twig", 4)->display($context);
+        $this->loadTemplate("FOSUserBundle:Registration:register_content.html.twig", "@FOSUser/Registration/register.html.twig", 4)->display($context);
         
-        $__internal_7db948bb69a55e4cc1b21a633bcb10c04b0e4f34d1f792605e57c348728b668f->leave($__internal_7db948bb69a55e4cc1b21a633bcb10c04b0e4f34d1f792605e57c348728b668f_prof);
+        $__internal_64ece68d4b1be91e97bf35331227ecf648fd93409cfa63985a995e5db90b0ad2->leave($__internal_64ece68d4b1be91e97bf35331227ecf648fd93409cfa63985a995e5db90b0ad2_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Registration:register.html.twig";
+        return "@FOSUser/Registration/register.html.twig";
     }
 
     public function isTraitable()
