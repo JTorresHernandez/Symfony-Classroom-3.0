@@ -4,7 +4,7 @@
     <parameter key="kernel.root_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.name">ap_</parameter>
+    <parameter key="kernel.name">app</parameter>
     <parameter key="kernel.cache_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/var/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
@@ -1938,7 +1938,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5666126039d8d2.84691039</argument>
+            <argument>566713a0776364.71047837</argument>
           </service>
         </argument>
       </argument>
@@ -2227,7 +2227,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5666126039d8d2.84691039</argument>
+            <argument>566713a0776364.71047837</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

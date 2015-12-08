@@ -2,22 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6d6f67-b609-4384-97bb-88994b9b33f4" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/article/addArticle.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/article/form.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/article/articles.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/article/articles.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/index/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/index/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ArticleType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ArticleType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/80/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361646441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/80/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361646441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/82/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c657223646f41646441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/82/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c657223646f41646441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/89/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c657223646f4564697441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/89/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c657223646f4564697441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/fd/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236564697441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/fd/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236564697441727469636c65416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevUrlGenerator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevUrlMatcher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/09/090c87ddb8f9a927c1c7208744acf1d145c1ac9825eae3cf149a876dab1723a3.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/09/090c87ddb8f9a927c1c7208744acf1d145c1ac9825eae3cf149a876dab1723a3.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/66/66d26d38861543a0fe4f7d2cf395a950050529d886194809aa3a577939c84a68.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/66/66d26d38861543a0fe4f7d2cf395a950050529d886194809aa3a577939c84a68.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/99/99fa618f13cc865ee82bf5d4e6695d61164f03229b962aea5d7c4ae384402ce4.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/99/99fa618f13cc865ee82bf5d4e6695d61164f03229b962aea5d7c4ae384402ce4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ca/ca61cc2296e2d2ede2464d5ccd3365aeb34ef88ec4581c32a5d8983bc8ff18c4.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ca/ca61cc2296e2d2ede2464d5ccd3365aeb34ef88ec4581c32a5d8983bc8ff18c4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f5/f525cc963b9d18e8818a57a0ee613d3bd0e49b1861f64c19c99b66a064904990.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/f5/f525cc963b9d18e8818a57a0ee613d3bd0e49b1861f64c19c99b66a064904990.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/85/854cfe7089765b483f918c05e25c96d4c038724dc6a02a4fa95775e85f308b4c.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/85/854cfe7089765b483f918c05e25c96d4c038724dc6a02a4fa95775e85f308b4c.php" />
     </list>
     <ignored path="Symfony-Classroom-3.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,22 +102,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="91" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="-23.125">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding>
                 <element signature="e#40#69#0#PHP" expanded="true" />
-                <element signature="e#587#606#1#PHP" expanded="true" />
-                <element signature="e#1341#1366#0#PHP" expanded="true" />
-                <element signature="e#1869#1884#1#PHP" expanded="true" />
-                <element signature="e#2137#2162#0#PHP" expanded="true" />
-                <element signature="e#2475#2494#1#PHP" expanded="true" />
-                <element signature="e#2925#2950#0#PHP" expanded="true" />
-                <element signature="e#3409#3428#1#PHP" expanded="true" />
-                <element signature="e#3951#3966#1#PHP" expanded="true" />
-                <element signature="e#4166#4191#0#PHP" expanded="true" />
+                <element signature="e#589#608#1#PHP" expanded="true" />
+                <element signature="e#1532#1547#1#PHP" expanded="true" />
+                <element signature="e#1834#1859#0#PHP" expanded="true" />
+                <element signature="e#2182#2201#1#PHP" expanded="true" />
+                <element signature="e#2791#2806#1#PHP" expanded="true" />
+                <element signature="e#3036#3061#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,8 +133,8 @@
       <file leaf-file-name="ArticleType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ArticleType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="25" />
+            <state vertical-scroll-proportion="-15.625">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -139,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="articles.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/article/articles.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5251142">
-              <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#383#404#0#HTML" expanded="true" />
               </folding>
@@ -159,6 +170,26 @@
               <folding>
                 <element signature="e#12#28#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.125">
+              <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/index/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25114155">
+              <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -215,15 +246,16 @@
         <option value="$PROJECT_DIR$/src/Trascastro/UserBundle/Resources/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/web/css/article.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/form-templates/bootstrap_3_horizontal_layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/form-templates/form_div_layout.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/form-templates/bootstrap_3_layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/article/form.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/ArticleType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/article/articles.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/index/index.html.twig" />
       </list>
     </option>
   </component>
@@ -726,6 +758,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -953,6 +1011,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -960,6 +1019,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.125">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,14 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20642202">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1284,14 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3196347">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/form-templates/form_div_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.5068493">
@@ -1304,14 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2739726">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42731276">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1336,38 +1372,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ArticleType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="25" />
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/articles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#383#404#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="91" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="-23.125">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
             <element signature="e#40#69#0#PHP" expanded="true" />
-            <element signature="e#587#606#1#PHP" expanded="true" />
-            <element signature="e#1341#1366#0#PHP" expanded="true" />
-            <element signature="e#1869#1884#1#PHP" expanded="true" />
-            <element signature="e#2137#2162#0#PHP" expanded="true" />
-            <element signature="e#2475#2494#1#PHP" expanded="true" />
-            <element signature="e#2925#2950#0#PHP" expanded="true" />
-            <element signature="e#3409#3428#1#PHP" expanded="true" />
-            <element signature="e#3951#3966#1#PHP" expanded="true" />
-            <element signature="e#4166#4191#0#PHP" expanded="true" />
+            <element signature="e#589#608#1#PHP" expanded="true" />
+            <element signature="e#1532#1547#1#PHP" expanded="true" />
+            <element signature="e#1834#1859#0#PHP" expanded="true" />
+            <element signature="e#2182#2201#1#PHP" expanded="true" />
+            <element signature="e#2791#2806#1#PHP" expanded="true" />
+            <element signature="e#3036#3061#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/articles.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5251142">
-          <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
-          <folding>
-            <element signature="e#383#404#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25114155">
+          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

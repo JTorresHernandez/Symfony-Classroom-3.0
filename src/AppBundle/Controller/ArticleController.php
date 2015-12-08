@@ -4,8 +4,8 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Article;
 use AppBundle\Form\ArticleType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -33,38 +33,27 @@ class ArticleController extends Controller
     }
 
     /**
-     * @Route("/add-article", name="app_article_addArticle")
+     * @Route("/new", name="app_article_new")
+     * @Security("has_role('ROLE_USER')")
      */
-    public function addArticleAction()
-    {
-        $a = new Article();
-        $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doAddArticle')]);
-
-        return $this->render(':article:form.html.twig', [
-            'form' => $form->createView(),
-            'title' => 'New Article'
-        ]);
-    }
-
-    /**
-     * @Route("/do-add-article", name="app_article_doAddArticle")
-     */
-    public function doAddArticleAction(Request $request)
+    public function newAction(Request $request)
     {
         $a = new Article();
         $form = $this->createForm(ArticleType::class, $a);
 
-        $form->handleRequest($request);
+        if ($request->getMethod() == Request::METHOD_POST) {
+            $form->handleRequest($request);
 
-        if ($form->isValid()) {
-            $m = $this->getDoctrine()->getManager();
-            $tagRepo = $m->getRepository('AppBundle:Tag');
-            $tagRepo->addTagsIfAreNew($a);
-            $a->setAuthor($this->getUser());
-            $m->persist($a);
-            $m->flush();
+            if ($form->isValid()) {
+                $m = $this->getDoctrine()->getManager();
+                $tagRepo = $m->getRepository('AppBundle:Tag');
+                $tagRepo->addTagsIfAreNew($a);
+                $a->setAuthor($this->getUser());
+                $m->persist($a);
+                $m->flush();
 
-            return $this->redirectToRoute('app_article_articles');
+                return $this->redirectToRoute('app_article_articles');
+            }
         }
 
         return $this->render(':article:form.html.twig', [
@@ -74,9 +63,9 @@ class ArticleController extends Controller
     }
 
     /**
-     * @Route("/edit/{id}", name="app_article_edit")
+     * @Route("edit/{id}", name="app_article_edit")
      */
-    public function editArticleAction($id)
+    public function editAction($id, Request $request)
     {
         $m = $this->getDoctrine()->getManager();
         $articleRepo = $m->getRepository('AppBundle:Article');
@@ -88,43 +77,21 @@ class ArticleController extends Controller
                 throw $this->createAccessDeniedException('You cannot access this page');
             }
 
-            $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doEditArticle', ['id' => $id])]);
-
-            return $this->render(':article:form.html.twig', [
-                'form'  => $form->createView(),
-                'title' => 'Edit Article',
+            $form = $this->createForm(ArticleType::class, $a, [
+                'submit_label'  => 'Edit Article'
             ]);
-        }
 
-        return $this->redirectToRoute('app_index_index');
-    }
+            if ($request->getMethod() == Request::METHOD_POST) {
+                $form->handleRequest($request);
 
-    /**
-     * @Route("do-edit/{id}", name="app_article_doEditArticle")
-     * @Method(methods={"POST"})
-     */
-    public function doEditArticleAction($id, Request $request)
-    {
-        $m = $this->getDoctrine()->getManager();
-        $articleRepo = $m->getRepository('AppBundle:Article');
+                if ($form->isValid()) {
+                    $tagRepo = $m->getRepository('AppBundle:Tag');
+                    $tagRepo->addTagsIfAreNew($a);
 
-        $a = $articleRepo->find($id);
+                    $m->flush();
 
-        if ($a) {
-            if (!$this->isGranted('ROLE_ADMIN') and $a->getAuthor() != $this->getUser()) {
-                throw $this->createAccessDeniedException('You cannot access this page');
-            }
-
-            $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doEditArticle', ['id' => $id])]);
-            $form->handleRequest($request);
-
-            if ($form->isValid()) {
-                $tagRepo = $m->getRepository('AppBundle:Tag');
-                $tagRepo->addTagsIfAreNew($a);
-
-                $m->flush();
-
-                return $this->redirectToRoute('app_article_articles');
+                    return $this->redirectToRoute('app_article_articles');
+                }
             }
 
             return $this->render(':article:form.html.twig', [

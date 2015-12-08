@@ -3,7 +3,15 @@
 {% block body %}
     <div>
         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-            <span>{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}</span> | <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+            <div>
+                <span>{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}</span> | <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="{{ path('app_article_articles') }}">Articles</a> - <a href="{{ path('app_article_new') }}">New Article</a></li>
+                    <li><a href="{{ path('app_tags_tags') }}">Tags</li>
+                </ul>
+            </div>
         {% else %}
             <span>You are anonymous</span> | <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a> - <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
         {% endif %}

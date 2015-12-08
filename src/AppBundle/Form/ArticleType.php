@@ -16,14 +16,17 @@ class ArticleType extends AbstractType
             ->add('content')
             ->add('tags', null, ['expanded' => true])
             ->add('new_tags')
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label' => $options['submit_label'],
+            ])
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'AppBundle\Entity\Article'
+            'data_class'    => 'AppBundle\Entity\Article',
+            'submit_label'  => 'New Article',
         ]);
     }
 
