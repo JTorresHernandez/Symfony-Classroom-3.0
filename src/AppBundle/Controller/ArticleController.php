@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Article;
 use AppBundle\Form\ArticleType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -63,43 +64,47 @@ class ArticleController extends Controller
     }
 
     /**
+     * http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
+     *
      * @Route("edit/{id}", name="app_article_edit")
      */
-    public function editAction($id, Request $request)
+    public function editAction(Article $article, Request $request)
     {
-        $m = $this->getDoctrine()->getManager();
-        $articleRepo = $m->getRepository('AppBundle:Article');
-
-        $a = $articleRepo->find($id);
-
-        if ($a) {
-            if (!$this->isGranted('ROLE_ADMIN') and $a->getAuthor() != $this->getUser()) {
-                throw $this->createAccessDeniedException('You cannot access this page');
-            }
-
-            $form = $this->createForm(ArticleType::class, $a, [
-                'submit_label'  => 'Edit Article'
-            ]);
-
-            if ($request->getMethod() == Request::METHOD_POST) {
-                $form->handleRequest($request);
-
-                if ($form->isValid()) {
-                    $tagRepo = $m->getRepository('AppBundle:Tag');
-                    $tagRepo->addTagsIfAreNew($a);
-
-                    $m->flush();
-
-                    return $this->redirectToRoute('app_article_articles');
-                }
-            }
-
-            return $this->render(':article:form.html.twig', [
-                'form'  => $form->createView(),
-                'title' => 'Edit Article',
-            ]);
+        if (!$this->isGranted('ROLE_ADMIN') and $article->getAuthor() != $this->getUser()) {
+            throw $this->createAccessDeniedException('You cannot access this page');
         }
 
-        return $this->redirectToRoute('app_index_index');
+        $form = $this->createForm(ArticleType::class, $article, [
+            'submit_label'  => 'Edit Article'
+        ]);
+
+        if ($request->getMethod() == Request::METHOD_POST) {
+            $form->handleRequest($request);
+
+            if ($form->isValid()) {
+                $m = $this->getDoctrine()->getManager();
+                $tagRepo = $m->getRepository('AppBundle:Tag');
+                $tagRepo->addTagsIfAreNew($article);
+
+                $m->flush();
+
+                return $this->redirectToRoute('app_article_articles');
+            }
+        }
+
+        return $this->render(':article:form.html.twig', [
+            'form'  => $form->createView(),
+            'title' => 'Edit Article',
+        ]);
+    }
+
+    /**
+     * @Route("/show/{id}", name="app_article_show")
+     */
+    public function showAction(Article $article)
+    {
+        return $this->render(':article:article.html.twig', [
+            'article' => $article
+        ]);
     }
 }

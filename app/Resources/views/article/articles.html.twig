@@ -1,32 +1,10 @@
 {% extends '::base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="/css/custom.css" />
-{% endblock %}
-
 {% block headTitle %}Articles{% endblock %}
 
 {% block body %}
     {% for article in articles %}
-        <div class="article"> {# article #}
-            {% if is_granted('ROLE_ADMIN') or article.author == app.user %}
-                <div style="float: right;"><a href="{{ path('app_article_edit', {'id': article.id}) }}">Edit</a></div>
-            {% endif %}
-            <h1 style="margin-top: 0px">{{ article.title }}</h1>
-            <div><strong>Author:</strong> {{ article.author }} :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
-            <div style="padding: 20px;font-size: medium">
-                {{ article.content }}
-            </div>
-            <div style="border-top:1px solid #DDD; padding-top: 10px">
-                <div style="margin: 10px 0px;">
-                    {% for tag in article.tags %}
-                        <a class="btn btn-default" href="{{ path('app_tags_tags') }}">{{ tag }}</a>
-                    {% endfor %}
-                </div>
-                <div></div>
-            </div>
-        </div> {# end article#}
+        {% include ':article:article_content.html.twig' %}
     {% endfor %}
     <div class="navigation">
         {{ knp_pagination_render(articles) }}

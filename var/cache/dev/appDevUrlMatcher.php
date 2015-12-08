@@ -286,40 +286,28 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_fos_user_change_password:
 
-        // app_index_index
+        // app_article_articles
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'app_index_index');
+                return $this->redirect($pathinfo.'/', 'app_article_articles');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\IndexController::indexAction',  '_route' => 'app_index_index',);
+            return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesAction',  '_route' => 'app_article_articles',);
         }
 
-        // app_index_sendEmail
-        if ($pathinfo === '/send-email') {
-            return array (  '_controller' => 'AppBundle\\Controller\\IndexController::sendEmailAction',  '_route' => 'app_index_sendEmail',);
+        // app_article_new
+        if ($pathinfo === '/new') {
+            return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::newAction',  '_route' => 'app_article_new',);
         }
 
-        if (0 === strpos($pathinfo, '/articles')) {
-            // app_article_articles
-            if (rtrim($pathinfo, '/') === '/articles') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'app_article_articles');
-                }
+        // app_article_edit
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editAction',));
+        }
 
-                return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesAction',  '_route' => 'app_article_articles',);
-            }
-
-            // app_article_new
-            if ($pathinfo === '/articles/new') {
-                return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::newAction',  '_route' => 'app_article_new',);
-            }
-
-            // app_article_edit
-            if (0 === strpos($pathinfo, '/articles/edit') && preg_match('#^/articles/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editAction',));
-            }
-
+        // app_article_show
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
         }
 
         // app_tags_tags

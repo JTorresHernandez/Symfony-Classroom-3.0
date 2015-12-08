@@ -12,8 +12,9 @@
 
     {# This must be rewritten for symfony 3#}
     {% block stylesheets %}
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/jumbotron.css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/jumbotron.css" />
+        <link rel="stylesheet" href="/css/custom.css" />
     {% endblock %}
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -36,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ path('app_index_index') }}">Symfony Classroom</a>
+            <a class="navbar-brand" href="{{ path('app_article_articles') }}">Symfony Classroom</a>
         </div>
     </div>
 </nav>
