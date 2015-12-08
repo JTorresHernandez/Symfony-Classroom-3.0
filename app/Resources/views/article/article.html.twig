@@ -3,5 +3,5 @@
 {% block headTitle %}Show Article{% endblock %}
 
 {% block body %}
-    {% include ':article:article_content.html.twig' %}
+    {% include ':article:article_content.html.twig' with {'show_content': true} %}
 {% endblock %}

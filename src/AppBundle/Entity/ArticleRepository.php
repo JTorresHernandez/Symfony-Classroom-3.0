@@ -24,4 +24,21 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     {
         return $this->queryAllArticles()->execute();
     }
+
+    public function queryArticlesByTagId($id)
+    {
+        return $this->createQueryBuilder('a')
+            ->leftJoin('a.tags', 'tags')
+            ->addSelect('tags')
+            ->addOrderBy('a.createdAt', 'DESC')
+            ->andWhere('tags.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+        ;
+    }
+
+    public function articlesByTagId($id)
+    {
+        return $this->queryArticlesByTagId($id)->execute();
+    }
 }

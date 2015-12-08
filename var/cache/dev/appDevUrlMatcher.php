@@ -310,13 +310,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
         }
 
-        // app_tags_tags
-        if (rtrim($pathinfo, '/') === '/tags') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'app_tags_tags');
+        if (0 === strpos($pathinfo, '/tag')) {
+            // app_articles_byTag
+            if (preg_match('#^/tag/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byTag')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByTagAction',));
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
+            // app_tags_tags
+            if (rtrim($pathinfo, '/') === '/tags') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'app_tags_tags');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

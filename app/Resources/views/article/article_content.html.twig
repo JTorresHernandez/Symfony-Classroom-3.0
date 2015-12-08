@@ -4,13 +4,18 @@
     {% endif %}
     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>
     <div><strong>Author:</strong> {{ article.author }} :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
-    <div style="padding: 20px;font-size: medium">
-        {{ article.content }}
+    <div style="padding: 20px;font-size: medium;font-weight: bold">
+        {{ article.intro }}
     </div>
+    {% if show_content is defined %}
+        <div style="margin-bottom:20px;padding: 0px 20px;font-size: medium">
+            {{ article.content }}
+        </div>
+    {% endif %}
     <div style="border-top:1px solid #DDD; padding-top: 10px">
         <div style="margin: 10px 0px;">
             {% for tag in article.tags %}
-                <a class="btn btn-default" href="{{ path('app_tags_tags') }}">{{ tag }}</a>
+                <a class="btn btn-default" href="{{ path('app_articles_byTag', {'id': tag.id}) }}">{{ tag }}</a>
             {% endfor %}
         </div>
         <div></div>

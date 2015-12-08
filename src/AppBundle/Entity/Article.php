@@ -31,6 +31,11 @@ class Article
     private $title;
 
     /**
+     * @ORM\Column(name="intro", type="text")
+     */
+    private $intro;
+
+    /**
      * @ORM\Column(name="content", type="text")
      */
     private $content;
@@ -66,7 +71,6 @@ class Article
         $this->createdAt = new \DateTime();
         $this->updatedAt = $this->createdAt;
     }
-
 
     /**
      * Get id
@@ -230,5 +234,21 @@ class Article
         $this->content = $content;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIntro()
+    {
+        return $this->intro;
+    }
+
+    /**
+     * @param mixed $intro
+     */
+    public function setIntro($intro)
+    {
+        $this->intro = $intro;
     }
 }

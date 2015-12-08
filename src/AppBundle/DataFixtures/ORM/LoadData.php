@@ -46,24 +46,33 @@ class LoadData implements FixtureInterface
         $a1 = new Article();
         $a1->setTitle('Boston Celtics NBA Champions');
         $a1->setAuthor($user1);
+        $a1->setIntro('
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?
+        ');
         $a1->setContent('
-            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that\'s what you see at a toy store. And you must think you\'re in a toy store, because you\'re here shopping for an infant named Jeb.
+            Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that\'s what you see at a toy store. And you must think you\'re in a toy store, because you\'re here shopping for an infant named Jeb.
         ');
         $m->persist($a1);
 
         $a2 = new Article();
         $a2->setTitle('Marcus Smart named player of the month');
         $a2->setAuthor($user2);
+        $a2->setIntro('
+            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.
+        ');
         $a2->setContent('
-            Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they\'re actually proud of that shit.
+            Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they\'re actually proud of that shit.
         ');
         $m->persist($a2);
 
         $a3 = new Article();
         $a3->setTitle('Symfony 3 is here');
         $a3->setAuthor($user1);
+        $a3->setIntro('
+            ow that we know who you are, I know who I am. I\'m not a mistake! It all makes sense!
+        ');
         $a3->setContent('
-            ow that we know who you are, I know who I am. I\'m not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain\'s going to be? He\'s the exact opposite of the hero. And most times they\'re friends, like you and me! I should\'ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+            In a comic, you know how you can tell who the arch-villain\'s going to be? He\'s the exact opposite of the hero. And most times they\'re friends, like you and me! I should\'ve known way back when... You know why, David? Because of the kids. They called me Mr Glass.
         ');
         $m->persist($a3);
 
@@ -102,7 +111,6 @@ class LoadData implements FixtureInterface
             ->addTag($t5)
             ->addTag($t6)
         ;
-
 
         $m->flush();
     }
