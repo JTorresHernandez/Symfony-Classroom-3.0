@@ -320,6 +320,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::doAddArticleAction',  '_route' => 'app_article_doAddArticle',);
             }
 
+            // app_article_edit
+            if (0 === strpos($pathinfo, '/articles/edit') && preg_match('#^/articles/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editArticleAction',));
+            }
+
+            // app_article_doEditArticle
+            if (0 === strpos($pathinfo, '/articles/do-edit') && preg_match('#^/articles/do\\-edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_app_article_doEditArticle;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_doEditArticle')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::doEditArticleAction',));
+            }
+            not_app_article_doEditArticle:
+
         }
 
         // app_tags_tags

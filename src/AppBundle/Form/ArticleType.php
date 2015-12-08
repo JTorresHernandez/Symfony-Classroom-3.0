@@ -16,7 +16,7 @@ class ArticleType extends AbstractType
             ->add('content')
             ->add('tags', null, ['expanded' => true])
             ->add('new_tags')
-            ->add('Create', SubmitType::class)
+            ->add('submit', SubmitType::class)
         ;
     }
 

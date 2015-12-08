@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Article;
 use AppBundle\Form\ArticleType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -39,8 +40,9 @@ class ArticleController extends Controller
         $a = new Article();
         $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doAddArticle')]);
 
-        return $this->render(':article:addArticle.html.twig', [
+        return $this->render(':article:form.html.twig', [
             'form' => $form->createView(),
+            'title' => 'New Article'
         ]);
     }
 
@@ -65,9 +67,72 @@ class ArticleController extends Controller
             return $this->redirectToRoute('app_article_articles');
         }
 
-        return $this->render(':article:addArticle.html.twig', [
-            'form' => $form->createView(),
+        return $this->render(':article:form.html.twig', [
+            'form'  => $form->createView(),
+            'title' => 'New Article',
         ]);
+    }
 
+    /**
+     * @Route("/edit/{id}", name="app_article_edit")
+     */
+    public function editArticleAction($id)
+    {
+        $m = $this->getDoctrine()->getManager();
+        $articleRepo = $m->getRepository('AppBundle:Article');
+
+        $a = $articleRepo->find($id);
+
+        if ($a) {
+            if (!$this->isGranted('ROLE_ADMIN') and $a->getAuthor() != $this->getUser()) {
+                throw $this->createAccessDeniedException('You cannot access this page');
+            }
+
+            $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doEditArticle', ['id' => $id])]);
+
+            return $this->render(':article:form.html.twig', [
+                'form'  => $form->createView(),
+                'title' => 'Edit Article',
+            ]);
+        }
+
+        return $this->redirectToRoute('app_index_index');
+    }
+
+    /**
+     * @Route("do-edit/{id}", name="app_article_doEditArticle")
+     * @Method(methods={"POST"})
+     */
+    public function doEditArticleAction($id, Request $request)
+    {
+        $m = $this->getDoctrine()->getManager();
+        $articleRepo = $m->getRepository('AppBundle:Article');
+
+        $a = $articleRepo->find($id);
+
+        if ($a) {
+            if (!$this->isGranted('ROLE_ADMIN') and $a->getAuthor() != $this->getUser()) {
+                throw $this->createAccessDeniedException('You cannot access this page');
+            }
+
+            $form = $this->createForm(ArticleType::class, $a, ['action' => $this->generateUrl('app_article_doEditArticle', ['id' => $id])]);
+            $form->handleRequest($request);
+
+            if ($form->isValid()) {
+                $tagRepo = $m->getRepository('AppBundle:Tag');
+                $tagRepo->addTagsIfAreNew($a);
+
+                $m->flush();
+
+                return $this->redirectToRoute('app_article_articles');
+            }
+
+            return $this->render(':article:form.html.twig', [
+                'form'  => $form->createView(),
+                'title' => 'Edit Article',
+            ]);
+        }
+
+        return $this->redirectToRoute('app_index_index');
     }
 }
