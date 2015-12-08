@@ -1,28 +1,27 @@
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/custom.css" />
+{% endblock %}
+
 {% block headTitle %}Articles{% endblock %}
 
 {% block body %}
     {% for article in articles %}
-        <div style="margin: 15px 0;
-    padding: 19px 19px 14px;
-    background-color: white;
-    border: 1px solid #DDD;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;"> {# article #}
-            <h1 style="margin-top: 0px">{{ article.title }}</h1> <strong>Author:</strong> {{ article.author }}
+        <div class="article"> {# article #}
+            <h1 style="margin-top: 0px">{{ article.title }}</h1>
+            <div><strong>Author:</strong> {{ article.author }} :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
             <div style="padding: 20px;font-size: medium">
                 {{ article.content }}
             </div>
             <div style="border-top:1px solid #DDD; padding-top: 10px">
-                <div>
-                    <strong>Tags:</strong>
+                <div style="margin: 10px 0px;">
                     {% for tag in article.tags %}
-                        {{ tag }},
+                        <span class="article-tag">{{ tag }}</span>
                     {% endfor %}
                 </div>
-                <div><strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} | <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
+                <div></div>
             </div>
         </div> {# end article#}
     {% endfor %}
