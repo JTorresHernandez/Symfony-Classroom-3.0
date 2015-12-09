@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6d6f67-b609-4384-97bb-88994b9b33f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/article/articles.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/article/articles.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/ArticleRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/ArticleRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/TagRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/TagRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/37/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c546167436f6e74726f6c6c65722374616773416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/37/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c546167436f6e74726f6c6c65722374616773416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/bf/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c546167436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/bf/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c546167436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/67/67f929d775b5c86187201fc8b15effb84b85d2758a97fb63b31880782dd4ca6c.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/67/67f929d775b5c86187201fc8b15effb84b85d2758a97fb63b31880782dd4ca6c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c2/c2ac51c8c563e16e29e132b0a39903936bfdf7ce651382133b53f31677003be2.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c2/c2ac51c8c563e16e29e132b0a39903936bfdf7ce651382133b53f31677003be2.php" />
     </list>
     <ignored path="Symfony-Classroom-3.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,10 +139,10 @@
       <file leaf-file-name="ArticleRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ArticleRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56621003">
-              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.29223743">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding>
-                <element signature="e#1737#1756#0#PHP" expanded="true" />
+                <element signature="e#1791#1810#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1465,10 +1456,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56621003">
-          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.29223743">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
-            <element signature="e#1737#1756#0#PHP" expanded="true" />
+            <element signature="e#1791#1810#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

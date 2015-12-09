@@ -28,6 +28,7 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     /**
      * DQL with addSelect = 'SELECT a, tags FROM AppBundle\Entity\Article a LEFT JOIN a.tags tags WHERE tags.id = :id ORDER BY a.createdAt DESC'
      *      It does not show all tags in every article
+     *      Only the tag matching the where condition
      * DQL without addSelect = 'SELECT a FROM AppBundle\Entity\Article a LEFT JOIN a.tags tags WHERE tags.id = :id ORDER BY a.createdAt DESC'
      *      It shows all tags in every article
      *      But it does lazy loading in views
