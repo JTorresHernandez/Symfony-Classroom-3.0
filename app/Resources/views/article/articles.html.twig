@@ -6,7 +6,9 @@
     {% for article in articles %}
         {% include ':article:article_content.html.twig' %}
     {% endfor %}
-    <div class="navigation">
-        {{ knp_pagination_render(articles) }}
-    </div>
+    {% if not doPagination is defined %}
+        <div class="navigation">
+            {{ knp_pagination_render(articles) }}
+        </div>
+    {% endif %}
 {% endblock %}

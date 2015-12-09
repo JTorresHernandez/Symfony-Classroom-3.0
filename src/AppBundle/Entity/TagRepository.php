@@ -39,4 +39,39 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
 
         return $qb->execute();
     }
+
+    public function queryArticlesByTagId($id)
+    {
+        return $this->createQueryBuilder('tag')
+            ->leftJoin('tag.articles', 'articles')
+            ->andWhere('tag.id = :id')
+            ->setParameter('id', $id)
+            ->addSelect('articles')
+            ->addOrderBy('articles.createdAt', 'DESC')
+            ->getQuery()
+        ;
+    }
+
+    /**
+     * DQL = 'SELECT a FROM AppBundle:Article a LEFT JOIN a.tags tag WHERE tag.id = :id ORDER BY a.createdAt DESC'
+     *
+     * This method return all articles having one tag (shows every tag in each article)
+     */
+    public function queryArticlesByTagId2($id)
+    {
+        $em = $this->getEntityManager();
+
+        $query =  $em->createQueryBuilder()
+            ->select('a', 'tag')
+            ->from('AppBundle:Article', 'a')
+            ->leftJoin('a.tags', 'tag')
+            ->andWhere('tag.id = :id')
+            ->setParameter('id', $id)
+            ->addOrderBy('a.createdAt', 'DESC')
+            ->getQuery()
+            ;
+
+        //var_dump($query->getDQL());die;
+        return $query;
+    }
 }
