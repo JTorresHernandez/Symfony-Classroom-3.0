@@ -75,4 +75,23 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     {
         return $this->queryArticlesByTagId($id)->execute();
     }
+
+    public function queryArticlesByUserId($id)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->leftJoin('a.author', 'author') // use contextual help to see the associations
+            ->andWhere('author.id = :id')
+            ->setParameter('id', $id)
+            ->addOrderBy('a.createdAt', 'DESC')
+            ->addSelect('author') // avoid lazy loading in views
+            ->getQuery()
+        ;
+
+        return $qb;
+    }
+
+    public function articlesByUserId($id)
+    {
+        return $this->queryArticlesByUserId($id)->execute();
+    }
 }

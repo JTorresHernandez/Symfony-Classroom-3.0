@@ -310,21 +310,26 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
         }
 
-        if (0 === strpos($pathinfo, '/tag')) {
+        if (0 === strpos($pathinfo, '/articles')) {
             // app_articles_byTag
-            if (preg_match('#^/tag/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/articles/tag') && preg_match('#^/articles/tag/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byTag')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByTagAction',));
             }
 
-            // app_tags_tags
-            if (rtrim($pathinfo, '/') === '/tags') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'app_tags_tags');
-                }
-
-                return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
+            // app_articles_byUser
+            if (0 === strpos($pathinfo, '/articles/user') && preg_match('#^/articles/user/(?P<username>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSer',));
             }
 
+        }
+
+        // app_tags_tags
+        if (rtrim($pathinfo, '/') === '/tags') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'app_tags_tags');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6127a77fb8b9f403a77e9f4fbdfd382bfc79f7505c5d8523d8d2d9d808f214c8 = $this->env->getExtension("native_profiler");
-        $__internal_6127a77fb8b9f403a77e9f4fbdfd382bfc79f7505c5d8523d8d2d9d808f214c8->enter($__internal_6127a77fb8b9f403a77e9f4fbdfd382bfc79f7505c5d8523d8d2d9d808f214c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8 = $this->env->getExtension("native_profiler");
+        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8->enter($__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"article\"> ";
@@ -35,10 +35,12 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         echo "\">";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "title", array()), "html", null, true);
         echo "</a></h1>
-    <div><strong>Author:</strong> ";
+    <div><strong>Author:</strong> <a href=\"";
         // line 6
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byUser", array("username" => $this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "author", array()), "username", array()))), "html", null, true);
+        echo "\">@";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "author", array()), "html", null, true);
-        echo " :: <strong>Created:</strong> ";
+        echo "</a> :: <strong>Created:</strong> ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "createdAt", array()), "d/m/Y H:i:s"), "html", null, true);
         echo " :: <strong>Updated:</strong> ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "updatedAt", array()), "d/m/Y H:i:s"), "html", null, true);
@@ -71,7 +73,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
             // line 18
             echo "                <a class=\"btn btn-default\" href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byTag", array("id" => $this->getAttribute($context["tag"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byTag", array("name" => $this->getAttribute($context["tag"], "name", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $context["tag"], "html", null, true);
             echo "</a>
@@ -86,7 +88,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
     </div>
 </div> ";
         
-        $__internal_6127a77fb8b9f403a77e9f4fbdfd382bfc79f7505c5d8523d8d2d9d808f214c8->leave($__internal_6127a77fb8b9f403a77e9f4fbdfd382bfc79f7505c5d8523d8d2d9d808f214c8_prof);
+        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8->leave($__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8_prof);
 
     }
 
@@ -102,7 +104,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     public function getDebugInfo()
     {
-        return array (  84 => 20,  73 => 18,  69 => 17,  65 => 15,  59 => 12,  56 => 11,  54 => 10,  49 => 8,  40 => 6,  33 => 5,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  86 => 20,  75 => 18,  71 => 17,  67 => 15,  61 => 12,  58 => 11,  56 => 10,  51 => 8,  40 => 6,  33 => 5,  27 => 3,  24 => 2,  22 => 1,);
     }
 }
 /* <div class="article"> {# article #}*/
@@ -110,7 +112,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*         <div style="float: right;"><a href="{{ path('app_article_edit', {'id': article.id}) }}">Edit</a></div>*/
 /*     {% endif %}*/
 /*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>*/
-/*     <div><strong>Author:</strong> {{ article.author }} :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>*/
+/*     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>*/
 /*     <div style="padding: 20px;font-size: medium;font-weight: bold">*/
 /*         {{ article.intro }}*/
 /*     </div>*/
@@ -122,7 +124,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*     <div style="border-top:1px solid #DDD; padding-top: 10px">*/
 /*         <div style="margin: 10px 0px;">*/
 /*             {% for tag in article.tags %}*/
-/*                 <a class="btn btn-default" href="{{ path('app_articles_byTag', {'id': tag.id}) }}">{{ tag }}</a>*/
+/*                 <a class="btn btn-default" href="{{ path('app_articles_byTag', {'name': tag.name}) }}">{{ tag }}</a>*/
 /*             {% endfor %}*/
 /*         </div>*/
 /*         <div></div>*/
