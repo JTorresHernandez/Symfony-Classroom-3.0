@@ -8,8 +8,11 @@
 
         <div style="padding: 5px 20px">
             {% for article in tag.articles %}
-                <div>{{ article }}</div>
+                <div><a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article }}</a></div>
             {% endfor %}
         </div>
     {% endfor %}
+    <div class="navigation">
+        {{ knp_pagination_render(tags) }}
+    </div>
 {% endblock %}

@@ -12,13 +12,15 @@ class TagController extends Controller
     /**
      * @Route("/", name="app_tags_tags")
      */
-    public function tagsAction()
+    public function tagsAction(Request $request)
     {
         $m = $this->getDoctrine()->getManager();
 
         $tagRepo = $m->getRepository('AppBundle:Tag');
 
-        $tags = $tagRepo->findAllTags();
+        $tagsQuery = $tagRepo->queryFindAllTags();
+
+        $tags = $this->get('knp_paginator')->paginate($tagsQuery, $request->query->getInt('page', 1), 2);
 
         return $this->render(':tag:tags.html.twig', [
             'tags' => $tags,

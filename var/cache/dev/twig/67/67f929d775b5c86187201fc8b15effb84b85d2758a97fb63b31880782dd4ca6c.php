@@ -22,32 +22,32 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_add7ab305bba3d9eab3059202676aac62e173399f5b05009064734fe2abd14a6 = $this->env->getExtension("native_profiler");
-        $__internal_add7ab305bba3d9eab3059202676aac62e173399f5b05009064734fe2abd14a6->enter($__internal_add7ab305bba3d9eab3059202676aac62e173399f5b05009064734fe2abd14a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":tag:tags.html.twig"));
+        $__internal_8dd521f8f8603671c07f6414fbeb5ff2009de4f5b8cf72279b008306fa46bb21 = $this->env->getExtension("native_profiler");
+        $__internal_8dd521f8f8603671c07f6414fbeb5ff2009de4f5b8cf72279b008306fa46bb21->enter($__internal_8dd521f8f8603671c07f6414fbeb5ff2009de4f5b8cf72279b008306fa46bb21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":tag:tags.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_add7ab305bba3d9eab3059202676aac62e173399f5b05009064734fe2abd14a6->leave($__internal_add7ab305bba3d9eab3059202676aac62e173399f5b05009064734fe2abd14a6_prof);
+        $__internal_8dd521f8f8603671c07f6414fbeb5ff2009de4f5b8cf72279b008306fa46bb21->leave($__internal_8dd521f8f8603671c07f6414fbeb5ff2009de4f5b8cf72279b008306fa46bb21_prof);
 
     }
 
     // line 3
     public function block_headTitle($context, array $blocks = array())
     {
-        $__internal_1119cd571e80550df7c1ba6bb2789333bc87a7e328882fe705a1176bbb73d36f = $this->env->getExtension("native_profiler");
-        $__internal_1119cd571e80550df7c1ba6bb2789333bc87a7e328882fe705a1176bbb73d36f->enter($__internal_1119cd571e80550df7c1ba6bb2789333bc87a7e328882fe705a1176bbb73d36f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
+        $__internal_bdf93ccd1df0c611e574e78d28a8fc7a2211846730c882f3914205c7b4f4a219 = $this->env->getExtension("native_profiler");
+        $__internal_bdf93ccd1df0c611e574e78d28a8fc7a2211846730c882f3914205c7b4f4a219->enter($__internal_bdf93ccd1df0c611e574e78d28a8fc7a2211846730c882f3914205c7b4f4a219_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
 
         echo "Tags";
         
-        $__internal_1119cd571e80550df7c1ba6bb2789333bc87a7e328882fe705a1176bbb73d36f->leave($__internal_1119cd571e80550df7c1ba6bb2789333bc87a7e328882fe705a1176bbb73d36f_prof);
+        $__internal_bdf93ccd1df0c611e574e78d28a8fc7a2211846730c882f3914205c7b4f4a219->leave($__internal_bdf93ccd1df0c611e574e78d28a8fc7a2211846730c882f3914205c7b4f4a219_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_97f1cf2b63d2e0f7e8a73e511599b7363bb48e68a6c18f7d6dae507333b072ad = $this->env->getExtension("native_profiler");
-        $__internal_97f1cf2b63d2e0f7e8a73e511599b7363bb48e68a6c18f7d6dae507333b072ad->enter($__internal_97f1cf2b63d2e0f7e8a73e511599b7363bb48e68a6c18f7d6dae507333b072ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_16d0a3e91bb39cb33cdd6008b84a5003e555a56af78b4034958cf2b1f317c27f = $this->env->getExtension("native_profiler");
+        $__internal_16d0a3e91bb39cb33cdd6008b84a5003e555a56af78b4034958cf2b1f317c27f->enter($__internal_16d0a3e91bb39cb33cdd6008b84a5003e555a56af78b4034958cf2b1f317c27f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -66,9 +66,11 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["tag"], "articles", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
                 // line 11
-                echo "                <div>";
+                echo "                <div><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+                echo "\">";
                 echo twig_escape_filter($this->env, $context["article"], "html", null, true);
-                echo "</div>
+                echo "</a></div>
             ";
             }
             $_parent = $context['_parent'];
@@ -81,8 +83,16 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 15
+        echo "    <div class=\"navigation\">
+        ";
+        // line 16
+        echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["tags"]) ? $context["tags"] : $this->getContext($context, "tags")));
+        echo "
+    </div>
+";
         
-        $__internal_97f1cf2b63d2e0f7e8a73e511599b7363bb48e68a6c18f7d6dae507333b072ad->leave($__internal_97f1cf2b63d2e0f7e8a73e511599b7363bb48e68a6c18f7d6dae507333b072ad_prof);
+        $__internal_16d0a3e91bb39cb33cdd6008b84a5003e555a56af78b4034958cf2b1f317c27f->leave($__internal_16d0a3e91bb39cb33cdd6008b84a5003e555a56af78b4034958cf2b1f317c27f_prof);
 
     }
 
@@ -98,7 +108,7 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
 
     public function getDebugInfo()
     {
-        return array (  78 => 13,  69 => 11,  65 => 10,  58 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
+        return array (  90 => 16,  87 => 15,  80 => 13,  69 => 11,  65 => 10,  58 => 7,  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -111,8 +121,11 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
 /* */
 /*         <div style="padding: 5px 20px">*/
 /*             {% for article in tag.articles %}*/
-/*                 <div>{{ article }}</div>*/
+/*                 <div><a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article }}</a></div>*/
 /*             {% endfor %}*/
 /*         </div>*/
 /*     {% endfor %}*/
+/*     <div class="navigation">*/
+/*         {{ knp_pagination_render(tags) }}*/
+/*     </div>*/
 /* {% endblock %}*/

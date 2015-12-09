@@ -29,15 +29,19 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
         }
     }
 
-    public function findAllTags()
+    public function queryFindAllTags()
     {
-        $qb = $this->createQueryBuilder('tag')
+        return $this->createQueryBuilder('tag')
             ->addOrderBy('tag.name', 'DESC')
             ->leftJoin('tag.articles', 'articles')
             ->addSelect('articles')
-            ->getQuery();
+            ->getQuery()
+        ;
+    }
 
-        return $qb->execute();
+    public function findAllTags()
+    {
+        return $this->queryFindAllTags()->execute();
     }
 
     public function queryArticlesByTagId($id)
