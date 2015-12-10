@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8 = $this->env->getExtension("native_profiler");
-        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8->enter($__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_fa11d62d07478c3f0b3b87ee8a797e18814a0428d54f646e6aec5b9f05694f47 = $this->env->getExtension("native_profiler");
+        $__internal_fa11d62d07478c3f0b3b87ee8a797e18814a0428d54f646e6aec5b9f05694f47->enter($__internal_fa11d62d07478c3f0b3b87ee8a797e18814a0428d54f646e6aec5b9f05694f47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"article\"> ";
@@ -88,7 +88,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
     </div>
 </div> ";
         
-        $__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8->leave($__internal_cdde80fb86671f29bed7198bc213aadc147f2ddac01f106527347df4800ff5f8_prof);
+        $__internal_fa11d62d07478c3f0b3b87ee8a797e18814a0428d54f646e6aec5b9f05694f47->leave($__internal_fa11d62d07478c3f0b3b87ee8a797e18814a0428d54f646e6aec5b9f05694f47_prof);
 
     }
 
