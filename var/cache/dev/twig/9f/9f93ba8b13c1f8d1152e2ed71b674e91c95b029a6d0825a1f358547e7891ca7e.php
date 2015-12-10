@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Security:horitzontal-login.html.twig */
+/* UserBundle:Security:horitzontal-login.html.twig */
 class __TwigTemplate_a822c2a53bf28c1ea72e71fe2480ea00ee359ef6fb5fa4b499f18aede306813f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,33 +15,40 @@ class __TwigTemplate_a822c2a53bf28c1ea72e71fe2480ea00ee359ef6fb5fa4b499f18aede30
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_122d24ca29526fb23e7ca715d84369192ffa744b10ce6a3b9e12b03970cd22b8 = $this->env->getExtension("native_profiler");
-        $__internal_122d24ca29526fb23e7ca715d84369192ffa744b10ce6a3b9e12b03970cd22b8->enter($__internal_122d24ca29526fb23e7ca715d84369192ffa744b10ce6a3b9e12b03970cd22b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:horitzontal-login.html.twig"));
+        $__internal_b84d79c5f4aefb2b0a908b6ef25ad780fa5bf9788d0059f8d94e5874ce716d4e = $this->env->getExtension("native_profiler");
+        $__internal_b84d79c5f4aefb2b0a908b6ef25ad780fa5bf9788d0059f8d94e5874ce716d4e->enter($__internal_b84d79c5f4aefb2b0a908b6ef25ad780fa5bf9788d0059f8d94e5874ce716d4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
 
         // line 1
         echo "<form action=\"";
         echo $this->env->getExtension('routing')->getPath("fos_user_security_check");
         echo "\" method=\"post\">
+    <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 2
+        echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderCsrfToken("authenticate"), "html", null, true);
+        echo "\">
     <div class=\"form-group\">
-        <input class=\"form-control\" placeholder=\"Username\" type=\"text\" id=\"username\" name=\"_username\" value=\"\" required=\"required\" />
+        <input class=\"form-control\" placeholder=\"Username\" type=\"text\" id=\"username\" name=\"_username\" value=\"";
+        // line 4
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
+        echo "\" required=\"required\" />
     </div>
     <div class=\"form-group\">
         <input class=\"form-control\" placeholder=\"Password\" type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
     </div>
     <button type=\"submit\" class=\"btn btn-success\">Sign in</button>
     <a class=\"btn btn-danger\" href=\"";
-        // line 9
+        // line 10
         echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
         echo "\">Sign up</a>
 </form>";
         
-        $__internal_122d24ca29526fb23e7ca715d84369192ffa744b10ce6a3b9e12b03970cd22b8->leave($__internal_122d24ca29526fb23e7ca715d84369192ffa744b10ce6a3b9e12b03970cd22b8_prof);
+        $__internal_b84d79c5f4aefb2b0a908b6ef25ad780fa5bf9788d0059f8d94e5874ce716d4e->leave($__internal_b84d79c5f4aefb2b0a908b6ef25ad780fa5bf9788d0059f8d94e5874ce716d4e_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Security:horitzontal-login.html.twig";
+        return "UserBundle:Security:horitzontal-login.html.twig";
     }
 
     public function isTraitable()
@@ -51,12 +58,13 @@ class __TwigTemplate_a822c2a53bf28c1ea72e71fe2480ea00ee359ef6fb5fa4b499f18aede30
 
     public function getDebugInfo()
     {
-        return array (  34 => 9,  22 => 1,);
+        return array (  41 => 10,  32 => 4,  27 => 2,  22 => 1,);
     }
 }
 /* <form action="{{ path("fos_user_security_check") }}" method="post">*/
+/*     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">*/
 /*     <div class="form-group">*/
-/*         <input class="form-control" placeholder="Username" type="text" id="username" name="_username" value="" required="required" />*/
+/*         <input class="form-control" placeholder="Username" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*         <input class="form-control" placeholder="Password" type="password" id="password" name="_password" required="required" />*/

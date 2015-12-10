@@ -105,6 +105,7 @@
   'UserBundle:Resetting:request_content.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/Resetting/request_content.html.twig',
   'UserBundle:Resetting:reset.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/Resetting/reset.html.twig',
   'UserBundle:Resetting:reset_content.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/Resetting/reset_content.html.twig',
+  'UserBundle:Security:horitzontal-login.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/Security/horitzontal-login.html.twig',
   'UserBundle:Security:login.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/Security/login.html.twig',
   'FOSUserBundle:ChangePassword:changePassword.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/ChangePassword/changePassword.html.twig',
   'FOSUserBundle:ChangePassword:changePassword_content.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/src/Trascastro/UserBundle/Resources/views/ChangePassword/changePassword_content.html.twig',

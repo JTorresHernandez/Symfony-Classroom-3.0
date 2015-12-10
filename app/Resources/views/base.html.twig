@@ -52,9 +52,8 @@
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <a class="btn btn-success" href="{{ path('fos_user_security_logout') }}">Sign out</a>
                     <a class="btn btn-danger" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
-                {% else %}
-                    {{ include('FOSUserBundle:Security:horitzontal-login.html.twig') }}
-
+                {% elseif app.request.get('_route') != 'fos_user_security_login' and app.request.get('_route') != 'fos_user_registration_register' %}
+                    {{ render(controller('UserBundle:HoritzontalLogin:horitzontalLogin'))}}
                 {% endif %}
                 </div>
             </ul>
