@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appProdUrlMatcher.
+ * appPRODUrlMatcher.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
+class appPRODUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
 {
     /**
      * Constructor.
@@ -213,18 +213,88 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         }
         not_fos_user_change_password:
 
-        // app_index_index
+        // app_article_articles
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'app_index_index');
+                return $this->redirect($pathinfo.'/', 'app_article_articles');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\IndexController::indexAction',  '_route' => 'app_index_index',);
+            return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesAction',  '_route' => 'app_article_articles',);
         }
 
-        // app_index_sendEmail
-        if ($pathinfo === '/send-email') {
-            return array (  '_controller' => 'AppBundle\\Controller\\IndexController::sendEmailAction',  '_route' => 'app_index_sendEmail',);
+        // app_article_new
+        if ($pathinfo === '/new') {
+            return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::newAction',  '_route' => 'app_article_new',);
+        }
+
+        // app_article_edit
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editAction',));
+        }
+
+        // app_article_show
+        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/articles')) {
+            // app_articles_byTag
+            if (0 === strpos($pathinfo, '/articles/tag') && preg_match('#^/articles/tag/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byTag')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByTagAction',));
+            }
+
+            // app_articles_byUser
+            if (0 === strpos($pathinfo, '/articles/user') && preg_match('#^/articles/user/(?P<username>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSer',));
+            }
+
+        }
+
+        // app_tags_tags
+        if (rtrim($pathinfo, '/') === '/tags') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'app_tags_tags');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin')) {
+            // app_admin_index_index
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'app_admin_index_index');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\Admin\\IndexController::indexAction',  '_route' => 'app_admin_index_index',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/tags')) {
+                // app_admin_tag_unused
+                if ($pathinfo === '/admin/tags/unused') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::showUnusedTagsAction',  '_route' => 'app_admin_tag_unused',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/tags/remove')) {
+                    // app_admin_tag_remove
+                    if (preg_match('#^/admin/tags/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_tag_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::removeTagAction',));
+                    }
+
+                    // app_admin_tag_removeAllUnusedTags
+                    if ($pathinfo === '/admin/tags/remove-all-unused-tags') {
+                        return array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::removeAllUnusedTagsAction',  '_route' => 'app_admin_tag_removeAllUnusedTags',);
+                    }
+
+                }
+
+            }
+
+            // app_admin_article_remove
+            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_article_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\ArticleController::removeArticle',));
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
