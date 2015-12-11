@@ -78,4 +78,14 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
         //var_dump($query->getDQL());die;
         return $query;
     }
+
+    public function getUnusedTags()
+    {
+        return $this->createQueryBuilder('tag')
+            ->leftJoin('tag.articles', 'articles')
+            ->andWhere('tag.articles is EMPTY')
+            ->getQuery()
+            ->execute()
+        ;
+    }
 }

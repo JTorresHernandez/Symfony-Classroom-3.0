@@ -332,6 +332,44 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\TagController::tagsAction',  '_route' => 'app_tags_tags',);
         }
 
+        if (0 === strpos($pathinfo, '/admin')) {
+            // app_admin_index_index
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'app_admin_index_index');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\Admin\\IndexController::indexAction',  '_route' => 'app_admin_index_index',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/tags')) {
+                // app_admin_tag_unused
+                if ($pathinfo === '/admin/tags/unused') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::showUnusedTagsAction',  '_route' => 'app_admin_tag_unused',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/tags/remove')) {
+                    // app_admin_tag_remove
+                    if (preg_match('#^/admin/tags/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_tag_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::removeTagAction',));
+                    }
+
+                    // app_admin_tag_removeAllUnusedTags
+                    if ($pathinfo === '/admin/tags/remove-all-unused-tags') {
+                        return array (  '_controller' => 'AppBundle\\Controller\\Admin\\TagController::removeAllUnusedTagsAction',  '_route' => 'app_admin_tag_removeAllUnusedTags',);
+                    }
+
+                }
+
+            }
+
+            // app_admin_article_remove
+            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_article_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\ArticleController::removeArticle',));
+            }
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

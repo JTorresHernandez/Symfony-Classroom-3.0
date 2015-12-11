@@ -9,3 +9,18 @@ app.tags:
     resource: "@AppBundle/Controller/TagController.php"
     type: annotation
     prefix: /tags
+
+app.admin.index:
+    resource: "@AppBundle/Controller/Admin/IndexController.php"
+    type: annotation
+    prefix: /admin
+
+app.admin.tags:
+    resource: "@AppBundle/Controller/Admin/TagController.php"
+    type: annotation
+    prefix: /admin/tags
+
+app.admin.articles:
+    resource: "@AppBundle/Controller/Admin/ArticleController.php"
+    type: annotation
+    prefix: /admin/articles

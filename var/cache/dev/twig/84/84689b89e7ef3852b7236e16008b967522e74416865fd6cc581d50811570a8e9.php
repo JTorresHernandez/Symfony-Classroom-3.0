@@ -21,25 +21,25 @@ class __TwigTemplate_fc2e4357f2da33b690c0c3a6a74a2bce4d156c5b36891f3930b6d7dfadc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_26df1f37be97eab6d0813433c1d1f088201205885dbdc1720bbe018bed8daac6 = $this->env->getExtension("native_profiler");
-        $__internal_26df1f37be97eab6d0813433c1d1f088201205885dbdc1720bbe018bed8daac6->enter($__internal_26df1f37be97eab6d0813433c1d1f088201205885dbdc1720bbe018bed8daac6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Profile:show.html.twig"));
+        $__internal_a5dbe65ea6aa250b02bde1d7a263ed4c4b56c72a5ca846d280edaaf11ea697d8 = $this->env->getExtension("native_profiler");
+        $__internal_a5dbe65ea6aa250b02bde1d7a263ed4c4b56c72a5ca846d280edaaf11ea697d8->enter($__internal_a5dbe65ea6aa250b02bde1d7a263ed4c4b56c72a5ca846d280edaaf11ea697d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Profile:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_26df1f37be97eab6d0813433c1d1f088201205885dbdc1720bbe018bed8daac6->leave($__internal_26df1f37be97eab6d0813433c1d1f088201205885dbdc1720bbe018bed8daac6_prof);
+        $__internal_a5dbe65ea6aa250b02bde1d7a263ed4c4b56c72a5ca846d280edaaf11ea697d8->leave($__internal_a5dbe65ea6aa250b02bde1d7a263ed4c4b56c72a5ca846d280edaaf11ea697d8_prof);
 
     }
 
     // line 3
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_4d0d9cc160674561409404ca1f977718d4cd1bf0e7244ce0bea26117bfdbb027 = $this->env->getExtension("native_profiler");
-        $__internal_4d0d9cc160674561409404ca1f977718d4cd1bf0e7244ce0bea26117bfdbb027->enter($__internal_4d0d9cc160674561409404ca1f977718d4cd1bf0e7244ce0bea26117bfdbb027_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_27c0b084a958e174c1e5f21c872dc5fb775658bef6dc042714d2cf2440acbc47 = $this->env->getExtension("native_profiler");
+        $__internal_27c0b084a958e174c1e5f21c872dc5fb775658bef6dc042714d2cf2440acbc47->enter($__internal_27c0b084a958e174c1e5f21c872dc5fb775658bef6dc042714d2cf2440acbc47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 4
         $this->loadTemplate("FOSUserBundle:Profile:show_content.html.twig", "UserBundle:Profile:show.html.twig", 4)->display($context);
         
-        $__internal_4d0d9cc160674561409404ca1f977718d4cd1bf0e7244ce0bea26117bfdbb027->leave($__internal_4d0d9cc160674561409404ca1f977718d4cd1bf0e7244ce0bea26117bfdbb027_prof);
+        $__internal_27c0b084a958e174c1e5f21c872dc5fb775658bef6dc042714d2cf2440acbc47->leave($__internal_27c0b084a958e174c1e5f21c872dc5fb775658bef6dc042714d2cf2440acbc47_prof);
 
     }
 

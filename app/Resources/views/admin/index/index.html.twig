@@ -1,0 +1,8 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <ul>
+        <li><a href="{{ path('app_admin_tag_unused') }}">List unused tags</a></li>
+        <li><a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></li>
+    </ul>
+{% endblock %}

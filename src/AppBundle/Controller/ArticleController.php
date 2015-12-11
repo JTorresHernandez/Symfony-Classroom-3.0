@@ -20,7 +20,6 @@ class ArticleController extends Controller
     public function articlesAction(Request $request)
     {
         $m = $this->getDoctrine()->getManager();
-
         $articleRepo = $m->getRepository('AppBundle:Article');
 
         // $articles = $articleRepo->findAll() ---> Does lazy loading and it produces extra queries from the templates

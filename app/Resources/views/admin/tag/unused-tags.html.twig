@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {% if tags %}
+    <table class="table">
+        <thead>
+            <td><strong>Tag</strong></td>
+            <td></td>
+        </thead>
+        {% for tag in tags %}
+            <tr>
+                <td>{{ tag }}</td>
+                <td><a class="btn btn-danger" href="{{ path('app_admin_tag_remove', {'id': tag.id}) }}">remove</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <a class="btn btn-danger" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>
+    </div>
+    {% else %}
+        <h1>No unused tags were found</h1>
+    {% endif %}
+{% endblock %}
