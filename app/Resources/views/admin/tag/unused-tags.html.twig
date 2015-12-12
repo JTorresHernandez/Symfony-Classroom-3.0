@@ -1,4 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends ':admin:admin_layout.html.twig' %}
+
+{% block headTitle %}Unused Tags{% endblock %}
 
 {% block body %}
     {% if tags %}
@@ -18,6 +20,6 @@
         <a class="btn btn-danger" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>
     </div>
     {% else %}
-        <h1>No unused tags were found</h1>
+        <p>No unused tags were found</p>
     {% endif %}
 {% endblock %}

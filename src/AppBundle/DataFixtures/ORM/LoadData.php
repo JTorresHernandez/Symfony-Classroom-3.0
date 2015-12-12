@@ -43,6 +43,17 @@ class LoadData implements FixtureInterface
         ;
         $m->persist($user2);
 
+        $a0 = new Article();
+        $a0->setTitle('PHP 7 is twice faster');
+        $a0->setAuthor($user1);
+        $a0->setIntro('
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?
+        ');
+        $a0->setContent('
+            Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that\'s what you see at a toy store. And you must think you\'re in a toy store, because you\'re here shopping for an infant named Jeb.
+        ');
+        $m->persist($a0);
+
         $a1 = new Article();
         $a1->setTitle('Boston Celtics NBA Champions');
         $a1->setAuthor($user1);
@@ -93,6 +104,11 @@ class LoadData implements FixtureInterface
 
         $t6 = new Tag();
         $t6->setName('Programming');
+
+        $a0
+            ->addTag($t5)
+            ->addTag($t6)
+        ;
 
         $a1
             ->addTag($t1)

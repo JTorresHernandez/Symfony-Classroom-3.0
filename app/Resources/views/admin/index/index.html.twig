@@ -1,12 +1,9 @@
-{% extends '::base.html.twig' %}
+{% extends ':admin:admin_layout.html.twig' %}
+
+{% block headTitle %}Dashboard{% endblock %}
 
 {% block body %}
-    <table class="table">
-        <tr>
-            <td><a class="btn btn-default" href="{{ path('app_admin_tag_unused') }}">List unused tags</a></td>
-        </tr>
-        <tr>
-            <td><a class="btn btn-default" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></td>
-        </tr>
-    </table>
+    <div>
+        <p>Welcome to dashboard</p>
+    </div>
 {% endblock %}

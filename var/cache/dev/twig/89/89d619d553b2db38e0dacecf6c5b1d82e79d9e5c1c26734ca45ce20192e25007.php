@@ -8,52 +8,54 @@ class __TwigTemplate_90d17780bbaebf6e7246c718c5f193e9540846ff1040d475697c2f30d3a
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("::base.html.twig", ":admin/index:index.html.twig", 1);
+        $this->parent = $this->loadTemplate(":admin:admin_layout.html.twig", ":admin/index:index.html.twig", 1);
         $this->blocks = array(
+            'headTitle' => array($this, 'block_headTitle'),
             'body' => array($this, 'block_body'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return ":admin:admin_layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b3389d1682683ea8b59b14b2d8f349734236995e4af928843e289a81e8565613 = $this->env->getExtension("native_profiler");
-        $__internal_b3389d1682683ea8b59b14b2d8f349734236995e4af928843e289a81e8565613->enter($__internal_b3389d1682683ea8b59b14b2d8f349734236995e4af928843e289a81e8565613_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin/index:index.html.twig"));
+        $__internal_ad827b1f5750acff541884db9a2fc0aa1a5212e525ee95536af776e6274684d8 = $this->env->getExtension("native_profiler");
+        $__internal_ad827b1f5750acff541884db9a2fc0aa1a5212e525ee95536af776e6274684d8->enter($__internal_ad827b1f5750acff541884db9a2fc0aa1a5212e525ee95536af776e6274684d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin/index:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b3389d1682683ea8b59b14b2d8f349734236995e4af928843e289a81e8565613->leave($__internal_b3389d1682683ea8b59b14b2d8f349734236995e4af928843e289a81e8565613_prof);
+        $__internal_ad827b1f5750acff541884db9a2fc0aa1a5212e525ee95536af776e6274684d8->leave($__internal_ad827b1f5750acff541884db9a2fc0aa1a5212e525ee95536af776e6274684d8_prof);
 
     }
 
     // line 3
+    public function block_headTitle($context, array $blocks = array())
+    {
+        $__internal_d8dd84f3f12b31a6af151f5f564fb15668d827a57664aed8b601ed8a126b16d4 = $this->env->getExtension("native_profiler");
+        $__internal_d8dd84f3f12b31a6af151f5f564fb15668d827a57664aed8b601ed8a126b16d4->enter($__internal_d8dd84f3f12b31a6af151f5f564fb15668d827a57664aed8b601ed8a126b16d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
+
+        echo "Dashboard";
+        
+        $__internal_d8dd84f3f12b31a6af151f5f564fb15668d827a57664aed8b601ed8a126b16d4->leave($__internal_d8dd84f3f12b31a6af151f5f564fb15668d827a57664aed8b601ed8a126b16d4_prof);
+
+    }
+
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_aa20bf1b6bbbbb3036dffdba99406678ac16f4943c903e7aa42ba0ad1da69615 = $this->env->getExtension("native_profiler");
-        $__internal_aa20bf1b6bbbbb3036dffdba99406678ac16f4943c903e7aa42ba0ad1da69615->enter($__internal_aa20bf1b6bbbbb3036dffdba99406678ac16f4943c903e7aa42ba0ad1da69615_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cd414fc0fc61ef5e03f22b07825ef4c9d19d35c43a2d0dd41573b71cf920cab8 = $this->env->getExtension("native_profiler");
+        $__internal_cd414fc0fc61ef5e03f22b07825ef4c9d19d35c43a2d0dd41573b71cf920cab8->enter($__internal_cd414fc0fc61ef5e03f22b07825ef4c9d19d35c43a2d0dd41573b71cf920cab8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
-        echo "    <table class=\"table\">
-        <tr>
-            <td><a class=\"btn btn-default\" href=\"";
         // line 6
-        echo $this->env->getExtension('routing')->getPath("app_admin_tag_unused");
-        echo "\">List unused tags</a></td>
-        </tr>
-        <tr>
-            <td><a class=\"btn btn-default\" href=\"";
-        // line 9
-        echo $this->env->getExtension('routing')->getPath("app_admin_tag_removeAllUnusedTags");
-        echo "\">Remove all unused tags</a></td>
-        </tr>
-    </table>
+        echo "    <div>
+        <p>Welcome to dashboard</p>
+    </div>
 ";
         
-        $__internal_aa20bf1b6bbbbb3036dffdba99406678ac16f4943c903e7aa42ba0ad1da69615->leave($__internal_aa20bf1b6bbbbb3036dffdba99406678ac16f4943c903e7aa42ba0ad1da69615_prof);
+        $__internal_cd414fc0fc61ef5e03f22b07825ef4c9d19d35c43a2d0dd41573b71cf920cab8->leave($__internal_cd414fc0fc61ef5e03f22b07825ef4c9d19d35c43a2d0dd41573b71cf920cab8_prof);
 
     }
 
@@ -69,18 +71,15 @@ class __TwigTemplate_90d17780bbaebf6e7246c718c5f193e9540846ff1040d475697c2f30d3a
 
     public function getDebugInfo()
     {
-        return array (  50 => 9,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  53 => 6,  47 => 5,  35 => 3,  11 => 1,);
     }
 }
-/* {% extends '::base.html.twig' %}*/
+/* {% extends ':admin:admin_layout.html.twig' %}*/
+/* */
+/* {% block headTitle %}Dashboard{% endblock %}*/
 /* */
 /* {% block body %}*/
-/*     <table class="table">*/
-/*         <tr>*/
-/*             <td><a class="btn btn-default" href="{{ path('app_admin_tag_unused') }}">List unused tags</a></td>*/
-/*         </tr>*/
-/*         <tr>*/
-/*             <td><a class="btn btn-default" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></td>*/
-/*         </tr>*/
-/*     </table>*/
+/*     <div>*/
+/*         <p>Welcome to dashboard</p>*/
+/*     </div>*/
 /* {% endblock %}*/

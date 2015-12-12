@@ -15,10 +15,10 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,14 +38,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">Dashboard</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="{{ path('app_article_articles') }}">Home</a></li>
+
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">
@@ -58,26 +56,34 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
+                <li class="active"><a href="#">Articles <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">New article</a></li>
+                <li><a href="#">Update article</a></li>
+                <li><a href="#">Remove article</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">Nav item</a></li>
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
-                <li><a href="">More navigation</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">New tag</a></li>
+                <li><a href="">Update tag</a></li>
+                <li><a href="">Remove tag</a></li>
+                <li><a href="{{ path('app_admin_tag_unused') }}">Unused tags</a></li>
+                <li><a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">Nav item again</a></li>
-                <li><a href="">One more nav</a></li>
-                <li><a href="">Another nav item</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">New comment</a></li>
+                <li><a href="#">Update comment</a></li>
+                <li><a href="#">Remove comment</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Users</a></li>
+                <li><a href="">New user</a></li>
+                <li><a href="">Update user</a></li>
+                <li><a href="">Remove user</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Dashboard - {% block headTitle %}{% endblock %}</h1>
+            <h1 class="page-header">{% block headTitle %}{% endblock %}</h1>
             {% block body %}{% endblock %}
         </div>
     </div>
@@ -86,10 +92,10 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
 <script>window.jQuery || document.write('<script src="{{ asset('js/jquery.min.js') }}"><\/script>')</script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
 </body>
 </html>
