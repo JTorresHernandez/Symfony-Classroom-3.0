@@ -2018,7 +2018,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>566b1123f207c1.19308871</argument>
+            <argument>566c109060c991.33605973</argument>
           </service>
         </argument>
       </argument>
@@ -2307,7 +2307,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>566b1123f207c1.19308871</argument>
+            <argument>566c109060c991.33605973</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3972,6 +3972,10 @@
       <call method="addPath">
         <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/KnpPaginatorBundle/views</argument>
+        <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/vendor/knplabs/knp-paginator-bundle/Resources/views</argument>

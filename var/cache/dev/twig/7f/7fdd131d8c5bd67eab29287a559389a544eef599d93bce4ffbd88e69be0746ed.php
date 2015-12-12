@@ -21,20 +21,20 @@ class __TwigTemplate_7e611c27757203cbc530905f667861034d646161d367f3bdb2c5efb2d3d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a198d6d9563f871382b75d8074fc7297b27bca37f15a6ea693aa221f79c687ba = $this->env->getExtension("native_profiler");
-        $__internal_a198d6d9563f871382b75d8074fc7297b27bca37f15a6ea693aa221f79c687ba->enter($__internal_a198d6d9563f871382b75d8074fc7297b27bca37f15a6ea693aa221f79c687ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error404.html.twig"));
+        $__internal_22bea0cbd5e1c06ef4ea8bde26209a3c012178a70f4d6f69bf61a262c426dfba = $this->env->getExtension("native_profiler");
+        $__internal_22bea0cbd5e1c06ef4ea8bde26209a3c012178a70f4d6f69bf61a262c426dfba->enter($__internal_22bea0cbd5e1c06ef4ea8bde26209a3c012178a70f4d6f69bf61a262c426dfba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error404.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a198d6d9563f871382b75d8074fc7297b27bca37f15a6ea693aa221f79c687ba->leave($__internal_a198d6d9563f871382b75d8074fc7297b27bca37f15a6ea693aa221f79c687ba_prof);
+        $__internal_22bea0cbd5e1c06ef4ea8bde26209a3c012178a70f4d6f69bf61a262c426dfba->leave($__internal_22bea0cbd5e1c06ef4ea8bde26209a3c012178a70f4d6f69bf61a262c426dfba_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9e5f508e51d396ad450c79601de90ae2349c952dd638ba2b89cb77f75bd60a13 = $this->env->getExtension("native_profiler");
-        $__internal_9e5f508e51d396ad450c79601de90ae2349c952dd638ba2b89cb77f75bd60a13->enter($__internal_9e5f508e51d396ad450c79601de90ae2349c952dd638ba2b89cb77f75bd60a13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c2665f5049a59e92aef58b004a0d0262c27fa4c1add6a0225cc35a10e24145f7 = $this->env->getExtension("native_profiler");
+        $__internal_c2665f5049a59e92aef58b004a0d0262c27fa4c1add6a0225cc35a10e24145f7->enter($__internal_c2665f5049a59e92aef58b004a0d0262c27fa4c1add6a0225cc35a10e24145f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>404 - Page not found</h1>
@@ -59,7 +59,7 @@ class __TwigTemplate_7e611c27757203cbc530905f667861034d646161d367f3bdb2c5efb2d3d
     </p>
 ";
         
-        $__internal_9e5f508e51d396ad450c79601de90ae2349c952dd638ba2b89cb77f75bd60a13->leave($__internal_9e5f508e51d396ad450c79601de90ae2349c952dd638ba2b89cb77f75bd60a13_prof);
+        $__internal_c2665f5049a59e92aef58b004a0d0262c27fa4c1add6a0225cc35a10e24145f7->leave($__internal_c2665f5049a59e92aef58b004a0d0262c27fa4c1add6a0225cc35a10e24145f7_prof);
 
     }
 

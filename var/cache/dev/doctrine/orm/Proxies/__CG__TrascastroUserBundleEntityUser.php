@@ -64,10 +64,10 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+            return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
         }
 
-        return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+        return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
     }
 
     /**

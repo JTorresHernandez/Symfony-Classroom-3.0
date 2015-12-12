@@ -15,11 +15,11 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5 = $this->env->getExtension("native_profiler");
-        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5->enter($__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8 = $this->env->getExtension("native_profiler");
+        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8->enter($__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
-        echo "<div class=\"article margin-bottom-lg\"> ";
+        echo "<div class=\"rounded-box margin-bottom-lg\"> ";
         // line 2
         echo "    ";
         if ((($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "author", array()) == $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) || $this->env->getExtension('security')->isGranted("ROLE_ADMIN"))) {
@@ -104,8 +104,25 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         <div></div>
     </div>
 </div> ";
+        // line 29
+        echo "
+";
+        // line 30
+        if (array_key_exists("show_content", $context)) {
+            // line 31
+            echo "    ";
+            echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AppBundle:Comment:showForm", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))));
+            echo "
+";
+        }
+        // line 33
+        if (array_key_exists("comments", $context)) {
+            // line 34
+            echo "    ";
+            $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 34)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
+        }
         
-        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5->leave($__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5_prof);
+        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8->leave($__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8_prof);
 
     }
 
@@ -121,10 +138,10 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     public function getDebugInfo()
     {
-        return array (  103 => 25,  92 => 23,  88 => 22,  84 => 20,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  57 => 11,  50 => 10,  46 => 8,  38 => 6,  36 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  121 => 34,  119 => 33,  113 => 31,  111 => 30,  108 => 29,  103 => 25,  92 => 23,  88 => 22,  84 => 20,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  57 => 11,  50 => 10,  46 => 8,  38 => 6,  36 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 }
-/* <div class="article margin-bottom-lg"> {# article #}*/
+/* <div class="rounded-box margin-bottom-lg"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
 /*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
@@ -152,3 +169,10 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*         <div></div>*/
 /*     </div>*/
 /* </div> {# end article#}*/
+/* */
+/* {% if show_content is defined %}*/
+/*     {{ render(controller('AppBundle:Comment:showForm', {'id': article.id})) }}*/
+/* {% endif %}*/
+/* {% if comments is defined %}*/
+/*     {% include ':comment:showCommentsByArticle.html.twig' with {'comments': comments} %}*/
+/* {% endif %}*/

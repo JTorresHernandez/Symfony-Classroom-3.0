@@ -1,0 +1,4 @@
+<div class="rounded-box margin-bottom-md">
+    <div class="margin-bottom-sm"><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': comment.author.username}) }}">@{{ comment.author }}</a> :: <strong>Created:</strong> {{ comment.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ comment.updatedAt|date("d/m/Y H:i:s") }}</div>
+    <div style="font-size: medium">{{ comment }}</div>
+</div>

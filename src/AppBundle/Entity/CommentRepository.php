@@ -16,5 +16,31 @@ use Doctrine\ORM\EntityRepository;
 
 class CommentRepository extends EntityRepository
 {
+    public function queryCommentsByArticle($id)
+    {
+        return $this->createQueryBuilder('c')
+            ->leftJoin('c.article', 'article')
+            ->andWhere('article.id = :id')
+            ->setParameter('id', $id)
+            ->addOrderBy('c.createdAt', 'DESC')
+            ->getQuery()
+        ;
+    }
 
+    public function commentsByArticle($id)
+    {
+        return $this->queryCommentsByArticle($id)->execute();
+    }
+
+    public function removeCommentsByArticle($id)
+    {
+        $this->createQueryBuilder('c')
+            ->delete()
+            ->leftJoin('c.article', 'article')
+            ->andWhere('article.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->execute()
+        ;
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-/* FOSUserBundle:Registration:register_content.html.twig */
+/* UserBundle:Registration:register_content.html.twig */
 class __TwigTemplate_9cc113f35904f695a044c666a0d61cf699d600ec515ea92e75a0799f92ed198e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_9cc113f35904f695a044c666a0d61cf699d600ec515ea92e75a0799f92e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2bb77b1040d560c00bec19da7678ed58d16853c5e9adb38a5eb709fa008115e3 = $this->env->getExtension("native_profiler");
-        $__internal_2bb77b1040d560c00bec19da7678ed58d16853c5e9adb38a5eb709fa008115e3->enter($__internal_2bb77b1040d560c00bec19da7678ed58d16853c5e9adb38a5eb709fa008115e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
+        $__internal_3c8938597685bdecc5bf6b21bb31ee68577109c089c22dd172f0bc4daf2982ae = $this->env->getExtension("native_profiler");
+        $__internal_3c8938597685bdecc5bf6b21bb31ee68577109c089c22dd172f0bc4daf2982ae->enter($__internal_3c8938597685bdecc5bf6b21bb31ee68577109c089c22dd172f0bc4daf2982ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Registration:register_content.html.twig"));
 
         // line 2
         echo "
@@ -40,13 +40,13 @@ class __TwigTemplate_9cc113f35904f695a044c666a0d61cf699d600ec515ea92e75a0799f92e
         echo "
 ";
         
-        $__internal_2bb77b1040d560c00bec19da7678ed58d16853c5e9adb38a5eb709fa008115e3->leave($__internal_2bb77b1040d560c00bec19da7678ed58d16853c5e9adb38a5eb709fa008115e3_prof);
+        $__internal_3c8938597685bdecc5bf6b21bb31ee68577109c089c22dd172f0bc4daf2982ae->leave($__internal_3c8938597685bdecc5bf6b21bb31ee68577109c089c22dd172f0bc4daf2982ae_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Registration:register_content.html.twig";
+        return "UserBundle:Registration:register_content.html.twig";
     }
 
     public function isTraitable()

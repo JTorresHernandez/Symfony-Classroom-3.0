@@ -1,4 +1,4 @@
-<div class="article margin-bottom-lg"> {# article #}
+<div class="rounded-box margin-bottom-lg"> {# article #}
     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}
         <div style="float: right;">
             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>
@@ -26,3 +26,10 @@
         <div></div>
     </div>
 </div> {# end article#}
+
+{% if show_content is defined %}
+    {{ render(controller('AppBundle:Comment:showForm', {'id': article.id})) }}
+{% endif %}
+{% if comments is defined %}
+    {% include ':comment:showCommentsByArticle.html.twig' with {'comments': comments} %}
+{% endif %}

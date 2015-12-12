@@ -35,9 +35,9 @@ class Comment
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text")
+     * @ORM\Column(name="comment", type="text")
      */
-    private $content;
+    private $comment;
 
     /**
      * @ORM\ManyToOne(targetEntity="Trascastro\UserBundle\Entity\User", inversedBy="comments")
@@ -79,27 +79,27 @@ class Comment
     }
 
     /**
-     * Set content
+     * Set comment
      *
-     * @param string $content
+     * @param string $comment
      *
      * @return Comment
      */
-    public function setContent($content)
+    public function setComment($comment)
     {
-        $this->content = $content;
+        $this->comment = $comment;
 
         return $this;
     }
 
     /**
-     * Get content
+     * Get comment
      *
      * @return string
      */
-    public function getContent()
+    public function getComment()
     {
-        return $this->content;
+        return $this->comment;
     }
 
     /**
@@ -201,6 +201,6 @@ class Comment
      */
     public function __toString()
     {
-        return $this->getContent();
+        return $this->getComment();
     }
 }

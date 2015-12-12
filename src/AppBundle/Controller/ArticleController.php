@@ -103,10 +103,19 @@ class ArticleController extends Controller
     /**
      * @Route("/show/{id}", name="app_article_show")
      */
-    public function showAction(Article $article)
+    public function showAction(Article $article, Request $request)
     {
+        $m = $this->getDoctrine()->getManager();
+        $commentRepo = $m->getRepository('AppBundle:Comment');
+
+        $query = $commentRepo->queryCommentsByArticle($article->getId());
+
+        $paginator = $this->get('knp_paginator');
+        $comments = $paginator->paginate($query, $request->query->getInt('page', 1), 5);
+
         return $this->render(':article:article.html.twig', [
-            'article' => $article
+            'article'   => $article,
+            'comments'  => $comments,
         ]);
     }
 
