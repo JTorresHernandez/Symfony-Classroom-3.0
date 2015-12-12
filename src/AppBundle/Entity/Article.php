@@ -65,11 +65,17 @@ class Article
      */
     private $author;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="article")
+     */
+    private $comments;
+
     public function __construct()
     {
-        $this->tags = new ArrayCollection();
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = $this->createdAt;
+        $this->tags         = new ArrayCollection();
+        $this->comments     = new ArrayCollection();
+        $this->createdAt    = new \DateTime();
+        $this->updatedAt    = $this->createdAt;
     }
 
     /**
@@ -192,7 +198,7 @@ class Article
     }
 
     /**
-     *
+     * created to prevent generation by /bin/console doctrine:generate:entities
      */
     public function setCreatedAt()
     {

@@ -49,13 +49,19 @@ class User extends BaseUser
      */
     private $articles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="author")
+     */
+    private $comments;
+
     public function __construct()
     {
         parent::__construct();
 
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = $this->createdAt;
-        $this->articles = new ArrayCollection();
+        $this->createdAt    = new \DateTime();
+        $this->updatedAt    = $this->createdAt;
+        $this->articles     = new ArrayCollection();
+        $this->comments     = new ArrayCollection();
     }
 
     public function setCreatedAt()
