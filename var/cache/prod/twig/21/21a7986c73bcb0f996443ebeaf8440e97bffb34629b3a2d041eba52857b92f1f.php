@@ -8,15 +8,16 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("::base.html.twig", ":admin/tag:unused-tags.html.twig", 1);
+        $this->parent = $this->loadTemplate(":admin:admin_layout.html.twig", ":admin/tag:unused-tags.html.twig", 1);
         $this->blocks = array(
+            'headTitle' => array($this, 'block_headTitle'),
             'body' => array($this, 'block_body'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return ":admin:admin_layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,30 +26,36 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
     }
 
     // line 3
+    public function block_headTitle($context, array $blocks = array())
+    {
+        echo "Unused Tags";
+    }
+
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "    ";
         if ((isset($context["tags"]) ? $context["tags"] : null)) {
-            // line 5
+            // line 7
             echo "    <table class=\"table\">
         <thead>
             <td><strong>Tag</strong></td>
             <td></td>
         </thead>
         ";
-            // line 10
+            // line 12
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["tags"]) ? $context["tags"] : null));
             foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
-                // line 11
+                // line 13
                 echo "            <tr>
                 <td>";
-                // line 12
+                // line 14
                 echo twig_escape_filter($this->env, $context["tag"], "html", null, true);
                 echo "</td>
                 <td><a class=\"btn btn-danger\" href=\"";
-                // line 13
+                // line 15
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_tag_remove", array("id" => $this->getAttribute($context["tag"], "id", array()))), "html", null, true);
                 echo "\">remove</a></td>
             </tr>
@@ -57,18 +64,18 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 16
+            // line 18
             echo "    </table>
     <div>
         <a class=\"btn btn-danger\" href=\"";
-            // line 18
+            // line 20
             echo $this->env->getExtension('routing')->getPath("app_admin_tag_removeAllUnusedTags");
             echo "\">Remove all unused tags</a>
     </div>
     ";
         } else {
-            // line 21
-            echo "        <h1>No unused tags were found</h1>
+            // line 23
+            echo "        <p>No unused tags were found</p>
     ";
         }
     }
@@ -85,10 +92,12 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
 
     public function getDebugInfo()
     {
-        return array (  71 => 21,  65 => 18,  61 => 16,  52 => 13,  48 => 12,  45 => 11,  41 => 10,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  78 => 23,  72 => 20,  68 => 18,  59 => 15,  55 => 14,  52 => 13,  48 => 12,  41 => 7,  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
     }
 }
-/* {% extends '::base.html.twig' %}*/
+/* {% extends ':admin:admin_layout.html.twig' %}*/
+/* */
+/* {% block headTitle %}Unused Tags{% endblock %}*/
 /* */
 /* {% block body %}*/
 /*     {% if tags %}*/
@@ -108,6 +117,6 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
 /*         <a class="btn btn-danger" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>*/
 /*     </div>*/
 /*     {% else %}*/
-/*         <h1>No unused tags were found</h1>*/
+/*         <p>No unused tags were found</p>*/
 /*     {% endif %}*/
 /* {% endblock %}*/

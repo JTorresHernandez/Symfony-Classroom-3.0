@@ -8,15 +8,16 @@ class __TwigTemplate_5c56afad8e95b146893d50a5c8d3abb096f9f02f975667597a289af32b9
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("::base.html.twig", ":admin/index:index.html.twig", 1);
+        $this->parent = $this->loadTemplate(":admin:admin_layout.html.twig", ":admin/index:index.html.twig", 1);
         $this->blocks = array(
+            'headTitle' => array($this, 'block_headTitle'),
             'body' => array($this, 'block_body'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return ":admin:admin_layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,19 +26,18 @@ class __TwigTemplate_5c56afad8e95b146893d50a5c8d3abb096f9f02f975667597a289af32b9
     }
 
     // line 3
+    public function block_headTitle($context, array $blocks = array())
+    {
+        echo "Dashboard";
+    }
+
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        // line 4
-        echo "    <ul>
-        <li><a href=\"";
-        // line 5
-        echo $this->env->getExtension('routing')->getPath("app_admin_tag_unused");
-        echo "\">List unused tags</a></li>
-        <li><a href=\"";
         // line 6
-        echo $this->env->getExtension('routing')->getPath("app_admin_tag_removeAllUnusedTags");
-        echo "\">Remove all unused tags</a></li>
-    </ul>
+        echo "    <div>
+        <p>Welcome to dashboard</p>
+    </div>
 ";
     }
 
@@ -53,14 +53,15 @@ class __TwigTemplate_5c56afad8e95b146893d50a5c8d3abb096f9f02f975667597a289af32b9
 
     public function getDebugInfo()
     {
-        return array (  38 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
     }
 }
-/* {% extends '::base.html.twig' %}*/
+/* {% extends ':admin:admin_layout.html.twig' %}*/
+/* */
+/* {% block headTitle %}Dashboard{% endblock %}*/
 /* */
 /* {% block body %}*/
-/*     <ul>*/
-/*         <li><a href="{{ path('app_admin_tag_unused') }}">List unused tags</a></li>*/
-/*         <li><a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></li>*/
-/*     </ul>*/
+/*     <div>*/
+/*         <p>Welcome to dashboard</p>*/
+/*     </div>*/
 /* {% endblock %}*/

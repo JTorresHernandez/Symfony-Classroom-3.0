@@ -64,10 +64,10 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author');
+            return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author');
+        return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments');
     }
 
     /**
@@ -384,6 +384,39 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIntro', array($intro));
 
         return parent::setIntro($intro);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addComment(\AppBundle\Entity\Comment $comment)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComment', array($comment));
+
+        return parent::addComment($comment);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeComment(\AppBundle\Entity\Comment $comment)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComment', array($comment));
+
+        return parent::removeComment($comment);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getComments()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', array());
+
+        return parent::getComments();
     }
 
 }

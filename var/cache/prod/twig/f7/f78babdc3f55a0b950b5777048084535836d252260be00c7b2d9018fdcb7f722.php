@@ -36,7 +36,7 @@ class __TwigTemplate_ccfbe56696b0c2162bd18d1a4b6bea7234bdd1c824872433012d0892124
     {
         // line 6
         echo "    ";
-        $this->loadTemplate(":article:article_content.html.twig", ":article:article.html.twig", 6)->display(array_merge($context, array("show_content" => true)));
+        $this->loadTemplate(":article:article_content.html.twig", ":article:article.html.twig", 6)->display(array_merge($context, array("show_content" => true, "comments" => (isset($context["comments"]) ? $context["comments"] : null))));
     }
 
     public function getTemplateName()
@@ -59,5 +59,5 @@ class __TwigTemplate_ccfbe56696b0c2162bd18d1a4b6bea7234bdd1c824872433012d0892124
 /* {% block headTitle %}Show Article{% endblock %}*/
 /* */
 /* {% block body %}*/
-/*     {% include ':article:article_content.html.twig' with {'show_content': true} %}*/
+/*     {% include ':article:article_content.html.twig' with {'show_content': true, 'comments': comments} %}*/
 /* {% endblock %}*/

@@ -56,7 +56,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Articles <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Articles</a></li>
                 <li><a href="#">New article</a></li>
                 <li><a href="#">Update article</a></li>
                 <li><a href="#">Remove article</a></li>
@@ -66,8 +66,12 @@
                 <li><a href="">New tag</a></li>
                 <li><a href="">Update tag</a></li>
                 <li><a href="">Remove tag</a></li>
-                <li><a href="{{ path('app_admin_tag_unused') }}">Unused tags</a></li>
-                <li><a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></li>
+                <li {% if app.request.get('_route') == 'app_admin_tag_unused' %}class="active"{% endif %}>
+                    <a href="{{ path('app_admin_tag_unused') }}">Unused tags</a>
+                </li>
+                <li {% if app.request.get('_route') == 'app_admin_tag_removeAllUnusedTags' %}class="active"{% endif %}>
+                    <a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>
+                </li>
             </ul>
             <ul class="nav nav-sidebar">
                 <li><a href="#">Comments</a></li>

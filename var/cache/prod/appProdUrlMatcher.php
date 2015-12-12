@@ -297,6 +297,17 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
         }
 
+        // app_comment_new
+        if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if ($this->context->getMethod() != 'POST') {
+                $allow[] = 'POST';
+                goto not_app_comment_new;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_new')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::submitCommentAction',));
+        }
+        not_app_comment_new:
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

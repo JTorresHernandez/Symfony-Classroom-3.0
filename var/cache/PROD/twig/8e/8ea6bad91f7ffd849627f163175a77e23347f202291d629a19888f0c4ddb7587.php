@@ -16,7 +16,7 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"article\"> ";
+        echo "<div class=\"rounded-box margin-bottom-lg\"> ";
         // line 2
         echo "    ";
         if ((($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "author", array()) == $this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array())) || $this->env->getExtension('security')->isGranted("ROLE_ADMIN"))) {
@@ -101,6 +101,23 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
         <div></div>
     </div>
 </div> ";
+        // line 29
+        echo "
+";
+        // line 30
+        if (array_key_exists("show_content", $context)) {
+            // line 31
+            echo "    ";
+            echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AppBundle:Comment:showForm", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))));
+            echo "
+";
+        }
+        // line 33
+        if (array_key_exists("comments", $context)) {
+            // line 34
+            echo "    ";
+            $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 34)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : null))));
+        }
     }
 
     public function getTemplateName()
@@ -115,10 +132,10 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
 
     public function getDebugInfo()
     {
-        return array (  100 => 25,  89 => 23,  85 => 22,  81 => 20,  75 => 17,  72 => 16,  70 => 15,  65 => 13,  54 => 11,  47 => 10,  43 => 8,  35 => 6,  33 => 5,  27 => 4,  24 => 3,  21 => 2,  19 => 1,);
+        return array (  118 => 34,  116 => 33,  110 => 31,  108 => 30,  105 => 29,  100 => 25,  89 => 23,  85 => 22,  81 => 20,  75 => 17,  72 => 16,  70 => 15,  65 => 13,  54 => 11,  47 => 10,  43 => 8,  35 => 6,  33 => 5,  27 => 4,  24 => 3,  21 => 2,  19 => 1,);
     }
 }
-/* <div class="article"> {# article #}*/
+/* <div class="rounded-box margin-bottom-lg"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
 /*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
@@ -146,3 +163,10 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
 /*         <div></div>*/
 /*     </div>*/
 /* </div> {# end article#}*/
+/* */
+/* {% if show_content is defined %}*/
+/*     {{ render(controller('AppBundle:Comment:showForm', {'id': article.id})) }}*/
+/* {% endif %}*/
+/* {% if comments is defined %}*/
+/*     {% include ':comment:showCommentsByArticle.html.twig' with {'comments': comments} %}*/
+/* {% endif %}*/

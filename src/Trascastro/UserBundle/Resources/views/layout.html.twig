@@ -11,8 +11,14 @@
         {% endfor %}
     {% endif %}
 
-    <div>
-        {% block fos_user_content %}
-        {% endblock fos_user_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+            </div>
+        </div>
     </div>
 {% endblock %}
+
+{% block sidebar %}{% endblock %}

@@ -45,12 +45,12 @@ class User extends BaseUser
     private $updatedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Article", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Article", mappedBy="author", cascade={"remove"})
      */
     private $articles;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="author", cascade={"remove"})
      */
     private $comments;
 
