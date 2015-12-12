@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Psr\Log\LoggerInterface;
 
 /**
- * appPRODUrlGenerator
+ * appProdUrlGenerator
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class appPRODUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
+class appProdUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
 {
     private static $declaredRoutes;
 

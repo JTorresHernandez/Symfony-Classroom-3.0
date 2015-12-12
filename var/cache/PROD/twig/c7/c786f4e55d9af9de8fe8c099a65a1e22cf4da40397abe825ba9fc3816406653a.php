@@ -171,7 +171,10 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
-<script>window.jQuery || document.write('<script src=\"/js/jquery.min.js\"><\\/script>')</script>
+<script>window.jQuery || document.write('<script src=\"";
+        // line 106
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
+        echo "\"><\\/script>')</script>
 </body>
 </html>";
     }
@@ -185,9 +188,17 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 15
-        echo "        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\" />
-        <link rel=\"stylesheet\" href=\"/css/jumbotron.css\" />
-        <link rel=\"stylesheet\" href=\"/css/custom.css\" />
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/jumbotron.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/custom.css"), "html", null, true);
+        echo "\" />
     ";
     }
 
@@ -216,7 +227,9 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
     public function block_javascripts($context, array $blocks = array())
     {
         // line 99
-        echo "<script src=\"/js/bootstrap.min.js\"></script>
+        echo "<script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
 ";
     }
 
@@ -232,7 +245,7 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 
     public function getDebugInfo()
     {
-        return array (  219 => 99,  216 => 98,  209 => 87,  206 => 86,  201 => 83,  195 => 68,  188 => 15,  185 => 14,  180 => 11,  169 => 101,  167 => 98,  157 => 89,  155 => 86,  151 => 84,  149 => 83,  141 => 77,  132 => 75,  128 => 74,  119 => 68,  107 => 58,  101 => 56,  99 => 55,  93 => 54,  88 => 53,  86 => 52,  71 => 40,  48 => 20,  45 => 19,  42 => 14,  37 => 11,  25 => 1,);
+        return array (  230 => 99,  227 => 98,  220 => 87,  217 => 86,  212 => 83,  206 => 68,  200 => 17,  196 => 16,  191 => 15,  188 => 14,  183 => 11,  176 => 106,  169 => 101,  167 => 98,  157 => 89,  155 => 86,  151 => 84,  149 => 83,  141 => 77,  132 => 75,  128 => 74,  119 => 68,  107 => 58,  101 => 56,  99 => 55,  93 => 54,  88 => 53,  86 => 52,  71 => 40,  48 => 20,  45 => 19,  42 => 14,  37 => 11,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -249,9 +262,9 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 /* */
 /*     {# This must be rewritten for symfony 3#}*/
 /*     {% block stylesheets %}*/
-/*         <link rel="stylesheet" href="/css/bootstrap.min.css" />*/
-/*         <link rel="stylesheet" href="/css/jumbotron.css" />*/
-/*         <link rel="stylesheet" href="/css/custom.css" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />*/
 /*     {% endblock %}*/
 /* */
 /*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
@@ -333,13 +346,13 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 /* */
 /* {# This must be rewritten for symfony 3#}*/
 /* {% block javascripts %}*/
-/* <script src="/js/bootstrap.min.js"></script>*/
+/* <script src="{{ asset('js/bootstrap.min.js') }}"></script>*/
 /* {% endblock %}*/
 /* */
 /* <!-- Bootstrap core JavaScript*/
 /* ================================================== -->*/
 /* <!-- Placed at the end of the document so the pages load faster -->*/
 /* <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>*/
-/* <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>*/
+/* <script>window.jQuery || document.write('<script src="{{ asset('js/jquery.min.js') }}"><\/script>')</script>*/
 /* </body>*/
 /* </html>*/

@@ -1,9 +1,9 @@
-<div class="article"> {# article #}
+<div class="article margin-bottom-lg"> {# article #}
     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}
         <div style="float: right;">
-            <a href="{{ path('app_article_edit', {'id': article.id}) }}">Edit</a>
+            <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>
             {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}">Remove</a>
+            <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>
             {% endif %}
         </div>
     {% endif %}

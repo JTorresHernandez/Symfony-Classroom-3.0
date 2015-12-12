@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appPRODUrlMatcher.
+ * appProdUrlMatcher.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class appPRODUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
+class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
 {
     /**
      * Constructor.

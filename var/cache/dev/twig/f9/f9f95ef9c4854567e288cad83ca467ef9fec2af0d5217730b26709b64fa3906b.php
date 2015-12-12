@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:header.html.twig */
+/* @WebProfiler/Profiler/header.html.twig */
 class __TwigTemplate_85e47a223f517ad64288d9e615f7f277b2256c911b3b5385e7acaa0daac6e37c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_85e47a223f517ad64288d9e615f7f277b2256c911b3b5385e7acaa0daac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7a9f9b2e5c94613097db37a459d16082769a613186ebb4207b654b4c2ca7e02e = $this->env->getExtension("native_profiler");
-        $__internal_7a9f9b2e5c94613097db37a459d16082769a613186ebb4207b654b4c2ca7e02e->enter($__internal_7a9f9b2e5c94613097db37a459d16082769a613186ebb4207b654b4c2ca7e02e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:header.html.twig"));
+        $__internal_a5df8de923167430650ffa7bb9217335cce5b4621d930aa71241195d961fb279 = $this->env->getExtension("native_profiler");
+        $__internal_a5df8de923167430650ffa7bb9217335cce5b4621d930aa71241195d961fb279->enter($__internal_a5df8de923167430650ffa7bb9217335cce5b4621d930aa71241195d961fb279_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/header.html.twig"));
 
         // line 1
         echo "<div id=\"header\">
@@ -38,13 +38,13 @@ class __TwigTemplate_85e47a223f517ad64288d9e615f7f277b2256c911b3b5385e7acaa0daac
 </div>
 ";
         
-        $__internal_7a9f9b2e5c94613097db37a459d16082769a613186ebb4207b654b4c2ca7e02e->leave($__internal_7a9f9b2e5c94613097db37a459d16082769a613186ebb4207b654b4c2ca7e02e_prof);
+        $__internal_a5df8de923167430650ffa7bb9217335cce5b4621d930aa71241195d961fb279->leave($__internal_a5df8de923167430650ffa7bb9217335cce5b4621d930aa71241195d961fb279_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:header.html.twig";
+        return "@WebProfiler/Profiler/header.html.twig";
     }
 
     public function isTraitable()

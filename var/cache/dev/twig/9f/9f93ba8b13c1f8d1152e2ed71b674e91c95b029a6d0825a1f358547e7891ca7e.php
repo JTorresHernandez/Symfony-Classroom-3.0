@@ -15,8 +15,8 @@ class __TwigTemplate_a822c2a53bf28c1ea72e71fe2480ea00ee359ef6fb5fa4b499f18aede30
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ad6ff217f99b47b9c0e77c2a3bbe4db0594bebdefc138e01ab357869ac71c478 = $this->env->getExtension("native_profiler");
-        $__internal_ad6ff217f99b47b9c0e77c2a3bbe4db0594bebdefc138e01ab357869ac71c478->enter($__internal_ad6ff217f99b47b9c0e77c2a3bbe4db0594bebdefc138e01ab357869ac71c478_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
+        $__internal_2e017476e52c45223dd75e717933470a37ec2485f33f5636d32838b9235aade7 = $this->env->getExtension("native_profiler");
+        $__internal_2e017476e52c45223dd75e717933470a37ec2485f33f5636d32838b9235aade7->enter($__internal_2e017476e52c45223dd75e717933470a37ec2485f33f5636d32838b9235aade7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
 
         // line 1
         echo "<form action=\"";
@@ -42,7 +42,7 @@ class __TwigTemplate_a822c2a53bf28c1ea72e71fe2480ea00ee359ef6fb5fa4b499f18aede30
         echo "\">Sign up</a>
 </form>";
         
-        $__internal_ad6ff217f99b47b9c0e77c2a3bbe4db0594bebdefc138e01ab357869ac71c478->leave($__internal_ad6ff217f99b47b9c0e77c2a3bbe4db0594bebdefc138e01ab357869ac71c478_prof);
+        $__internal_2e017476e52c45223dd75e717933470a37ec2485f33f5636d32838b9235aade7->leave($__internal_2e017476e52c45223dd75e717933470a37ec2485f33f5636d32838b9235aade7_prof);
 
     }
 

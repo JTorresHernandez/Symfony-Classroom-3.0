@@ -12,7 +12,6 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'headTitle' => array($this, 'block_headTitle'),
             'body' => array($this, 'block_body'),
             'sidebar' => array($this, 'block_sidebar'),
             'javascripts' => array($this, 'block_javascripts'),
@@ -21,8 +20,8 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_22fea34c9be10174945a1691f9cb05e91f81eed2723cfdbfd561f05ad3cf5812 = $this->env->getExtension("native_profiler");
-        $__internal_22fea34c9be10174945a1691f9cb05e91f81eed2723cfdbfd561f05ad3cf5812->enter($__internal_22fea34c9be10174945a1691f9cb05e91f81eed2723cfdbfd561f05ad3cf5812_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_c174c0d786f7ca3038c6a84065e70f902e69372f2fb92ce4497c52f535e871d8 = $this->env->getExtension("native_profiler");
+        $__internal_c174c0d786f7ca3038c6a84065e70f902e69372f2fb92ce4497c52f535e871d8->enter($__internal_c174c0d786f7ca3038c6a84065e70f902e69372f2fb92ce4497c52f535e871d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -114,24 +113,14 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
     </div>
 </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class=\"jumbotron\">
-    <div class=\"container\">
-        <h1>";
-        // line 68
-        $this->displayBlock('headTitle', $context, $blocks);
-        echo "</h1>
-    </div>
-</div>
-
 <div class=\"container\">
     <ul>
         ";
-        // line 74
+        // line 67
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "get", array(0 => "messages"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 75
+            // line 68
             echo "            <li>";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "</li>
@@ -140,23 +129,24 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 77
+        // line 70
         echo "    </ul>
 </div>
 
 <div class=\"container\">
+    <div class=\"margin-bottom-md\"></div>
     <div class=\"row\">
         <div class=\"col-md-8\">
             ";
-        // line 83
+        // line 77
         $this->displayBlock('body', $context, $blocks);
-        // line 84
+        // line 78
         echo "        </div>
         <div class=\"col-md-4\">
             ";
-        // line 86
+        // line 80
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 89
+        // line 97
         echo "        </div>
     </div>
     <hr>
@@ -166,99 +156,123 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 </div> <!-- /container -->
 
 ";
-        // line 98
+        // line 106
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 101
+        // line 109
         echo "
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
-<script>window.jQuery || document.write('<script src=\"/js/jquery.min.js\"><\\/script>')</script>
+<script>window.jQuery || document.write('<script src=\"";
+        // line 114
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
+        echo "\"><\\/script>')</script>
 </body>
 </html>";
         
-        $__internal_22fea34c9be10174945a1691f9cb05e91f81eed2723cfdbfd561f05ad3cf5812->leave($__internal_22fea34c9be10174945a1691f9cb05e91f81eed2723cfdbfd561f05ad3cf5812_prof);
+        $__internal_c174c0d786f7ca3038c6a84065e70f902e69372f2fb92ce4497c52f535e871d8->leave($__internal_c174c0d786f7ca3038c6a84065e70f902e69372f2fb92ce4497c52f535e871d8_prof);
 
     }
 
     // line 11
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8bab1533dd727ec59b1716d1c8b81716d5b99b0e6a8f211080393fa10ecf1c70 = $this->env->getExtension("native_profiler");
-        $__internal_8bab1533dd727ec59b1716d1c8b81716d5b99b0e6a8f211080393fa10ecf1c70->enter($__internal_8bab1533dd727ec59b1716d1c8b81716d5b99b0e6a8f211080393fa10ecf1c70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_7ae7161ad99142bcc6c9704ea7877beb3c4d440694590304463ecb91f0994889 = $this->env->getExtension("native_profiler");
+        $__internal_7ae7161ad99142bcc6c9704ea7877beb3c4d440694590304463ecb91f0994889->enter($__internal_7ae7161ad99142bcc6c9704ea7877beb3c4d440694590304463ecb91f0994889_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         
-        $__internal_8bab1533dd727ec59b1716d1c8b81716d5b99b0e6a8f211080393fa10ecf1c70->leave($__internal_8bab1533dd727ec59b1716d1c8b81716d5b99b0e6a8f211080393fa10ecf1c70_prof);
+        $__internal_7ae7161ad99142bcc6c9704ea7877beb3c4d440694590304463ecb91f0994889->leave($__internal_7ae7161ad99142bcc6c9704ea7877beb3c4d440694590304463ecb91f0994889_prof);
 
     }
 
     // line 14
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_fc18165ae2825c3edc11776ee6960ed38b9f7dbf45e1a422cc07344df236f728 = $this->env->getExtension("native_profiler");
-        $__internal_fc18165ae2825c3edc11776ee6960ed38b9f7dbf45e1a422cc07344df236f728->enter($__internal_fc18165ae2825c3edc11776ee6960ed38b9f7dbf45e1a422cc07344df236f728_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a391482c99eee90e40037d3daedc1c2c8fcbddb415fd01f743ae16b1d3741bfc = $this->env->getExtension("native_profiler");
+        $__internal_a391482c99eee90e40037d3daedc1c2c8fcbddb415fd01f743ae16b1d3741bfc->enter($__internal_a391482c99eee90e40037d3daedc1c2c8fcbddb415fd01f743ae16b1d3741bfc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 15
-        echo "        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\" />
-        <link rel=\"stylesheet\" href=\"/css/jumbotron.css\" />
-        <link rel=\"stylesheet\" href=\"/css/custom.css\" />
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/jumbotron.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/custom.css"), "html", null, true);
+        echo "\" />
     ";
         
-        $__internal_fc18165ae2825c3edc11776ee6960ed38b9f7dbf45e1a422cc07344df236f728->leave($__internal_fc18165ae2825c3edc11776ee6960ed38b9f7dbf45e1a422cc07344df236f728_prof);
+        $__internal_a391482c99eee90e40037d3daedc1c2c8fcbddb415fd01f743ae16b1d3741bfc->leave($__internal_a391482c99eee90e40037d3daedc1c2c8fcbddb415fd01f743ae16b1d3741bfc_prof);
 
     }
 
-    // line 68
-    public function block_headTitle($context, array $blocks = array())
-    {
-        $__internal_c817a25cd15252fb81b3dd95a558520afba1368be4bcd803fd0a61be6be4e5c0 = $this->env->getExtension("native_profiler");
-        $__internal_c817a25cd15252fb81b3dd95a558520afba1368be4bcd803fd0a61be6be4e5c0->enter($__internal_c817a25cd15252fb81b3dd95a558520afba1368be4bcd803fd0a61be6be4e5c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
-
-        echo "Session 7 - Doctrine";
-        
-        $__internal_c817a25cd15252fb81b3dd95a558520afba1368be4bcd803fd0a61be6be4e5c0->leave($__internal_c817a25cd15252fb81b3dd95a558520afba1368be4bcd803fd0a61be6be4e5c0_prof);
-
-    }
-
-    // line 83
+    // line 77
     public function block_body($context, array $blocks = array())
     {
-        $__internal_8ef116e1a91e20e5471718b1b2033944c36790fe60222bd6968b4af11a05380d = $this->env->getExtension("native_profiler");
-        $__internal_8ef116e1a91e20e5471718b1b2033944c36790fe60222bd6968b4af11a05380d->enter($__internal_8ef116e1a91e20e5471718b1b2033944c36790fe60222bd6968b4af11a05380d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ad074d79c9d5a0da45e7b3a801b19699bbe72db7b69b0297adf3b3adee75cc08 = $this->env->getExtension("native_profiler");
+        $__internal_ad074d79c9d5a0da45e7b3a801b19699bbe72db7b69b0297adf3b3adee75cc08->enter($__internal_ad074d79c9d5a0da45e7b3a801b19699bbe72db7b69b0297adf3b3adee75cc08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_8ef116e1a91e20e5471718b1b2033944c36790fe60222bd6968b4af11a05380d->leave($__internal_8ef116e1a91e20e5471718b1b2033944c36790fe60222bd6968b4af11a05380d_prof);
+        $__internal_ad074d79c9d5a0da45e7b3a801b19699bbe72db7b69b0297adf3b3adee75cc08->leave($__internal_ad074d79c9d5a0da45e7b3a801b19699bbe72db7b69b0297adf3b3adee75cc08_prof);
 
     }
 
-    // line 86
+    // line 80
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_71f6c34959242a09cb023507ba1c1dacf8c44e942a20da6db64b15e38d9d6565 = $this->env->getExtension("native_profiler");
-        $__internal_71f6c34959242a09cb023507ba1c1dacf8c44e942a20da6db64b15e38d9d6565->enter($__internal_71f6c34959242a09cb023507ba1c1dacf8c44e942a20da6db64b15e38d9d6565_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_d4cf136796f1a17ae0e5881200a1ea3615003ea539c32c920f6cb0e8738c8be2 = $this->env->getExtension("native_profiler");
+        $__internal_d4cf136796f1a17ae0e5881200a1ea3615003ea539c32c920f6cb0e8738c8be2->enter($__internal_d4cf136796f1a17ae0e5881200a1ea3615003ea539c32c920f6cb0e8738c8be2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 87
-        echo "                <a class=\"btn btn-primary\" style=\"font-size:x-large;width: 100%\" href=\"";
+        // line 81
+        echo "                <div class=\"container\">
+                    ";
+        // line 82
+        if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
+            // line 83
+            echo "                        <div class=\"row margin-bottom-md\">
+                            <div class=\"col-md-4\">
+                                <a class=\"btn btn-warning\" style=\"font-size:x-large;width: 100%\" href=\"";
+            // line 85
+            echo $this->env->getExtension('routing')->getPath("app_admin_index_index");
+            echo "\">Dashboard</a>
+                            </div>
+                        </div>
+                    ";
+        }
+        // line 89
+        echo "                    <div class=\"row\">
+                        <div class=\"col-md-4\">
+                            <a class=\"btn btn-primary\" style=\"font-size:x-large;width: 100%\" href=\"";
+        // line 91
         echo $this->env->getExtension('routing')->getPath("app_article_new");
         echo "\">Submit a new article</a>
+                        </div>
+                    </div>
+                </div>
+
             ";
         
-        $__internal_71f6c34959242a09cb023507ba1c1dacf8c44e942a20da6db64b15e38d9d6565->leave($__internal_71f6c34959242a09cb023507ba1c1dacf8c44e942a20da6db64b15e38d9d6565_prof);
+        $__internal_d4cf136796f1a17ae0e5881200a1ea3615003ea539c32c920f6cb0e8738c8be2->leave($__internal_d4cf136796f1a17ae0e5881200a1ea3615003ea539c32c920f6cb0e8738c8be2_prof);
 
     }
 
-    // line 98
+    // line 106
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b7129ed1b4eacf5bf4ae1d8076e494bdc2c6df3f689e03029ed47df9baf8b24c = $this->env->getExtension("native_profiler");
-        $__internal_b7129ed1b4eacf5bf4ae1d8076e494bdc2c6df3f689e03029ed47df9baf8b24c->enter($__internal_b7129ed1b4eacf5bf4ae1d8076e494bdc2c6df3f689e03029ed47df9baf8b24c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_9ccb29bfe4f0b74e4481241ec8ce60a3da599980b1f82059b61c3f17a58f789c = $this->env->getExtension("native_profiler");
+        $__internal_9ccb29bfe4f0b74e4481241ec8ce60a3da599980b1f82059b61c3f17a58f789c->enter($__internal_9ccb29bfe4f0b74e4481241ec8ce60a3da599980b1f82059b61c3f17a58f789c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 99
-        echo "<script src=\"/js/bootstrap.min.js\"></script>
+        // line 107
+        echo "<script src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
 ";
         
-        $__internal_b7129ed1b4eacf5bf4ae1d8076e494bdc2c6df3f689e03029ed47df9baf8b24c->leave($__internal_b7129ed1b4eacf5bf4ae1d8076e494bdc2c6df3f689e03029ed47df9baf8b24c_prof);
+        $__internal_9ccb29bfe4f0b74e4481241ec8ce60a3da599980b1f82059b61c3f17a58f789c->leave($__internal_9ccb29bfe4f0b74e4481241ec8ce60a3da599980b1f82059b61c3f17a58f789c_prof);
 
     }
 
@@ -274,7 +288,7 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 
     public function getDebugInfo()
     {
-        return array (  258 => 99,  252 => 98,  242 => 87,  236 => 86,  225 => 83,  213 => 68,  203 => 15,  197 => 14,  186 => 11,  172 => 101,  170 => 98,  160 => 89,  158 => 86,  154 => 84,  152 => 83,  144 => 77,  135 => 75,  131 => 74,  122 => 68,  110 => 58,  104 => 56,  102 => 55,  96 => 54,  91 => 53,  89 => 52,  74 => 40,  51 => 20,  48 => 19,  45 => 14,  40 => 11,  28 => 1,);
+        return array (  270 => 107,  264 => 106,  251 => 91,  247 => 89,  240 => 85,  236 => 83,  234 => 82,  231 => 81,  225 => 80,  214 => 77,  205 => 17,  201 => 16,  196 => 15,  190 => 14,  179 => 11,  169 => 114,  162 => 109,  160 => 106,  150 => 97,  148 => 80,  144 => 78,  142 => 77,  133 => 70,  124 => 68,  120 => 67,  109 => 58,  103 => 56,  101 => 55,  95 => 54,  90 => 53,  88 => 52,  73 => 40,  50 => 20,  47 => 19,  44 => 14,  39 => 11,  27 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -291,9 +305,9 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 /* */
 /*     {# This must be rewritten for symfony 3#}*/
 /*     {% block stylesheets %}*/
-/*         <link rel="stylesheet" href="/css/bootstrap.min.css" />*/
-/*         <link rel="stylesheet" href="/css/jumbotron.css" />*/
-/*         <link rel="stylesheet" href="/css/custom.css" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />*/
 /*     {% endblock %}*/
 /* */
 /*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
@@ -341,13 +355,6 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 /*     </div>*/
 /* </nav>*/
 /* */
-/* <!-- Main jumbotron for a primary marketing message or call to action -->*/
-/* <div class="jumbotron">*/
-/*     <div class="container">*/
-/*         <h1>{% block headTitle %}Session 7 - Doctrine{% endblock %}</h1>*/
-/*     </div>*/
-/* </div>*/
-/* */
 /* <div class="container">*/
 /*     <ul>*/
 /*         {% for message in app.session.flashBag.get('messages') %}*/
@@ -357,13 +364,28 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 /* </div>*/
 /* */
 /* <div class="container">*/
+/*     <div class="margin-bottom-md"></div>*/
 /*     <div class="row">*/
 /*         <div class="col-md-8">*/
 /*             {% block body %}{% endblock %}*/
 /*         </div>*/
 /*         <div class="col-md-4">*/
 /*             {% block sidebar %}*/
-/*                 <a class="btn btn-primary" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>*/
+/*                 <div class="container">*/
+/*                     {% if is_granted('ROLE_ADMIN') %}*/
+/*                         <div class="row margin-bottom-md">*/
+/*                             <div class="col-md-4">*/
+/*                                 <a class="btn btn-warning" style="font-size:x-large;width: 100%" href="{{ path('app_admin_index_index') }}">Dashboard</a>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     {% endif %}*/
+/*                     <div class="row">*/
+/*                         <div class="col-md-4">*/
+/*                             <a class="btn btn-primary" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                 </div>*/
+/* */
 /*             {% endblock %}*/
 /*         </div>*/
 /*     </div>*/
@@ -375,13 +397,13 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 /* */
 /* {# This must be rewritten for symfony 3#}*/
 /* {% block javascripts %}*/
-/* <script src="/js/bootstrap.min.js"></script>*/
+/* <script src="{{ asset('js/bootstrap.min.js') }}"></script>*/
 /* {% endblock %}*/
 /* */
 /* <!-- Bootstrap core JavaScript*/
 /* ================================================== -->*/
 /* <!-- Placed at the end of the document so the pages load faster -->*/
 /* <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>*/
-/* <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>*/
+/* <script>window.jQuery || document.write('<script src="{{ asset('js/jquery.min.js') }}"><\/script>')</script>*/
 /* </body>*/
 /* </html>*/

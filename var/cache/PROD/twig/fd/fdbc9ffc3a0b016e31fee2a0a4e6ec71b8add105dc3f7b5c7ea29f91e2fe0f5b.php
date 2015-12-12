@@ -1,6 +1,6 @@
 <?php
 
-/* @Twig/Exception/error403.html.twig */
+/* TwigBundle:Exception:error403.html.twig */
 class __TwigTemplate_f29c10ac6bbcd3e133a779ec702b1993d66749bafbdb29a0c0100c38b8346675 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_f29c10ac6bbcd3e133a779ec702b1993d66749bafbdb29a0c0100c38b83
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "@Twig/Exception/error403.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "TwigBundle:Exception:error403.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -52,7 +52,7 @@ class __TwigTemplate_f29c10ac6bbcd3e133a779ec702b1993d66749bafbdb29a0c0100c38b83
 
     public function getTemplateName()
     {
-        return "@Twig/Exception/error403.html.twig";
+        return "TwigBundle:Exception:error403.html.twig";
     }
 
     public function isTraitable()

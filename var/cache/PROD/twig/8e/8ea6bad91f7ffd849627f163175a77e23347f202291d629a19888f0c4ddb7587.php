@@ -25,14 +25,18 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
             <a href=\"";
             // line 4
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))), "html", null, true);
-            echo "\">Edit</a>
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-151-edit.png"), "html", null, true);
+            echo "\" /></a>
             ";
             // line 5
             if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
                 // line 6
                 echo "            <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))), "html", null, true);
-                echo "\">Remove</a>
+                echo "\"><img src=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-198-remove.png"), "html", null, true);
+                echo "\" /></a>
             ";
             }
             // line 8
@@ -111,15 +115,15 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
 
     public function getDebugInfo()
     {
-        return array (  96 => 25,  85 => 23,  81 => 22,  77 => 20,  71 => 17,  68 => 16,  66 => 15,  61 => 13,  50 => 11,  43 => 10,  39 => 8,  33 => 6,  31 => 5,  27 => 4,  24 => 3,  21 => 2,  19 => 1,);
+        return array (  100 => 25,  89 => 23,  85 => 22,  81 => 20,  75 => 17,  72 => 16,  70 => 15,  65 => 13,  54 => 11,  47 => 10,  43 => 8,  35 => 6,  33 => 5,  27 => 4,  24 => 3,  21 => 2,  19 => 1,);
     }
 }
 /* <div class="article"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
-/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}">Edit</a>*/
+/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
 /*             {% if is_granted('ROLE_ADMIN') %}*/
-/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}">Remove</a>*/
+/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>*/
 /*             {% endif %}*/
 /*         </div>*/
 /*     {% endif %}*/

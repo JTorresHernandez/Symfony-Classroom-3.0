@@ -15,11 +15,11 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c4e5d115ace8aa8c3e69689849c7af84973839db89f95c0ba6fa2457efa777a9 = $this->env->getExtension("native_profiler");
-        $__internal_c4e5d115ace8aa8c3e69689849c7af84973839db89f95c0ba6fa2457efa777a9->enter($__internal_c4e5d115ace8aa8c3e69689849c7af84973839db89f95c0ba6fa2457efa777a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5 = $this->env->getExtension("native_profiler");
+        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5->enter($__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
-        echo "<div class=\"article\"> ";
+        echo "<div class=\"article margin-bottom-lg\"> ";
         // line 2
         echo "    ";
         if ((($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "author", array()) == $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) || $this->env->getExtension('security')->isGranted("ROLE_ADMIN"))) {
@@ -28,14 +28,18 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             <a href=\"";
             // line 4
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
-            echo "\">Edit</a>
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-151-edit.png"), "html", null, true);
+            echo "\" /></a>
             ";
             // line 5
             if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
                 // line 6
                 echo "            <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
-                echo "\">Remove</a>
+                echo "\"><img src=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-198-remove.png"), "html", null, true);
+                echo "\" /></a>
             ";
             }
             // line 8
@@ -101,7 +105,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
     </div>
 </div> ";
         
-        $__internal_c4e5d115ace8aa8c3e69689849c7af84973839db89f95c0ba6fa2457efa777a9->leave($__internal_c4e5d115ace8aa8c3e69689849c7af84973839db89f95c0ba6fa2457efa777a9_prof);
+        $__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5->leave($__internal_0a6fdc3eb8faee4b822a715f6411f6d3c83ab19d91b03fcbd02c8db12cf249e5_prof);
 
     }
 
@@ -117,15 +121,15 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     public function getDebugInfo()
     {
-        return array (  99 => 25,  88 => 23,  84 => 22,  80 => 20,  74 => 17,  71 => 16,  69 => 15,  64 => 13,  53 => 11,  46 => 10,  42 => 8,  36 => 6,  34 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  103 => 25,  92 => 23,  88 => 22,  84 => 20,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  57 => 11,  50 => 10,  46 => 8,  38 => 6,  36 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 }
-/* <div class="article"> {# article #}*/
+/* <div class="article margin-bottom-lg"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
-/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}">Edit</a>*/
+/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
 /*             {% if is_granted('ROLE_ADMIN') %}*/
-/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}">Remove</a>*/
+/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>*/
 /*             {% endif %}*/
 /*         </div>*/
 /*     {% endif %}*/
