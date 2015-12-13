@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8 = $this->env->getExtension("native_profiler");
-        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8->enter($__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_d085e16f1c7f311fc937f7a468ab25414d1b12b6f67ab44fc73a19da3ec0a890 = $this->env->getExtension("native_profiler");
+        $__internal_d085e16f1c7f311fc937f7a468ab25414d1b12b6f67ab44fc73a19da3ec0a890->enter($__internal_d085e16f1c7f311fc937f7a468ab25414d1b12b6f67ab44fc73a19da3ec0a890_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -116,13 +116,16 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 ";
         }
         // line 33
+        echo "
+";
+        // line 34
         if (array_key_exists("comments", $context)) {
-            // line 34
+            // line 35
             echo "    ";
-            $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 34)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
+            $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 35)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8->leave($__internal_45f5353a8114a57e749b196a36f29b9a7f163d11b8293c59303acec0323f29e8_prof);
+        $__internal_d085e16f1c7f311fc937f7a468ab25414d1b12b6f67ab44fc73a19da3ec0a890->leave($__internal_d085e16f1c7f311fc937f7a468ab25414d1b12b6f67ab44fc73a19da3ec0a890_prof);
 
     }
 
@@ -138,7 +141,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     public function getDebugInfo()
     {
-        return array (  121 => 34,  119 => 33,  113 => 31,  111 => 30,  108 => 29,  103 => 25,  92 => 23,  88 => 22,  84 => 20,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  57 => 11,  50 => 10,  46 => 8,  38 => 6,  36 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  124 => 35,  122 => 34,  119 => 33,  113 => 31,  111 => 30,  108 => 29,  103 => 25,  92 => 23,  88 => 22,  84 => 20,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  57 => 11,  50 => 10,  46 => 8,  38 => 6,  36 => 5,  30 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 }
 /* <div class="rounded-box margin-bottom-lg"> {# article #}*/
@@ -173,6 +176,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /* {% if show_content is defined %}*/
 /*     {{ render(controller('AppBundle:Comment:showForm', {'id': article.id})) }}*/
 /* {% endif %}*/
+/* */
 /* {% if comments is defined %}*/
 /*     {% include ':comment:showCommentsByArticle.html.twig' with {'comments': comments} %}*/
 /* {% endif %}*/

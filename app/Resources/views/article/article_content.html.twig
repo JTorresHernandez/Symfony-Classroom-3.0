@@ -30,6 +30,7 @@
 {% if show_content is defined %}
     {{ render(controller('AppBundle:Comment:showForm', {'id': article.id})) }}
 {% endif %}
+
 {% if comments is defined %}
     {% include ':comment:showCommentsByArticle.html.twig' with {'comments': comments} %}
 {% endif %}
