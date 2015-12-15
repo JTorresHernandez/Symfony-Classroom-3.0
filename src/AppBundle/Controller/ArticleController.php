@@ -90,7 +90,7 @@ class ArticleController extends Controller
 
                 $m->flush();
 
-                return $this->redirectToRoute('app_article_articles');
+                return $this->redirectToRoute('app_article_show', ['id' => $article->getId()]);
             }
         }
 

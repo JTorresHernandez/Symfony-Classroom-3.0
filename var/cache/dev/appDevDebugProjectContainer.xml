@@ -89,9 +89,6 @@
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
-      <parameter key="ROLE_SUPER_ADMIN" type="collection">
-        <parameter>ROLE_ADMIN</parameter>
-      </parameter>
     </parameter>
     <parameter key="security.access.denied_url">null</parameter>
     <parameter key="security.authentication.manager.erase_credentials">true</parameter>
@@ -2018,7 +2015,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>566dd399378dc7.67061918</argument>
+            <argument>566edc1e109587.51143473</argument>
           </service>
         </argument>
       </argument>
@@ -2073,9 +2070,6 @@
       <argument type="collection">
         <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_USER</argument>
-        </argument>
-        <argument key="ROLE_SUPER_ADMIN" type="collection">
-          <argument>ROLE_ADMIN</argument>
         </argument>
       </argument>
     </service>
@@ -2307,7 +2301,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>566dd399378dc7.67061918</argument>
+            <argument>566edc1e109587.51143473</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
