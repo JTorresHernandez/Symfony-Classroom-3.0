@@ -18,7 +18,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Comment
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="AppBundle\Entity\CommentRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CommentRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Comment

@@ -18,9 +18,9 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class ApplicationAvailabilityFunctionalTest extends WebTestCase
 {
     /**
-     * @dataProvider urlProvider
+     * @dataProvider roleAnnonymousUrlProvider
      */
-    public function testPageIsSuccessful($url)
+    public function testRoleAnnonymousPages($url)
     {
         $client = self::createClient();
         $client->request('GET', $url);
@@ -28,11 +28,56 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isSuccessful());
     }
 
-    public function urlProvider()
+    public function roleAnnonymousUrlProvider()
     {
-        return array(
-            array('/'),
-            array('/new'),
-        );
+        return [
+            ['/'],
+            ['/register/'],
+            ['/login'],
+            ['/show/71'],
+        ];
+    }
+
+    /**
+     * @dataProvider roleUserUrlProvider
+     */
+    public function testRoleUserPages($url)
+    {
+        $client = static::createClient(array(), array(
+            'PHP_AUTH_USER' => 'ismael',
+            'PHP_AUTH_PW'   => '1234',
+        ));
+        $client->request('GET', $url);
+
+        $this->assertTrue($client->getResponse()->isSuccessful());
+    }
+
+    public function roleUserUrlProvider()
+    {
+        return [
+            ['/new'],
+            ['/edit/69'],
+        ];
+    }
+
+    /**
+     * @dataProvider roleAdminUrlProvider
+     */
+    public function testRoleAdminPages($url)
+    {
+        $client = static::createClient(array(), array(
+            'PHP_AUTH_USER' => 'admin',
+            'PHP_AUTH_PW'   => '1234',
+        ));
+        $client->request('GET', $url);
+
+        $this->assertTrue($client->getResponse()->isSuccessful());
+    }
+
+    public function roleAdminUrlProvider()
+    {
+        return [
+            ['/admin/'],
+        ];
     }
 }

@@ -18,7 +18,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="app_user")
- * @ORM\Entity(repositoryClass="Trascastro\UserBundle\Entity\UserRepository")
+ * @ORM\Entity(repositoryClass="Trascastro\UserBundle\Repository\UserRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class User extends BaseUser

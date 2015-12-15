@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Article
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="AppBundle\Entity\ArticleRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ArticleRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Article
