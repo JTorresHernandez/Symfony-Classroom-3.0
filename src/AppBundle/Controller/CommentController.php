@@ -44,7 +44,7 @@ class CommentController extends Controller
             $m->persist($c);
             $m->flush();
 
-            return $this->redirectToRoute('app_article_show', ['id' => $article->getId()]);
+            return $this->redirectToRoute('app_article_show', ['slug' => $article->getSlug()]);
         }
 
         return $this->forward('AppBundle:Comment:showForm', ['id' => $article->getId()]);

@@ -22,32 +22,32 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cfcdcf31d7a3d83a067fc3fac28f918abc94bc4ab6c7f9bd6f62061a6ae84262 = $this->env->getExtension("native_profiler");
-        $__internal_cfcdcf31d7a3d83a067fc3fac28f918abc94bc4ab6c7f9bd6f62061a6ae84262->enter($__internal_cfcdcf31d7a3d83a067fc3fac28f918abc94bc4ab6c7f9bd6f62061a6ae84262_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":tag:tags.html.twig"));
+        $__internal_72f3d1218f7ac50f208fc33f1f10531e523ed9a73b217fbb3476b43f67af7f12 = $this->env->getExtension("native_profiler");
+        $__internal_72f3d1218f7ac50f208fc33f1f10531e523ed9a73b217fbb3476b43f67af7f12->enter($__internal_72f3d1218f7ac50f208fc33f1f10531e523ed9a73b217fbb3476b43f67af7f12_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":tag:tags.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_cfcdcf31d7a3d83a067fc3fac28f918abc94bc4ab6c7f9bd6f62061a6ae84262->leave($__internal_cfcdcf31d7a3d83a067fc3fac28f918abc94bc4ab6c7f9bd6f62061a6ae84262_prof);
+        $__internal_72f3d1218f7ac50f208fc33f1f10531e523ed9a73b217fbb3476b43f67af7f12->leave($__internal_72f3d1218f7ac50f208fc33f1f10531e523ed9a73b217fbb3476b43f67af7f12_prof);
 
     }
 
     // line 3
     public function block_headTitle($context, array $blocks = array())
     {
-        $__internal_5fa36fe997e47cddb10fb673f5d708b2b3133919b5157ef158172d3683af52f8 = $this->env->getExtension("native_profiler");
-        $__internal_5fa36fe997e47cddb10fb673f5d708b2b3133919b5157ef158172d3683af52f8->enter($__internal_5fa36fe997e47cddb10fb673f5d708b2b3133919b5157ef158172d3683af52f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
+        $__internal_2cc9ff6a1cd14327fe151d36d2b52c4cb4bcb149cfa0f7612a3914e78e20552e = $this->env->getExtension("native_profiler");
+        $__internal_2cc9ff6a1cd14327fe151d36d2b52c4cb4bcb149cfa0f7612a3914e78e20552e->enter($__internal_2cc9ff6a1cd14327fe151d36d2b52c4cb4bcb149cfa0f7612a3914e78e20552e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
 
         echo "Tags";
         
-        $__internal_5fa36fe997e47cddb10fb673f5d708b2b3133919b5157ef158172d3683af52f8->leave($__internal_5fa36fe997e47cddb10fb673f5d708b2b3133919b5157ef158172d3683af52f8_prof);
+        $__internal_2cc9ff6a1cd14327fe151d36d2b52c4cb4bcb149cfa0f7612a3914e78e20552e->leave($__internal_2cc9ff6a1cd14327fe151d36d2b52c4cb4bcb149cfa0f7612a3914e78e20552e_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6ad73a51a847a9d11fa623a3c5fc219d70e07383044ac52b4ea23bc178c97cb2 = $this->env->getExtension("native_profiler");
-        $__internal_6ad73a51a847a9d11fa623a3c5fc219d70e07383044ac52b4ea23bc178c97cb2->enter($__internal_6ad73a51a847a9d11fa623a3c5fc219d70e07383044ac52b4ea23bc178c97cb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0dbf29208eaefbe318601a87c152b684f935da8ea1ec83e5fb747e31e5c415db = $this->env->getExtension("native_profiler");
+        $__internal_0dbf29208eaefbe318601a87c152b684f935da8ea1ec83e5fb747e31e5c415db->enter($__internal_0dbf29208eaefbe318601a87c152b684f935da8ea1ec83e5fb747e31e5c415db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -67,7 +67,7 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
             foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
                 // line 11
                 echo "                <div><a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("slug" => $this->getAttribute($context["article"], "slug", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $context["article"], "html", null, true);
                 echo "</a></div>
@@ -92,7 +92,7 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
     </div>
 ";
         
-        $__internal_6ad73a51a847a9d11fa623a3c5fc219d70e07383044ac52b4ea23bc178c97cb2->leave($__internal_6ad73a51a847a9d11fa623a3c5fc219d70e07383044ac52b4ea23bc178c97cb2_prof);
+        $__internal_0dbf29208eaefbe318601a87c152b684f935da8ea1ec83e5fb747e31e5c415db->leave($__internal_0dbf29208eaefbe318601a87c152b684f935da8ea1ec83e5fb747e31e5c415db_prof);
 
     }
 
@@ -121,7 +121,7 @@ class __TwigTemplate_0f02d57e95c6c58794039610be94cdef4796739e5bbd83b492bb72d5b7f
 /* */
 /*         <div style="padding: 5px 20px">*/
 /*             {% for article in tag.articles %}*/
-/*                 <div><a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article }}</a></div>*/
+/*                 <div><a href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article }}</a></div>*/
 /*             {% endfor %}*/
 /*         </div>*/
 /*     {% endfor %}*/

@@ -35,6 +35,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             ['/register/'],
             ['/login'],
             ['/boston-celtics-nba-champions.html'],
+            ['/tags/'],
         ];
     }
 

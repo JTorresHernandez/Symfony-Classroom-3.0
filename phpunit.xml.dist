@@ -16,6 +16,7 @@
             <file>tests/AppBundle/ApplicationAvailabilityFunctionalTest.php</file>
             <file>tests/AppBundle/Controller/ArticleControllerTest.php</file>
             <file>tests/AppBundle/Controller/Admin/ArticleControllerTest.php</file>
+            <file>tests/AppBundle/Controller/Admin/TagControllerTest.php</file>
            <!-- <directory>tests</directory> -->
         </testsuite>
     </testsuites>

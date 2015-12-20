@@ -8,7 +8,7 @@
 
         <div style="padding: 5px 20px">
             {% for article in tag.articles %}
-                <div><a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article }}</a></div>
+                <div><a href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article }}</a></div>
             {% endfor %}
         </div>
     {% endfor %}

@@ -20,8 +20,8 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_975067cd5ea822427b3fe06fa9d35b87931513a021186fc69e0b94f5d5581ab3 = $this->env->getExtension("native_profiler");
-        $__internal_975067cd5ea822427b3fe06fa9d35b87931513a021186fc69e0b94f5d5581ab3->enter($__internal_975067cd5ea822427b3fe06fa9d35b87931513a021186fc69e0b94f5d5581ab3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_0a75d8f2eb75086cf9b7fb01fdcf59ab558ab733616bee4cd93d7a034e769bbd = $this->env->getExtension("native_profiler");
+        $__internal_0a75d8f2eb75086cf9b7fb01fdcf59ab558ab733616bee4cd93d7a034e769bbd->enter($__internal_0a75d8f2eb75086cf9b7fb01fdcf59ab558ab733616bee4cd93d7a034e769bbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -160,7 +160,7 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
             ";
         // line 91
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 107
+        // line 112
         echo "        </div>
     </div>
     <hr>
@@ -170,41 +170,41 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 </div> <!-- /container -->
 
 ";
-        // line 116
+        // line 121
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 119
+        // line 124
         echo "
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
 <script>window.jQuery || document.write('<script src=\"";
-        // line 124
+        // line 129
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"><\\/script>')</script>
 </body>
 </html>";
         
-        $__internal_975067cd5ea822427b3fe06fa9d35b87931513a021186fc69e0b94f5d5581ab3->leave($__internal_975067cd5ea822427b3fe06fa9d35b87931513a021186fc69e0b94f5d5581ab3_prof);
+        $__internal_0a75d8f2eb75086cf9b7fb01fdcf59ab558ab733616bee4cd93d7a034e769bbd->leave($__internal_0a75d8f2eb75086cf9b7fb01fdcf59ab558ab733616bee4cd93d7a034e769bbd_prof);
 
     }
 
     // line 11
     public function block_title($context, array $blocks = array())
     {
-        $__internal_825f59532d1c9ba056a806da8103dddc477af15e7eaa3f61a8acb3c9cd412d9a = $this->env->getExtension("native_profiler");
-        $__internal_825f59532d1c9ba056a806da8103dddc477af15e7eaa3f61a8acb3c9cd412d9a->enter($__internal_825f59532d1c9ba056a806da8103dddc477af15e7eaa3f61a8acb3c9cd412d9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_1fc0373ec13bf6d5ea1b4429493c06e3033a19a225733b58e582afc8aa4e15a3 = $this->env->getExtension("native_profiler");
+        $__internal_1fc0373ec13bf6d5ea1b4429493c06e3033a19a225733b58e582afc8aa4e15a3->enter($__internal_1fc0373ec13bf6d5ea1b4429493c06e3033a19a225733b58e582afc8aa4e15a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         
-        $__internal_825f59532d1c9ba056a806da8103dddc477af15e7eaa3f61a8acb3c9cd412d9a->leave($__internal_825f59532d1c9ba056a806da8103dddc477af15e7eaa3f61a8acb3c9cd412d9a_prof);
+        $__internal_1fc0373ec13bf6d5ea1b4429493c06e3033a19a225733b58e582afc8aa4e15a3->leave($__internal_1fc0373ec13bf6d5ea1b4429493c06e3033a19a225733b58e582afc8aa4e15a3_prof);
 
     }
 
     // line 14
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_3d24c6090f27c15e4968bbdc869b6c69d7687df9f80dda89981ae0172c89f49d = $this->env->getExtension("native_profiler");
-        $__internal_3d24c6090f27c15e4968bbdc869b6c69d7687df9f80dda89981ae0172c89f49d->enter($__internal_3d24c6090f27c15e4968bbdc869b6c69d7687df9f80dda89981ae0172c89f49d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a8d49184d7ddb20f177f1f6e625b9968966083023e3468bbdfc6698a9ad09444 = $this->env->getExtension("native_profiler");
+        $__internal_a8d49184d7ddb20f177f1f6e625b9968966083023e3468bbdfc6698a9ad09444->enter($__internal_a8d49184d7ddb20f177f1f6e625b9968966083023e3468bbdfc6698a9ad09444_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 15
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -220,26 +220,26 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
         echo "\" />
     ";
         
-        $__internal_3d24c6090f27c15e4968bbdc869b6c69d7687df9f80dda89981ae0172c89f49d->leave($__internal_3d24c6090f27c15e4968bbdc869b6c69d7687df9f80dda89981ae0172c89f49d_prof);
+        $__internal_a8d49184d7ddb20f177f1f6e625b9968966083023e3468bbdfc6698a9ad09444->leave($__internal_a8d49184d7ddb20f177f1f6e625b9968966083023e3468bbdfc6698a9ad09444_prof);
 
     }
 
     // line 88
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9cef73ee6f0f577286870658e6d8afa30b3636fe27aad09239d5631428c9304f = $this->env->getExtension("native_profiler");
-        $__internal_9cef73ee6f0f577286870658e6d8afa30b3636fe27aad09239d5631428c9304f->enter($__internal_9cef73ee6f0f577286870658e6d8afa30b3636fe27aad09239d5631428c9304f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d4652e25168a217e45ec0d53d457f927e5cbca8c9cacb56ecee308a6ad1b6587 = $this->env->getExtension("native_profiler");
+        $__internal_d4652e25168a217e45ec0d53d457f927e5cbca8c9cacb56ecee308a6ad1b6587->enter($__internal_d4652e25168a217e45ec0d53d457f927e5cbca8c9cacb56ecee308a6ad1b6587_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_9cef73ee6f0f577286870658e6d8afa30b3636fe27aad09239d5631428c9304f->leave($__internal_9cef73ee6f0f577286870658e6d8afa30b3636fe27aad09239d5631428c9304f_prof);
+        $__internal_d4652e25168a217e45ec0d53d457f927e5cbca8c9cacb56ecee308a6ad1b6587->leave($__internal_d4652e25168a217e45ec0d53d457f927e5cbca8c9cacb56ecee308a6ad1b6587_prof);
 
     }
 
     // line 91
     public function block_sidebar($context, array $blocks = array())
     {
-        $__internal_f6eb66bffcd335c86a95de1e451493c0b5bac4652682755003b1e12caf2d35b0 = $this->env->getExtension("native_profiler");
-        $__internal_f6eb66bffcd335c86a95de1e451493c0b5bac4652682755003b1e12caf2d35b0->enter($__internal_f6eb66bffcd335c86a95de1e451493c0b5bac4652682755003b1e12caf2d35b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+        $__internal_71be4988f9040f87e0ca3a2585038c1d93c7807148a1e922b8468f4e3c1b85af = $this->env->getExtension("native_profiler");
+        $__internal_71be4988f9040f87e0ca3a2585038c1d93c7807148a1e922b8468f4e3c1b85af->enter($__internal_71be4988f9040f87e0ca3a2585038c1d93c7807148a1e922b8468f4e3c1b85af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 92
         echo "                <div class=\"container\">
@@ -258,7 +258,7 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
                     ";
         }
         // line 100
-        echo "                    <div class=\"row\">
+        echo "                    <div class=\"row margin-bottom-md\">
                         <div class=\"col-md-4\">
                             <a class=\"btn btn-default\" style=\"font-size:x-large;width: 100%\" href=\"";
         // line 102
@@ -266,26 +266,34 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
         echo "\">Submit a new article</a>
                         </div>
                     </div>
+                    <div class=\"row\">
+                        <div class=\"col-md-4\">
+                            <a class=\"btn btn-default\" style=\"font-size:x-large;width: 100%\" href=\"";
+        // line 107
+        echo $this->env->getExtension('routing')->getPath("app_tags_tags");
+        echo "\">Tags</a>
+                        </div>
+                    </div>
                 </div>
             ";
         
-        $__internal_f6eb66bffcd335c86a95de1e451493c0b5bac4652682755003b1e12caf2d35b0->leave($__internal_f6eb66bffcd335c86a95de1e451493c0b5bac4652682755003b1e12caf2d35b0_prof);
+        $__internal_71be4988f9040f87e0ca3a2585038c1d93c7807148a1e922b8468f4e3c1b85af->leave($__internal_71be4988f9040f87e0ca3a2585038c1d93c7807148a1e922b8468f4e3c1b85af_prof);
 
     }
 
-    // line 116
+    // line 121
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_6a6351b4988f4b654bf8ee1e7c37448ec94a3a70e943aa179e80d5cbeb6f4ae1 = $this->env->getExtension("native_profiler");
-        $__internal_6a6351b4988f4b654bf8ee1e7c37448ec94a3a70e943aa179e80d5cbeb6f4ae1->enter($__internal_6a6351b4988f4b654bf8ee1e7c37448ec94a3a70e943aa179e80d5cbeb6f4ae1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_21a04dfd0f85eaefc81e19e125a85ad2238307762c080480823879b91b4d7b30 = $this->env->getExtension("native_profiler");
+        $__internal_21a04dfd0f85eaefc81e19e125a85ad2238307762c080480823879b91b4d7b30->enter($__internal_21a04dfd0f85eaefc81e19e125a85ad2238307762c080480823879b91b4d7b30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 117
+        // line 122
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 ";
         
-        $__internal_6a6351b4988f4b654bf8ee1e7c37448ec94a3a70e943aa179e80d5cbeb6f4ae1->leave($__internal_6a6351b4988f4b654bf8ee1e7c37448ec94a3a70e943aa179e80d5cbeb6f4ae1_prof);
+        $__internal_21a04dfd0f85eaefc81e19e125a85ad2238307762c080480823879b91b4d7b30->leave($__internal_21a04dfd0f85eaefc81e19e125a85ad2238307762c080480823879b91b4d7b30_prof);
 
     }
 
@@ -301,7 +309,7 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 
     public function getDebugInfo()
     {
-        return array (  283 => 117,  277 => 116,  265 => 102,  261 => 100,  254 => 96,  250 => 94,  248 => 93,  245 => 92,  239 => 91,  228 => 88,  219 => 17,  215 => 16,  210 => 15,  204 => 14,  193 => 11,  183 => 124,  176 => 119,  174 => 116,  164 => 107,  162 => 91,  158 => 89,  156 => 88,  147 => 81,  138 => 79,  134 => 78,  123 => 69,  117 => 67,  115 => 66,  109 => 65,  104 => 64,  102 => 63,  87 => 51,  73 => 40,  50 => 20,  47 => 19,  44 => 14,  39 => 11,  27 => 1,);
+        return array (  291 => 122,  285 => 121,  273 => 107,  265 => 102,  261 => 100,  254 => 96,  250 => 94,  248 => 93,  245 => 92,  239 => 91,  228 => 88,  219 => 17,  215 => 16,  210 => 15,  204 => 14,  193 => 11,  183 => 129,  176 => 124,  174 => 121,  164 => 112,  162 => 91,  158 => 89,  156 => 88,  147 => 81,  138 => 79,  134 => 78,  123 => 69,  117 => 67,  115 => 66,  109 => 65,  104 => 64,  102 => 63,  87 => 51,  73 => 40,  50 => 20,  47 => 19,  44 => 14,  39 => 11,  27 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -403,9 +411,14 @@ class __TwigTemplate_963509cee2ef0677899e7928568356b0f85172ec592b3817801279f000d
 /*                             </div>*/
 /*                         </div>*/
 /*                     {% endif %}*/
-/*                     <div class="row">*/
+/*                     <div class="row margin-bottom-md">*/
 /*                         <div class="col-md-4">*/
 /*                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                     <div class="row">*/
+/*                         <div class="col-md-4">*/
+/*                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_tags_tags') }}">Tags</a>*/
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/

@@ -22,32 +22,32 @@ class __TwigTemplate_a4688b57df17551e812c217db8bc4dde4ab5bedf5f7e724cc34b986aac9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5491ceafed79b9c63072d5eb580ab815aec7d62ad052e400906fcdb75f8a7ab2 = $this->env->getExtension("native_profiler");
-        $__internal_5491ceafed79b9c63072d5eb580ab815aec7d62ad052e400906fcdb75f8a7ab2->enter($__internal_5491ceafed79b9c63072d5eb580ab815aec7d62ad052e400906fcdb75f8a7ab2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin/tag:unused-tags.html.twig"));
+        $__internal_e20873c2ad80409866560d2fc68796382356b88d9d7816d901781fa776ecbbb9 = $this->env->getExtension("native_profiler");
+        $__internal_e20873c2ad80409866560d2fc68796382356b88d9d7816d901781fa776ecbbb9->enter($__internal_e20873c2ad80409866560d2fc68796382356b88d9d7816d901781fa776ecbbb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":admin/tag:unused-tags.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5491ceafed79b9c63072d5eb580ab815aec7d62ad052e400906fcdb75f8a7ab2->leave($__internal_5491ceafed79b9c63072d5eb580ab815aec7d62ad052e400906fcdb75f8a7ab2_prof);
+        $__internal_e20873c2ad80409866560d2fc68796382356b88d9d7816d901781fa776ecbbb9->leave($__internal_e20873c2ad80409866560d2fc68796382356b88d9d7816d901781fa776ecbbb9_prof);
 
     }
 
     // line 3
     public function block_headTitle($context, array $blocks = array())
     {
-        $__internal_6b6c7e03592bd410317a965172807a00df1df3cc22a566afecf93150b89b366f = $this->env->getExtension("native_profiler");
-        $__internal_6b6c7e03592bd410317a965172807a00df1df3cc22a566afecf93150b89b366f->enter($__internal_6b6c7e03592bd410317a965172807a00df1df3cc22a566afecf93150b89b366f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
+        $__internal_a2f6d45d1a55fd7703567a7e5a2ac56e74bf342d1116afad7894d3b25b0f460a = $this->env->getExtension("native_profiler");
+        $__internal_a2f6d45d1a55fd7703567a7e5a2ac56e74bf342d1116afad7894d3b25b0f460a->enter($__internal_a2f6d45d1a55fd7703567a7e5a2ac56e74bf342d1116afad7894d3b25b0f460a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "headTitle"));
 
         echo "Unused Tags";
         
-        $__internal_6b6c7e03592bd410317a965172807a00df1df3cc22a566afecf93150b89b366f->leave($__internal_6b6c7e03592bd410317a965172807a00df1df3cc22a566afecf93150b89b366f_prof);
+        $__internal_a2f6d45d1a55fd7703567a7e5a2ac56e74bf342d1116afad7894d3b25b0f460a->leave($__internal_a2f6d45d1a55fd7703567a7e5a2ac56e74bf342d1116afad7894d3b25b0f460a_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9f9a590424ebd5d523a309e1069f4b88992436fdc145d9d61f9765111eac16d0 = $this->env->getExtension("native_profiler");
-        $__internal_9f9a590424ebd5d523a309e1069f4b88992436fdc145d9d61f9765111eac16d0->enter($__internal_9f9a590424ebd5d523a309e1069f4b88992436fdc145d9d61f9765111eac16d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_01343453cccf6133081b5bd6570b92132d361622c098ffca3f07245da2752808 = $this->env->getExtension("native_profiler");
+        $__internal_01343453cccf6133081b5bd6570b92132d361622c098ffca3f07245da2752808->enter($__internal_01343453cccf6133081b5bd6570b92132d361622c098ffca3f07245da2752808_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "    ";
@@ -65,7 +65,7 @@ class __TwigTemplate_a4688b57df17551e812c217db8bc4dde4ab5bedf5f7e724cc34b986aac9
             foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
                 // line 13
                 echo "            <tr>
-                <td>";
+                <td class=\"tag-name\">";
                 // line 14
                 echo twig_escape_filter($this->env, $context["tag"], "html", null, true);
                 echo "</td>
@@ -90,11 +90,15 @@ class __TwigTemplate_a4688b57df17551e812c217db8bc4dde4ab5bedf5f7e724cc34b986aac9
     ";
         } else {
             // line 23
-            echo "        <p>No unused tags were found</p>
+            echo "        <div class=\"row \">
+            <div class=\"col-md-4 alert-success\" style=\"padding: 10px;\">
+                <p id=\"no-unused-tags-found\">No unused tags were found</p>
+            </div>
+        </div>
     ";
         }
         
-        $__internal_9f9a590424ebd5d523a309e1069f4b88992436fdc145d9d61f9765111eac16d0->leave($__internal_9f9a590424ebd5d523a309e1069f4b88992436fdc145d9d61f9765111eac16d0_prof);
+        $__internal_01343453cccf6133081b5bd6570b92132d361622c098ffca3f07245da2752808->leave($__internal_01343453cccf6133081b5bd6570b92132d361622c098ffca3f07245da2752808_prof);
 
     }
 
@@ -126,7 +130,7 @@ class __TwigTemplate_a4688b57df17551e812c217db8bc4dde4ab5bedf5f7e724cc34b986aac9
 /*         </thead>*/
 /*         {% for tag in tags %}*/
 /*             <tr>*/
-/*                 <td>{{ tag }}</td>*/
+/*                 <td class="tag-name">{{ tag }}</td>*/
 /*                 <td><a class="btn btn-danger" href="{{ path('app_admin_tag_remove', {'id': tag.id}) }}">remove</a></td>*/
 /*             </tr>*/
 /*         {% endfor %}*/
@@ -135,6 +139,10 @@ class __TwigTemplate_a4688b57df17551e812c217db8bc4dde4ab5bedf5f7e724cc34b986aac9
 /*         <a class="btn btn-danger" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>*/
 /*     </div>*/
 /*     {% else %}*/
-/*         <p>No unused tags were found</p>*/
+/*         <div class="row ">*/
+/*             <div class="col-md-4 alert-success" style="padding: 10px;">*/
+/*                 <p id="no-unused-tags-found">No unused tags were found</p>*/
+/*             </div>*/
+/*         </div>*/
 /*     {% endif %}*/
 /* {% endblock %}*/
