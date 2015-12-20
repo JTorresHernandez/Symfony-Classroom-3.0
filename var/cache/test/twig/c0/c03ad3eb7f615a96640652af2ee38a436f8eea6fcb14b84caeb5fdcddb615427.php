@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5 = $this->env->getExtension("native_profiler");
-        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5->enter($__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_c05006695bbd56772083fe29a9baea48214b7b07306b244c49c7a681d0b5901f = $this->env->getExtension("native_profiler");
+        $__internal_c05006695bbd56772083fe29a9baea48214b7b07306b244c49c7a681d0b5901f->enter($__internal_c05006695bbd56772083fe29a9baea48214b7b07306b244c49c7a681d0b5901f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -27,19 +27,19 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             echo "        <div style=\"float: right;\">
             <a href=\"";
             // line 4
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "slug", array()))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-151-edit.png"), "html", null, true);
-            echo "\" /></a>
+            echo "\" alt=\"edit article\" /></a>
             ";
             // line 5
             if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
                 // line 6
                 echo "            <a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "slug", array()))), "html", null, true);
                 echo "\"><img src=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-198-remove.png"), "html", null, true);
-                echo "\" /></a>
+                echo "\" alt=\"remove article\" /></a>
             ";
             }
             // line 8
@@ -48,7 +48,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         }
         // line 10
         echo "    <h1 style=\"margin-top: 0px\"><a style=\"color: inherit; text-decoration: inherit;\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "slug", array()))), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "title", array()), "html", null, true);
         echo "</a></h1>
@@ -125,7 +125,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 35)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5->leave($__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5_prof);
+        $__internal_c05006695bbd56772083fe29a9baea48214b7b07306b244c49c7a681d0b5901f->leave($__internal_c05006695bbd56772083fe29a9baea48214b7b07306b244c49c7a681d0b5901f_prof);
 
     }
 
@@ -147,13 +147,13 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /* <div class="rounded-box margin-bottom-lg"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
-/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
+/*             <a href="{{ path('app_article_edit', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" /></a>*/
 /*             {% if is_granted('ROLE_ADMIN') %}*/
-/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>*/
+/*             <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" /></a>*/
 /*             {% endif %}*/
 /*         </div>*/
 /*     {% endif %}*/
-/*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>*/
+/*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article.title }}</a></h1>*/
 /*     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>*/
 /*     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">*/
 /*         {{ article.intro }}*/

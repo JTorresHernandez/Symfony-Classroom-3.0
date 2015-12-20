@@ -20,7 +20,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ArticleController extends Controller
 {
     /**
-     * @Route("/remove/{id}", name="app_admin_article_remove")
+     * @Route("/remove/{slug}.html", name="app_admin_article_remove")
      */
     public function removeArticle(Article $article)
     {

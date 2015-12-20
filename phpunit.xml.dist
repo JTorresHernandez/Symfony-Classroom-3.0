@@ -13,7 +13,10 @@
 
     <testsuites>
         <testsuite name="Project Test Suite">
-            <directory>tests</directory>
+            <file>tests/AppBundle/ApplicationAvailabilityFunctionalTest.php</file>
+            <file>tests/AppBundle/Controller/ArticleControllerTest.php</file>
+            <file>tests/AppBundle/Controller/Admin/ArticleControllerTest.php</file>
+           <!-- <directory>tests</directory> -->
         </testsuite>
     </testsuites>
 

@@ -34,7 +34,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             ['/'],
             ['/register/'],
             ['/login'],
-            ['/show/71'],
+            ['/boston-celtics-nba-champions.html'],
         ];
     }
 
@@ -56,7 +56,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     {
         return [
             ['/new'],
-            ['/edit/69'],
+            ['/edit/boston-celtics-nba-champions.html'],
         ];
     }
 
@@ -78,6 +78,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     {
         return [
             ['/admin/'],
+            ['/admin/tags/unused'],
         ];
     }
 }

@@ -54,7 +54,7 @@ class ArticleController extends Controller
                 $m->persist($a);
                 $m->flush();
 
-                return $this->redirectToRoute('app_article_show', ['id' => $a->getId()]);
+                return $this->redirectToRoute('app_article_show', ['slug' => $a->getSlug()]);
             }
         }
 
@@ -67,7 +67,7 @@ class ArticleController extends Controller
     /**
      * http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
      *
-     * @Route("edit/{id}", name="app_article_edit")
+     * @Route("edit/{slug}.html", name="app_article_edit")
      */
     public function editAction(Article $article, Request $request)
     {
@@ -83,13 +83,14 @@ class ArticleController extends Controller
             $form->handleRequest($request);
 
             if ($form->isValid()) {
+                $article->setSlug(true);
                 $m = $this->getDoctrine()->getManager();
                 $tagRepo = $m->getRepository('AppBundle:Tag');
                 $tagRepo->addTagsIfAreNew($article);
 
                 $m->flush();
 
-                return $this->redirectToRoute('app_article_show', ['id' => $article->getId()]);
+                return $this->redirectToRoute('app_article_show', ['slug' => $article->getSlug()]);
             }
         }
 
@@ -100,7 +101,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * @Route("/show/{id}", name="app_article_show")
+     * @Route("/{slug}.html", name="app_article_show")
      */
     public function showAction(Article $article, Request $request)
     {
@@ -140,7 +141,7 @@ class ArticleController extends Controller
     /**
      * @Route("/articles/user/{username}", name="app_articles_byUser")
      */
-    public function articlesByUSer(User $user, Request $request)
+    public function articlesByUSerAction(User $user, Request $request)
     {
         $m = $this->getDoctrine()->getManager();
         $articleRepo = $m->getRepository('AppBundle:Article');

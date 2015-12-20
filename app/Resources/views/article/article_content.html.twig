@@ -1,13 +1,13 @@
 <div class="rounded-box margin-bottom-lg"> {# article #}
     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}
         <div style="float: right;">
-            <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>
+            <a href="{{ path('app_article_edit', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" /></a>
             {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>
+            <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" /></a>
             {% endif %}
         </div>
     {% endif %}
-    <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>
+    <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article.title }}</a></h1>
     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">
         {{ article.intro }}

@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Article
@@ -11,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ArticleRepository")
  * @ORM\HasLifecycleCallbacks()
+ * @UniqueEntity(fields={"title"}, message="Title must be unique")
  */
 class Article
 {
@@ -26,9 +28,14 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255)
+     * @ORM\Column(name="title", type="string", length=255, unique=true)
      */
     private $title;
+
+    /**
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
 
     /**
      * @ORM\Column(name="intro", type="text")
@@ -290,5 +297,25 @@ class Article
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function setSlug($change = false)
+    {
+        if (!$this->slug or $change) {
+            $this->slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower(strip_tags($this->title))), '-');
+        }
+
+        return $this;
     }
 }

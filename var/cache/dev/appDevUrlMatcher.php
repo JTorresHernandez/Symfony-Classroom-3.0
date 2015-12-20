@@ -301,12 +301,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // app_article_edit
-        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editAction',));
         }
 
         // app_article_show
-        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
         }
 
@@ -318,7 +318,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // app_articles_byUser
             if (0 === strpos($pathinfo, '/articles/user') && preg_match('#^/articles/user/(?P<username>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSer',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSerAction',));
             }
 
         }
@@ -364,7 +364,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // app_admin_article_remove
-            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_article_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\ArticleController::removeArticle',));
             }
 
