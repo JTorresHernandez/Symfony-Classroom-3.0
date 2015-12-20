@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d98a3417d2af4851a1f2253aee320bcf3b305c33e95a59411e8cfe1ef36f576f = $this->env->getExtension("native_profiler");
-        $__internal_d98a3417d2af4851a1f2253aee320bcf3b305c33e95a59411e8cfe1ef36f576f->enter($__internal_d98a3417d2af4851a1f2253aee320bcf3b305c33e95a59411e8cfe1ef36f576f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5 = $this->env->getExtension("native_profiler");
+        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5->enter($__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -62,7 +62,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         echo " :: <strong>Updated:</strong> ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "updatedAt", array()), "d/m/Y H:i:s"), "html", null, true);
         echo "</div>
-    <div style=\"padding: 20px;font-size: medium;font-weight: bold\">
+    <div id=\"article-intro\" style=\"padding: 20px;font-size: medium;font-weight: bold\">
         ";
         // line 13
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "intro", array()), "html", null, true);
@@ -72,7 +72,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         // line 15
         if (array_key_exists("show_content", $context)) {
             // line 16
-            echo "        <div style=\"margin-bottom:20px;padding: 0px 20px;font-size: medium\">
+            echo "        <div id=\"article-content\" style=\"margin-bottom:20px;padding: 0px 20px;font-size: medium\">
             ";
             // line 17
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "content", array()), "html", null, true);
@@ -125,7 +125,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 35)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_d98a3417d2af4851a1f2253aee320bcf3b305c33e95a59411e8cfe1ef36f576f->leave($__internal_d98a3417d2af4851a1f2253aee320bcf3b305c33e95a59411e8cfe1ef36f576f_prof);
+        $__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5->leave($__internal_34ba7874e0c998d6945941cd92558d867c6c0c6e129b09111d11dc072f93eee5_prof);
 
     }
 
@@ -155,11 +155,11 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*     {% endif %}*/
 /*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>*/
 /*     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>*/
-/*     <div style="padding: 20px;font-size: medium;font-weight: bold">*/
+/*     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">*/
 /*         {{ article.intro }}*/
 /*     </div>*/
 /*     {% if show_content is defined %}*/
-/*         <div style="margin-bottom:20px;padding: 0px 20px;font-size: medium">*/
+/*         <div id="article-content" style="margin-bottom:20px;padding: 0px 20px;font-size: medium">*/
 /*             {{ article.content }}*/
 /*         </div>*/
 /*     {% endif %}*/

@@ -88,7 +88,7 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
     <div class=\"row\">
         <div class=\"col-sm-3 col-md-2 sidebar\">
             <ul class=\"nav nav-sidebar\">
-                <li class=\"active\"><a href=\"#\">Articles <span class=\"sr-only\">(current)</span></a></li>
+                <li><a href=\"#\">Articles</a></li>
                 <li><a href=\"#\">New article</a></li>
                 <li><a href=\"#\">Update article</a></li>
                 <li><a href=\"#\">Remove article</a></li>
@@ -98,14 +98,28 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
                 <li><a href=\"\">New tag</a></li>
                 <li><a href=\"\">Update tag</a></li>
                 <li><a href=\"\">Remove tag</a></li>
-                <li><a href=\"";
+                <li ";
         // line 69
-        echo $this->env->getExtension('routing')->getPath("app_admin_tag_unused");
-        echo "\">Unused tags</a></li>
-                <li><a href=\"";
+        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") == "app_admin_tag_unused")) {
+            echo "class=\"active\"";
+        }
+        echo ">
+                    <a href=\"";
         // line 70
+        echo $this->env->getExtension('routing')->getPath("app_admin_tag_unused");
+        echo "\">Unused tags</a>
+                </li>
+                <li ";
+        // line 72
+        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") == "app_admin_tag_removeAllUnusedTags")) {
+            echo "class=\"active\"";
+        }
+        echo ">
+                    <a href=\"";
+        // line 73
         echo $this->env->getExtension('routing')->getPath("app_admin_tag_removeAllUnusedTags");
-        echo "\">Remove all unused tags</a></li>
+        echo "\">Remove all unused tags</a>
+                </li>
             </ul>
             <ul class=\"nav nav-sidebar\">
                 <li><a href=\"#\">Comments</a></li>
@@ -122,13 +136,13 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
         </div>
         <div class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">
             <h1 class=\"page-header\">";
-        // line 86
+        // line 90
         $this->displayBlock('headTitle', $context, $blocks);
         echo "</h1>
             ";
-        // line 87
+        // line 91
         $this->displayBlock('body', $context, $blocks);
-        // line 88
+        // line 92
         echo "        </div>
     </div>
 </div>
@@ -137,20 +151,20 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"";
-        // line 95
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script>window.jQuery || document.write('<script src=\"";
-        // line 96
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"><\\/script>')</script>
 <script src=\"";
-        // line 97
+        // line 101
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src=\"js/";
-        // line 99
+        // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/ie10-viewport-bug-workaround.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -158,12 +172,12 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
 ";
     }
 
-    // line 86
+    // line 90
     public function block_headTitle($context, array $blocks = array())
     {
     }
 
-    // line 87
+    // line 91
     public function block_body($context, array $blocks = array())
     {
     }
@@ -180,7 +194,7 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
 
     public function getDebugInfo()
     {
-        return array (  167 => 87,  162 => 86,  154 => 99,  149 => 97,  145 => 96,  141 => 95,  132 => 88,  130 => 87,  126 => 86,  107 => 70,  103 => 69,  76 => 45,  49 => 21,  43 => 18,  37 => 15,  21 => 1,);
+        return array (  181 => 91,  176 => 90,  168 => 103,  163 => 101,  159 => 100,  155 => 99,  146 => 92,  144 => 91,  140 => 90,  120 => 73,  114 => 72,  109 => 70,  103 => 69,  76 => 45,  49 => 21,  43 => 18,  37 => 15,  21 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -241,7 +255,7 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
 /*     <div class="row">*/
 /*         <div class="col-sm-3 col-md-2 sidebar">*/
 /*             <ul class="nav nav-sidebar">*/
-/*                 <li class="active"><a href="#">Articles <span class="sr-only">(current)</span></a></li>*/
+/*                 <li><a href="#">Articles</a></li>*/
 /*                 <li><a href="#">New article</a></li>*/
 /*                 <li><a href="#">Update article</a></li>*/
 /*                 <li><a href="#">Remove article</a></li>*/
@@ -251,8 +265,12 @@ class __TwigTemplate_cdb4147337cffbc8b93027aac25dc768660c875b8429d8690e87da78eff
 /*                 <li><a href="">New tag</a></li>*/
 /*                 <li><a href="">Update tag</a></li>*/
 /*                 <li><a href="">Remove tag</a></li>*/
-/*                 <li><a href="{{ path('app_admin_tag_unused') }}">Unused tags</a></li>*/
-/*                 <li><a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a></li>*/
+/*                 <li {% if app.request.get('_route') == 'app_admin_tag_unused' %}class="active"{% endif %}>*/
+/*                     <a href="{{ path('app_admin_tag_unused') }}">Unused tags</a>*/
+/*                 </li>*/
+/*                 <li {% if app.request.get('_route') == 'app_admin_tag_removeAllUnusedTags' %}class="active"{% endif %}>*/
+/*                     <a href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>*/
+/*                 </li>*/
 /*             </ul>*/
 /*             <ul class="nav nav-sidebar">*/
 /*                 <li><a href="#">Comments</a></li>*/

@@ -23,7 +23,42 @@ class ArticleControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertCount(2, $crawler->filter('h1'));
+        // $this->assertCount(2, $crawler->filter('h1'));
+        $this->assertGreaterThan(0, $crawler->filter('h1')->count());
+    }
+
+    public function testNew()
+    {
+        $client = static::createClient(array(), array(
+            'PHP_AUTH_USER' => 'ismael',
+            'PHP_AUTH_PW'   => '1234',
+        ));
+
+        $crawler = $client->request('GET', '/new');
+
+        $button = $crawler->selectButton('article[submit]');
+
+        $form = $button->form();
+
+        $form['article[title]'] = 'Created From Test';
+        $form['article[intro]'] = 'Test intro';
+        $form['article[content]'] = 'Test content';
+        $form['article[tags][1]']->tick();
+        $form['article[new_tags]'] = 'test1;test2';
+
+        $client->submit($form);
+
+        $crawler = $client->followRedirect();
+        $response = $client->getResponse();
+
+        $intro = $crawler->filter('#article-intro')->text();
+        $content = $crawler->filter('#article-content')->text();
+
+        $this->assertEquals('Created From Test', $crawler->filter('h1')->first()->text());
+        $this->assertEquals('Test intro', trim($intro));
+        $this->assertEquals('Test content', trim($content));
+        $this->assertContains('test1', $response->getContent());
+        $this->assertContains('test2', $response->getContent());
     }
 
 

@@ -27,6 +27,8 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
                     $newTag = new Tag();
                     $newTag->setName($tagText);
                     $article->addTag($newTag);
+                } else {
+                    $article->addTag($tag);
                 }
             }
         }

@@ -12,6 +12,7 @@ class __TwigTemplate_45c883faeff1557fac4ea355e82a8b72b3999f7d276fdb9031a26c2956b
         $this->blocks = array(
             'body' => array($this, 'block_body'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
+            'sidebar' => array($this, 'block_sidebar'),
         );
     }
 
@@ -66,20 +67,29 @@ class __TwigTemplate_45c883faeff1557fac4ea355e82a8b72b3999f7d276fdb9031a26c2956b
         }
         // line 13
         echo "
-    <div>
-        ";
-        // line 15
-        $this->displayBlock('fos_user_content', $context, $blocks);
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-md-8\">
+                ";
         // line 17
-        echo "    </div>
+        $this->displayBlock('fos_user_content', $context, $blocks);
+        // line 19
+        echo "            </div>
+        </div>
+    </div>
 ";
     }
 
-    // line 15
+    // line 17
     public function block_fos_user_content($context, array $blocks = array())
     {
-        // line 16
-        echo "        ";
+        // line 18
+        echo "                ";
+    }
+
+    // line 24
+    public function block_sidebar($context, array $blocks = array())
+    {
     }
 
     public function getTemplateName()
@@ -94,7 +104,7 @@ class __TwigTemplate_45c883faeff1557fac4ea355e82a8b72b3999f7d276fdb9031a26c2956b
 
     public function getDebugInfo()
     {
-        return array (  82 => 16,  79 => 15,  74 => 17,  72 => 15,  68 => 13,  65 => 12,  59 => 11,  50 => 8,  45 => 7,  40 => 6,  35 => 5,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  91 => 24,  87 => 18,  84 => 17,  77 => 19,  75 => 17,  69 => 13,  66 => 12,  60 => 11,  51 => 8,  46 => 7,  41 => 6,  36 => 5,  33 => 4,  30 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -110,8 +120,14 @@ class __TwigTemplate_45c883faeff1557fac4ea355e82a8b72b3999f7d276fdb9031a26c2956b
 /*         {% endfor %}*/
 /*     {% endif %}*/
 /* */
-/*     <div>*/
-/*         {% block fos_user_content %}*/
-/*         {% endblock fos_user_content %}*/
+/*     <div class="container">*/
+/*         <div class="row">*/
+/*             <div class="col-md-8">*/
+/*                 {% block fos_user_content %}*/
+/*                 {% endblock fos_user_content %}*/
+/*             </div>*/
+/*         </div>*/
 /*     </div>*/
 /* {% endblock %}*/
+/* */
+/* {% block sidebar %}{% endblock %}*/

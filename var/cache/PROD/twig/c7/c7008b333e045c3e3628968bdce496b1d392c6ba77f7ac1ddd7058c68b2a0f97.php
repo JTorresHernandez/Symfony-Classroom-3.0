@@ -78,6 +78,10 @@ class __TwigTemplate_61e231b4c2e363309e98d90fe3705e49b2a3fa8e83258d09610e34a6d4d
         // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
+    or <a href=\"";
+        // line 30
+        echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
+        echo "\">Sign up</a>
 </form>
 ";
     }
@@ -94,7 +98,7 @@ class __TwigTemplate_61e231b4c2e363309e98d90fe3705e49b2a3fa8e83258d09610e34a6d4d
 
     public function getDebugInfo()
     {
-        return array (  79 => 29,  72 => 25,  63 => 19,  56 => 15,  52 => 14,  46 => 11,  42 => 10,  39 => 9,  33 => 7,  31 => 6,  28 => 5,  11 => 1,);
+        return array (  83 => 30,  79 => 29,  72 => 25,  63 => 19,  56 => 15,  52 => 14,  46 => 11,  42 => 10,  39 => 9,  33 => 7,  31 => 6,  28 => 5,  11 => 1,);
     }
 }
 /* {% extends "FOSUserBundle::layout.html.twig" %}*/
@@ -126,6 +130,7 @@ class __TwigTemplate_61e231b4c2e363309e98d90fe3705e49b2a3fa8e83258d09610e34a6d4d
 /*     </div>*/
 /* */
 /*     <input class="btn btn-default" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />*/
+/*     or <a href="{{ path('fos_user_registration_register') }}">Sign up</a>*/
 /* </form>*/
 /* {% endblock fos_user_content %}*/
 /* */

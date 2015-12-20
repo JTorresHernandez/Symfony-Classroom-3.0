@@ -9,11 +9,11 @@
     {% endif %}
     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>
     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>
-    <div style="padding: 20px;font-size: medium;font-weight: bold">
+    <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">
         {{ article.intro }}
     </div>
     {% if show_content is defined %}
-        <div style="margin-bottom:20px;padding: 0px 20px;font-size: medium">
+        <div id="article-content" style="margin-bottom:20px;padding: 0px 20px;font-size: medium">
             {{ article.content }}
         </div>
     {% endif %}

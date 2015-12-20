@@ -12,6 +12,7 @@ class __TwigTemplate_a41baab8bdad932f23aa1eeaf9795c0ed082e50dbc5f42df4f241215a12
         $this->blocks = array(
             'headTitle' => array($this, 'block_headTitle'),
             'body' => array($this, 'block_body'),
+            'sidebar' => array($this, 'block_sidebar'),
         );
     }
 
@@ -41,6 +42,11 @@ class __TwigTemplate_a41baab8bdad932f23aa1eeaf9795c0ed082e50dbc5f42df4f241215a12
 ";
     }
 
+    // line 9
+    public function block_sidebar($context, array $blocks = array())
+    {
+    }
+
     public function getTemplateName()
     {
         return ":article:form.html.twig";
@@ -53,7 +59,7 @@ class __TwigTemplate_a41baab8bdad932f23aa1eeaf9795c0ed082e50dbc5f42df4f241215a12
 
     public function getDebugInfo()
     {
-        return array (  38 => 6,  35 => 5,  29 => 3,  11 => 1,);
+        return array (  46 => 9,  39 => 6,  36 => 5,  30 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
@@ -63,3 +69,5 @@ class __TwigTemplate_a41baab8bdad932f23aa1eeaf9795c0ed082e50dbc5f42df4f241215a12
 /* {% block body %}*/
 /*     {{ form(form) }}*/
 /* {% endblock %}*/
+/* */
+/* {% block sidebar %}{% endblock %}*/

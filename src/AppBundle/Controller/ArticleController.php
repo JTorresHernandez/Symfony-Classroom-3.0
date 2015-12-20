@@ -10,7 +10,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Trascastro\UserBundle\Entity\User;
-use Trascastro\UserBundle\UserBundle;
 
 class ArticleController extends Controller
 {
@@ -55,7 +54,7 @@ class ArticleController extends Controller
                 $m->persist($a);
                 $m->flush();
 
-                return $this->redirectToRoute('app_article_articles');
+                return $this->redirectToRoute('app_article_show', ['id' => $a->getId()]);
             }
         }
 

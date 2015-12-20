@@ -157,7 +157,7 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
             ";
         // line 91
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 108
+        // line 107
         echo "        </div>
     </div>
     <hr>
@@ -167,16 +167,16 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 </div> <!-- /container -->
 
 ";
-        // line 117
+        // line 116
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 120
+        // line 119
         echo "
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
 <script>window.jQuery || document.write('<script src=\"";
-        // line 125
+        // line 124
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"><\\/script>')</script>
 </body>
@@ -240,14 +240,13 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
                         </div>
                     </div>
                 </div>
-
             ";
     }
 
-    // line 117
+    // line 116
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 118
+        // line 117
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
@@ -266,7 +265,7 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 
     public function getDebugInfo()
     {
-        return array (  251 => 118,  248 => 117,  238 => 102,  234 => 100,  227 => 96,  223 => 94,  221 => 93,  218 => 92,  215 => 91,  210 => 88,  204 => 17,  200 => 16,  195 => 15,  192 => 14,  187 => 11,  180 => 125,  173 => 120,  171 => 117,  161 => 108,  159 => 91,  155 => 89,  153 => 88,  144 => 81,  135 => 79,  131 => 78,  120 => 69,  114 => 67,  112 => 66,  106 => 65,  101 => 64,  99 => 63,  84 => 51,  70 => 40,  47 => 20,  44 => 19,  41 => 14,  36 => 11,  24 => 1,);
+        return array (  250 => 117,  247 => 116,  238 => 102,  234 => 100,  227 => 96,  223 => 94,  221 => 93,  218 => 92,  215 => 91,  210 => 88,  204 => 17,  200 => 16,  195 => 15,  192 => 14,  187 => 11,  180 => 124,  173 => 119,  171 => 116,  161 => 107,  159 => 91,  155 => 89,  153 => 88,  144 => 81,  135 => 79,  131 => 78,  120 => 69,  114 => 67,  112 => 66,  106 => 65,  101 => 64,  99 => 63,  84 => 51,  70 => 40,  47 => 20,  44 => 19,  41 => 14,  36 => 11,  24 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -374,7 +373,6 @@ class __TwigTemplate_db26bb755c538cdd1c0e905d4b8b7031b0d8e75061122afc0b03d56e7a0
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
-/* */
 /*             {% endblock %}*/
 /*         </div>*/
 /*     </div>*/
