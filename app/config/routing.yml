@@ -25,6 +25,11 @@ app.admin.articles:
     type: annotation
     prefix: /admin/articles
 
+app.admin.comments:
+    resource: "@AppBundle/Controller/Admin/CommentController.php"
+    type: annotation
+    prefix: /admin/comments
+
 app.comments:
     resource: "@AppBundle/Controller/CommentController.php"
     type: annotation

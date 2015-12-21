@@ -368,18 +368,31 @@ class appTestUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_article_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\ArticleController::removeArticle',));
             }
 
-        }
-
-        // app_comment_new
-        if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            if ($this->context->getMethod() != 'POST') {
-                $allow[] = 'POST';
-                goto not_app_comment_new;
+            // app_admin_comment_remove
+            if (0 === strpos($pathinfo, '/admin/comments/remove') && preg_match('#^/admin/comments/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_comment_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\CommentController::removeCommnentAction',));
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_new')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::submitCommentAction',));
         }
-        not_app_comment_new:
+
+        if (0 === strpos($pathinfo, '/comment')) {
+            // app_comment_new
+            if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_app_comment_new;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_new')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::submitCommentAction',));
+            }
+            not_app_comment_new:
+
+            // app_comment_edit
+            if (0 === strpos($pathinfo, '/comment/edit') && preg_match('#^/comment/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_edit')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::editAction',));
+            }
+
+        }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

@@ -49,4 +49,31 @@ class CommentController extends Controller
 
         return $this->forward('AppBundle:Comment:showForm', ['id' => $article->getId()]);
     }
+
+    /**
+     * @Route("/edit/{id}", name="app_comment_edit")
+     */
+    public function editAction(Comment $comment, Request $request)
+    {
+        if (!$this->isGranted('ROLE_ADMIN') and $this->getUser() != $comment->getAuthor()) {
+            throw $this->createAccessDeniedException('You are not allowed to do this');
+        }
+
+        $form = $this->createForm(CommentType::class, $comment, ['submit_label' => 'Edit Comment']);
+
+        if ($request->getMethod() == Request::METHOD_POST) {
+            $form->handleRequest($request);
+
+            if ($form->isValid()) {
+                $m = $this->getDoctrine()->getManager();
+                $m->flush();
+
+                return $this->redirectToRoute('app_article_show', ['slug' => $comment->getArticle()->getSlug()]);
+            }
+        }
+
+        return $this->render(':comment:show-form-edit-mode.html.twig', [
+            'form'      => $form->createView(),
+        ]);
+    }
 }
