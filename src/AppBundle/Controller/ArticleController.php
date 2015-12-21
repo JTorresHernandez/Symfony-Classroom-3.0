@@ -79,6 +79,14 @@ class ArticleController extends Controller
             'submit_label'  => 'Edit Article'
         ]);
 
+        $now = new \DateTime();
+        $sinceCreated = $now->diff($article->getCreatedAt());
+        $minutes = $sinceCreated->days * 24 * 60 + $sinceCreated->h * 60 + $sinceCreated->i;
+
+        if ($minutes > 4) {
+            $form->remove('title');
+        }
+
         if ($request->getMethod() == Request::METHOD_POST) {
             $form->handleRequest($request);
 
