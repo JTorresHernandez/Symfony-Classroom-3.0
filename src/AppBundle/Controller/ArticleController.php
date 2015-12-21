@@ -83,7 +83,6 @@ class ArticleController extends Controller
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                $article->setSlug(true);
                 $m = $this->getDoctrine()->getManager();
                 $tagRepo = $m->getRepository('AppBundle:Tag');
                 $tagRepo->addTagsIfAreNew($article);

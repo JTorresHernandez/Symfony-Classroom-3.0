@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Article
@@ -33,7 +34,8 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(name="slug", type="string", length=255)
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
     private $slug;
 
@@ -308,13 +310,12 @@ class Article
     }
 
     /**
-     * @ORM\PrePersist()
+     * @param mixed $slug
+     * @return $this
      */
-    public function setSlug($change = false)
+    public function setSlug($slug)
     {
-        if (!$this->slug or $change) {
-            $this->slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower(strip_tags($this->title))), '-');
-        }
+        $this->slug = $slug;
 
         return $this;
     }

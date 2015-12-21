@@ -15,8 +15,8 @@ class __TwigTemplate_4579c37c0154f0aa5d7db92c6beb60c2fad9a4f5d1d8a6a552e7cc3630f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_34e9738fc09fcd9f40f72a1d0913da9eb08dc646e78ab3b03ef1c19710165061 = $this->env->getExtension("native_profiler");
-        $__internal_34e9738fc09fcd9f40f72a1d0913da9eb08dc646e78ab3b03ef1c19710165061->enter($__internal_34e9738fc09fcd9f40f72a1d0913da9eb08dc646e78ab3b03ef1c19710165061_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:showCommentsByArticle.html.twig"));
+        $__internal_82bb9088433d62a106afca240ddf27adb02a903eea20c31d6dc0c312849fbc2c = $this->env->getExtension("native_profiler");
+        $__internal_82bb9088433d62a106afca240ddf27adb02a903eea20c31d6dc0c312849fbc2c->enter($__internal_82bb9088433d62a106afca240ddf27adb02a903eea20c31d6dc0c312849fbc2c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:showCommentsByArticle.html.twig"));
 
         // line 1
         if ( !twig_test_empty((isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))) {
@@ -74,7 +74,7 @@ class __TwigTemplate_4579c37c0154f0aa5d7db92c6beb60c2fad9a4f5d1d8a6a552e7cc3630f
 ";
         }
         
-        $__internal_34e9738fc09fcd9f40f72a1d0913da9eb08dc646e78ab3b03ef1c19710165061->leave($__internal_34e9738fc09fcd9f40f72a1d0913da9eb08dc646e78ab3b03ef1c19710165061_prof);
+        $__internal_82bb9088433d62a106afca240ddf27adb02a903eea20c31d6dc0c312849fbc2c->leave($__internal_82bb9088433d62a106afca240ddf27adb02a903eea20c31d6dc0c312849fbc2c_prof);
 
     }
 
