@@ -89,21 +89,21 @@
         </div>
         <div class="col-md-4">
             {% block sidebar %}
-                <div class="container">
+                <div class="container-fluid">
                     {% if is_granted('ROLE_ADMIN') %}
                         <div class="row margin-bottom-md">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_admin_index_index') }}">Dashboard</a>
                             </div>
                         </div>
                     {% endif %}
                     <div class="row margin-bottom-md">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_tags_tags') }}">Tags</a>
                         </div>
                     </div>

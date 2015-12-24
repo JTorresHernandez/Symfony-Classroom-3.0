@@ -52,7 +52,7 @@ class __TwigTemplate_b8406f7b8ed0db4f8bbda7c88c14835f507ea3ba4f7c05c7642c28d425d
             foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
                 // line 11
                 echo "                <div><a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("slug" => $this->getAttribute($context["article"], "slug", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $context["article"], "html", null, true);
                 echo "</a></div>
@@ -103,7 +103,7 @@ class __TwigTemplate_b8406f7b8ed0db4f8bbda7c88c14835f507ea3ba4f7c05c7642c28d425d
 /* */
 /*         <div style="padding: 5px 20px">*/
 /*             {% for article in tag.articles %}*/
-/*                 <div><a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article }}</a></div>*/
+/*                 <div><a href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article }}</a></div>*/
 /*             {% endfor %}*/
 /*         </div>*/
 /*     {% endfor %}*/

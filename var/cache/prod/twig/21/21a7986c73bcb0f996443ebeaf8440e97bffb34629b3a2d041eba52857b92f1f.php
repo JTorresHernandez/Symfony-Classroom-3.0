@@ -50,7 +50,7 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
             foreach ($context['_seq'] as $context["_key"] => $context["tag"]) {
                 // line 13
                 echo "            <tr>
-                <td>";
+                <td class=\"tag-name\">";
                 // line 14
                 echo twig_escape_filter($this->env, $context["tag"], "html", null, true);
                 echo "</td>
@@ -75,7 +75,11 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
     ";
         } else {
             // line 23
-            echo "        <p>No unused tags were found</p>
+            echo "        <div class=\"row \">
+            <div class=\"col-md-4 alert-success\" style=\"padding: 10px;\">
+                <p id=\"no-unused-tags-found\">No unused tags were found</p>
+            </div>
+        </div>
     ";
         }
     }
@@ -108,7 +112,7 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
 /*         </thead>*/
 /*         {% for tag in tags %}*/
 /*             <tr>*/
-/*                 <td>{{ tag }}</td>*/
+/*                 <td class="tag-name">{{ tag }}</td>*/
 /*                 <td><a class="btn btn-danger" href="{{ path('app_admin_tag_remove', {'id': tag.id}) }}">remove</a></td>*/
 /*             </tr>*/
 /*         {% endfor %}*/
@@ -117,6 +121,10 @@ class __TwigTemplate_4be0bcff574b70b9f43e06ef7b039c30e85c67686a005a00b94df2fdb86
 /*         <a class="btn btn-danger" href="{{ path('app_admin_tag_removeAllUnusedTags') }}">Remove all unused tags</a>*/
 /*     </div>*/
 /*     {% else %}*/
-/*         <p>No unused tags were found</p>*/
+/*         <div class="row ">*/
+/*             <div class="col-md-4 alert-success" style="padding: 10px;">*/
+/*                 <p id="no-unused-tags-found">No unused tags were found</p>*/
+/*             </div>*/
+/*         </div>*/
 /*     {% endif %}*/
 /* {% endblock %}*/

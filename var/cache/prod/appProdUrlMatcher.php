@@ -228,12 +228,12 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         }
 
         // app_article_edit
-        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_edit')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::editAction',));
         }
 
         // app_article_show
-        if (0 === strpos($pathinfo, '/show') && preg_match('#^/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_article_show')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::showAction',));
         }
 
@@ -245,7 +245,7 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
             // app_articles_byUser
             if (0 === strpos($pathinfo, '/articles/user') && preg_match('#^/articles/user/(?P<username>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSer',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_articles_byUser')), array (  '_controller' => 'AppBundle\\Controller\\ArticleController::articlesByUSerAction',));
             }
 
         }
@@ -291,22 +291,35 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             }
 
             // app_admin_article_remove
-            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/admin/articles/remove') && preg_match('#^/admin/articles/remove/(?P<slug>[^/\\.]++)\\.html$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_article_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\ArticleController::removeArticle',));
             }
 
-        }
-
-        // app_comment_new
-        if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            if ($this->context->getMethod() != 'POST') {
-                $allow[] = 'POST';
-                goto not_app_comment_new;
+            // app_admin_comment_remove
+            if (0 === strpos($pathinfo, '/admin/comments/remove') && preg_match('#^/admin/comments/remove/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_admin_comment_remove')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\CommentController::removeCommnentAction',));
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_new')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::submitCommentAction',));
         }
-        not_app_comment_new:
+
+        if (0 === strpos($pathinfo, '/comment')) {
+            // app_comment_new
+            if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_app_comment_new;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_new')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::submitCommentAction',));
+            }
+            not_app_comment_new:
+
+            // app_comment_edit
+            if (0 === strpos($pathinfo, '/comment/edit') && preg_match('#^/comment/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_edit')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::editAction',));
+            }
+
+        }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

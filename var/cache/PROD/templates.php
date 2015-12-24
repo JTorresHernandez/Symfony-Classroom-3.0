@@ -152,6 +152,7 @@
   ':article:form.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/article/form.html.twig',
   '::base.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/base.html.twig',
   ':comment:show-comment.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/comment/show-comment.html.twig',
+  ':comment:show-form-edit-mode.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/comment/show-form-edit-mode.html.twig',
   ':comment:show-form.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/comment/show-form.html.twig',
   ':comment:showCommentsByArticle.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/comment/showCommentsByArticle.html.twig',
   ':form-templates:bootstrap_3_horizontal_layout.html.twig' => '/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/views/form-templates/bootstrap_3_horizontal_layout.html.twig',

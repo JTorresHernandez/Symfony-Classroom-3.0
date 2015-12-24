@@ -24,19 +24,19 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
             echo "        <div style=\"float: right;\">
             <a href=\"";
             // line 4
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_edit", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "slug", array()))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-151-edit.png"), "html", null, true);
-            echo "\" /></a>
+            echo "\" alt=\"edit article\" /></a>
             ";
             // line 5
             if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
                 // line 6
                 echo "            <a href=\"";
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_admin_article_remove", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "slug", array()))), "html", null, true);
                 echo "\"><img src=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("icons/glyphicons-198-remove.png"), "html", null, true);
-                echo "\" /></a>
+                echo "\" alt=\"remove article\" /></a>
             ";
             }
             // line 8
@@ -45,7 +45,7 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
         }
         // line 10
         echo "    <h1 style=\"margin-top: 0px\"><a style=\"color: inherit; text-decoration: inherit;\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_article_show", array("slug" => $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "slug", array()))), "html", null, true);
         echo "\">";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "title", array()), "html", null, true);
         echo "</a></h1>
@@ -59,7 +59,7 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
         echo " :: <strong>Updated:</strong> ";
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "updatedAt", array()), "d/m/Y H:i:s"), "html", null, true);
         echo "</div>
-    <div style=\"padding: 20px;font-size: medium;font-weight: bold\">
+    <div id=\"article-intro\" style=\"padding: 20px;font-size: medium;font-weight: bold\">
         ";
         // line 13
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "intro", array()), "html", null, true);
@@ -69,7 +69,7 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
         // line 15
         if (array_key_exists("show_content", $context)) {
             // line 16
-            echo "        <div style=\"margin-bottom:20px;padding: 0px 20px;font-size: medium\">
+            echo "        <div id=\"article-content\" style=\"margin-bottom:20px;padding: 0px 20px;font-size: medium\">
             ";
             // line 17
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "content", array()), "html", null, true);
@@ -141,19 +141,19 @@ class __TwigTemplate_67d8d5cca710e180b019f0f95b2fe485c416eb388ca6d53e0d8d2041da9
 /* <div class="rounded-box margin-bottom-lg"> {# article #}*/
 /*     {% if article.author == app.user or is_granted('ROLE_ADMIN') %}*/
 /*         <div style="float: right;">*/
-/*             <a href="{{ path('app_article_edit', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" /></a>*/
+/*             <a href="{{ path('app_article_edit', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" /></a>*/
 /*             {% if is_granted('ROLE_ADMIN') %}*/
-/*             <a href="{{ path('app_admin_article_remove', {'id': article.id}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" /></a>*/
+/*             <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" /></a>*/
 /*             {% endif %}*/
 /*         </div>*/
 /*     {% endif %}*/
-/*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.title }}</a></h1>*/
+/*     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article.title }}</a></h1>*/
 /*     <div><strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> :: <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} :: <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}</div>*/
-/*     <div style="padding: 20px;font-size: medium;font-weight: bold">*/
+/*     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">*/
 /*         {{ article.intro }}*/
 /*     </div>*/
 /*     {% if show_content is defined %}*/
-/*         <div style="margin-bottom:20px;padding: 0px 20px;font-size: medium">*/
+/*         <div id="article-content" style="margin-bottom:20px;padding: 0px 20px;font-size: medium">*/
 /*             {{ article.content }}*/
 /*         </div>*/
 /*     {% endif %}*/

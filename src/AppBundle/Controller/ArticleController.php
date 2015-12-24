@@ -10,11 +10,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Trascastro\UserBundle\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
 class ArticleController extends Controller
 {
     /**
      * @Route("/", name="app_article_articles")
+     * @Cache(maxage=60)
      */
     public function articlesAction(Request $request)
     {
@@ -28,10 +30,15 @@ class ArticleController extends Controller
         $paginator = $this->get('knp_paginator');
         $articles = $paginator->paginate($query, $request->query->getInt('page', 1), 2);
 
-        return $this->render(':article:articles.html.twig', [
+        $response = $this->render(':article:articles.html.twig', [
             'articles'  => $articles,
             'title'     => 'Articles'
         ]);
+
+        //$response->setLastModified($articles[0]->getUpdatedAt());
+        //$response->isNotModified($request); // Needed to generate a 304 (cache) response
+
+        return $response;
     }
 
     /**
@@ -83,7 +90,7 @@ class ArticleController extends Controller
         $sinceCreated = $now->diff($article->getCreatedAt());
         $minutes = $sinceCreated->days * 24 * 60 + $sinceCreated->h * 60 + $sinceCreated->i;
 
-        if ($minutes > 4) {
+        if ($minutes > 4 and !$this->isGranted('ROLE_ADMIN')) {
             $form->remove('title');
         }
 

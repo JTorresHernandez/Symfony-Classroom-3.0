@@ -4,7 +4,7 @@
     <parameter key="kernel.root_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.name">app</parameter>
+    <parameter key="kernel.name">ap_</parameter>
     <parameter key="kernel.cache_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/var/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
@@ -652,7 +652,7 @@
     </service>
     <service id="fragment.renderer.esi" class="Symfony\Component\HttpKernel\Fragment\EsiFragmentRenderer">
       <tag name="kernel.fragment_renderer" alias="esi"/>
-      <argument>null</argument>
+      <argument type="service" id="esi" on-invalid="null"/>
       <argument type="service" id="fragment.renderer.inline"/>
       <argument type="service" id="uri_signer"/>
       <call method="setFragmentPath">
@@ -1535,6 +1535,11 @@
       <tag name="validator.constraint_validator" alias="Symfony\Component\Validator\Constraints\EmailValidator"/>
       <argument>false</argument>
     </service>
+    <service id="esi" class="Symfony\Component\HttpKernel\HttpCache\Esi"/>
+    <service id="esi_listener" class="Symfony\Component\HttpKernel\EventListener\SurrogateListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="esi" on-invalid="ignore"/>
+    </service>
     <service id="fragment.listener" class="Symfony\Component\HttpKernel\EventListener\FragmentListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="uri_signer"/>
@@ -1858,6 +1863,10 @@
         <argument>Symfony\Component\HttpKernel\EventListener\SaveSessionListener</argument>
       </call>
       <call method="addSubscriberService">
+        <argument>esi_listener</argument>
+        <argument>Symfony\Component\HttpKernel\EventListener\SurrogateListener</argument>
+      </call>
+      <call method="addSubscriberService">
         <argument>fragment.listener</argument>
         <argument>Symfony\Component\HttpKernel\EventListener\FragmentListener</argument>
       </call>
@@ -2021,7 +2030,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>567828b669a473.28688403</argument>
+            <argument>567a8aa807a107.61315075</argument>
           </service>
         </argument>
       </argument>
@@ -2328,7 +2337,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>567828b669a473.28688403</argument>
+            <argument>567a8aa807a107.61315075</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
