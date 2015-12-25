@@ -1,22 +1,19 @@
 <div class="rounded-box margin-bottom-lg"> {# article #}
     <div style="float: right;">
+
         {% if article.author == app.user or is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('app_article_edit', {'slug': article.slug}) }}">
-                <img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" />
-            </a>
+            <a href="{{ path('app_article_edit', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" /></a>
             {% if is_granted('ROLE_ADMIN') %}
-                <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}">
-                    <img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" />
-                </a>
+                <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" /></a>
             {% endif %}
         {% endif %}
-        {{ article.comments.count }} <a href="{{ path('app_article_show', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-310-comments.png') }}" /> </a>
+
     </div>
     <h1 style="margin-top: 0px"><a style="color: inherit; text-decoration: inherit;" href="{{ path('app_article_show', {'slug': article.slug}) }}">{{ article.title }}</a></h1>
     <div>
         <strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> ::
         <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} ::
-        <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }} ::
+        <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}
     </div>
     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">
         {{ article.intro }}
@@ -26,13 +23,16 @@
             {{ article.content }}
         </div>
     {% endif %}
-    <div style="border-top:1px solid #DDD; padding-top: 10px">
-        <div style="margin: 10px 0px;">
+    <div style="border-top:1px solid #DDD; padding-top: 10px;">
+        <div style="margin: 10px 0px;float: left">
             {% for tag in article.tags %}
-                <a class="btn btn-default" href="{{ path('app_articles_byTag', {'name': tag.name}) }}">{{ tag }}</a>
+                <a class="btn btn-default" style="margin-bottom: 10px" href="{{ path('app_articles_byTag', {'name': tag.name}) }}">{{ tag }}</a>
             {% endfor %}
         </div>
-        <div></div>
+        <div style="margin: 20px 0px;float: right">
+            {{ article.comments.count }} <a href="{{ path('app_article_show', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-310-comments.png') }}" /></a>
+        </div>
+        <div style="clear: both"></div>
     </div>
 </div> {# end article#}
 
