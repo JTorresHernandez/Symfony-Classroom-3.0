@@ -6,6 +6,7 @@ use AppBundle\Entity\Article;
 use AppBundle\Entity\Comment;
 use AppBundle\Entity\Tag;
 use AppBundle\Form\ArticleType;
+use AppBundle\Security\ArticleVoter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -79,9 +80,14 @@ class ArticleController extends Controller
      */
     public function editAction(Article $article, Request $request)
     {
-        if (!$this->isGranted('ROLE_ADMIN') and $article->getAuthor() != $this->getUser()) {
-            throw $this->createAccessDeniedException('You cannot access this page');
-        }
+        /*
+         * Without voter
+         */
+        // if (!$this->isGranted('ROLE_ADMIN') and $article->getAuthor() != $this->getUser()) {
+        //    throw $this->createAccessDeniedException('You cannot access this page');
+        // }
+
+        $this->denyAccessUnlessGranted(ArticleVoter::EDIT_ARTICLE, $article);
 
         $form = $this->createForm(ArticleType::class, $article, [
             'submit_label'  => 'Edit Article'

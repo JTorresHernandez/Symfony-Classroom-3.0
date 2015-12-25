@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6d6f67-b609-4384-97bb-88994b9b33f4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Security/ArticleVoter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/43/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236e6577416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/43/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236e6577416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/62/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c65734279546167416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/62/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c65734279546167416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/98/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722373686f77416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/98/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722373686f77416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/d0/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722365646974416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/d0/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722365646974416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations/d9/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573427955536572416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/dev/annotations/d9/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573427955536572416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6c/6c22494b1e014716ed9f5f77d6d396cf8f4f75bb2fbfa8adc9b85fd28a35718a.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6c/6c22494b1e014716ed9f5f77d6d396cf8f4f75bb2fbfa8adc9b85fd28a35718a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/bf/bfd886c79ef7ff4cd61ee60a5a6df6ab762c34fdfe8dbf31c7e17477d0efbc90.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/bf/bfd886c79ef7ff4cd61ee60a5a6df6ab762c34fdfe8dbf31c7e17477d0efbc90.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c0/c02ff5cdbf978f902a3bde67b48c715b2fec46f42e7bee4452fa9f0a2651dffc.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c0/c02ff5cdbf978f902a3bde67b48c715b2fec46f42e7bee4452fa9f0a2651dffc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/0b/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/2f/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/43/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236e6577416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/43/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c6572236e6577416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/62/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c65734279546167416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/62/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c65734279546167416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/98/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722373686f77416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/98/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722373686f77416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/d0/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722365646974416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/d0/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722365646974416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/annotations/d9/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573427955536572416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" afterPath="$PROJECT_DIR$/var/cache/test/annotations/d9/5b5b435d41707042756e646c655c436f6e74726f6c6c65725c41727469636c65436f6e74726f6c6c65722361727469636c6573427955536572416374696f6e405b416e6e6f745d5d5b315d.doctrinecache.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerCompiler.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/test/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" afterPath="$PROJECT_DIR$/var/cache/test/twig/c0/c03ad3eb7f615a96640652af2ee38a436f8eea6fcb14b84caeb5fdcddb615427.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
     </list>
     <ignored path="Symfony-Classroom-3.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +87,92 @@
     <favorites_list name="Symfony-Classroom-3.0" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="89" column="65" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="65" />
+              <folding>
+                <element signature="e#2226#2244#0#PHP" expanded="true" />
+                <element signature="e#3706#3721#1#PHP" expanded="true" />
+                <element signature="e#3854#3872#0#PHP" expanded="true" />
+                <element signature="e#3962#3987#0#PHP" expanded="true" />
+                <element signature="e#4327#4346#1#PHP" expanded="true" />
+                <element signature="e#4618#4646#0#PHP" expanded="true" />
+                <element signature="e#4989#5008#1#PHP" expanded="true" />
+                <element signature="e#5274#5303#0#PHP" expanded="true" />
+                <element signature="e#5668#5687#1#PHP" expanded="true" />
+                <element signature="e#5955#5984#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article_content.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25114155">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="e#349#365#0#Twig" expanded="true" />
+                <element signature="e#558#582#0#Twig" expanded="true" />
+                <element signature="e#763#784#0#HTML" expanded="true" />
+                <element signature="e#788#837#0#HTML" expanded="true" />
+                <element signature="e#853#869#0#Twig" expanded="true" />
+                <element signature="e#990#1009#0#Twig" expanded="true" />
+                <element signature="e#1282#1339#0#HTML" expanded="true" />
+                <element signature="e#1451#1511#0#HTML" expanded="true" />
+                <element signature="e#1587#1640#0#HTML" expanded="true" />
+                <element signature="e#1655#1689#0#HTML" expanded="true" />
+                <element signature="e#1791#1809#0#Twig" expanded="true" />
+                <element signature="e#1903#1938#0#HTML" expanded="true" />
+                <element signature="e#1999#2015#0#Twig" expanded="true" />
+                <element signature="e#2141#2160#0#HTML" expanded="true" />
+                <element signature="e#2374#2414#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleVoter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Security/ArticleVoter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.625">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="e#432#461#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/ArticleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+              <folding>
+                <marker date="1451083683000" expanded="true" signature="0:211" placeholder="services:" />
+                <marker date="1451083683000" expanded="true" signature="14:211" placeholder="app.article_voter:" />
+                <marker date="1451083683000" expanded="true" signature="88:136" placeholder="arguments:" />
+                <marker date="1451083683000" expanded="true" signature="145:189" placeholder="tags:" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,8 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadData.php" />
-        <option value="$PROJECT_DIR$/app/Resources/KnpPaginatorBundle/views/Pagination/twitter_bootstrap_v3_pagination.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/comment/show-comments.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/article/article.html.twig" />
@@ -110,17 +225,19 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/custom.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Article.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Comment.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Tag.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/TagController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ExampleController.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Controller/Admin/ArticleControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Controller/CommentControllerTest.php" />
+        <option value="$PROJECT_DIR$/web/css/custom.css" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Security/ArticleVoter.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig" />
       </list>
     </option>
   </component>
@@ -267,7 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,15 +398,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gedmo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine-extensions" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,6 +522,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -436,6 +571,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony-Classroom-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,9 +751,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1276" height="778" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32863188" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32863188" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -561,13 +794,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -778,13 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -796,20 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41095892">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34246576">
-          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -828,22 +1033,6 @@
         <state vertical-scroll-proportion="0.38812786">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-103.75">
-          <caret line="166" column="110" selection-start-line="166" selection-start-column="110" selection-end-line="166" selection-end-column="110" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="false" />
-            <element signature="e#768#787#1#PHP" expanded="false" />
-            <element signature="e#1966#1981#1#PHP" expanded="false" />
-            <element signature="e#3534#3549#1#PHP" expanded="false" />
-            <element signature="e#4155#4174#1#PHP" expanded="false" />
-            <element signature="e#4817#4836#1#PHP" expanded="false" />
-            <element signature="e#5496#5515#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,14 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25114155">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38812786">
@@ -935,19 +1116,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/CommentControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65753424">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/ArticleControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.02739726">
           <caret line="34" column="11" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/CommentControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0045662">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02283105">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+          <folding>
+            <marker date="1451083683000" expanded="true" signature="0:211" placeholder="services:" />
+            <marker date="1451083683000" expanded="true" signature="14:211" placeholder="app.article_voter:" />
+            <marker date="1451083683000" expanded="true" signature="88:136" placeholder="arguments:" />
+            <marker date="1451083683000" expanded="true" signature="145:189" placeholder="tags:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="89" column="65" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="65" />
+          <folding>
+            <element signature="e#2226#2244#0#PHP" expanded="true" />
+            <element signature="e#3706#3721#1#PHP" expanded="true" />
+            <element signature="e#3854#3872#0#PHP" expanded="true" />
+            <element signature="e#3962#3987#0#PHP" expanded="true" />
+            <element signature="e#4327#4346#1#PHP" expanded="true" />
+            <element signature="e#4618#4646#0#PHP" expanded="true" />
+            <element signature="e#4989#5008#1#PHP" expanded="true" />
+            <element signature="e#5274#5303#0#PHP" expanded="true" />
+            <element signature="e#5668#5687#1#PHP" expanded="true" />
+            <element signature="e#5955#5984#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Security/ArticleVoter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.625">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#432#461#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25114155">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="e#349#365#0#Twig" expanded="true" />
+            <element signature="e#558#582#0#Twig" expanded="true" />
+            <element signature="e#763#784#0#HTML" expanded="true" />
+            <element signature="e#788#837#0#HTML" expanded="true" />
+            <element signature="e#853#869#0#Twig" expanded="true" />
+            <element signature="e#990#1009#0#Twig" expanded="true" />
+            <element signature="e#1282#1339#0#HTML" expanded="true" />
+            <element signature="e#1451#1511#0#HTML" expanded="true" />
+            <element signature="e#1587#1640#0#HTML" expanded="true" />
+            <element signature="e#1655#1689#0#HTML" expanded="true" />
+            <element signature="e#1791#1809#0#Twig" expanded="true" />
+            <element signature="e#1903#1938#0#HTML" expanded="true" />
+            <element signature="e#1999#2015#0#Twig" expanded="true" />
+            <element signature="e#2141#2160#0#HTML" expanded="true" />
+            <element signature="e#2374#2414#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
