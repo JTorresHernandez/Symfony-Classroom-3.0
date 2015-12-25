@@ -18,6 +18,11 @@ use Gedmo\Mapping\Annotation as Gedmo;
 class Article
 {
     /**
+     * it rarely changes, so better define it as a constant than a parameter under parameters.yml
+     */
+    const PAGINATION_ITEMS = 2;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="id", type="integer")

@@ -13,9 +13,11 @@ class ExampleController extends Controller
      */
     public function indexAction()
     {
-        /*$user_manager = $this->get('fos_user.user_manager');
+        /*
+        $user_manager = $this->get('fos_user.user_manager');
         $users = $user_manager->findUsers();
-        var_dump($users);die;*/
+        var_dump($users);die;
+        */
         $m = $this->getDoctrine()->getManager();
         $userManager = $this->get('fos_user.user_manager');
         $user = $userManager->findUserByUsername('ismael');

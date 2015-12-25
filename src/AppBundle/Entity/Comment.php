@@ -23,6 +23,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Comment
 {
+    const PAGINATION_ITEMS = 5;
+
     /**
      * @var integer
      *

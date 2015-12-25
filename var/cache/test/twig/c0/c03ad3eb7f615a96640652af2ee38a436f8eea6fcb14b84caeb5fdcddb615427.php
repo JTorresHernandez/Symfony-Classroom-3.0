@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_16de8c10ebee5e5f36737beaced4e446009e10b4d405602405b36f8ebca5cba4 = $this->env->getExtension("native_profiler");
-        $__internal_16de8c10ebee5e5f36737beaced4e446009e10b4d405602405b36f8ebca5cba4->enter($__internal_16de8c10ebee5e5f36737beaced4e446009e10b4d405602405b36f8ebca5cba4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_1653501b162659e389e43fa17beb0fd632a10f09fbe6d3b529b5eb36ad6bb8bb = $this->env->getExtension("native_profiler");
+        $__internal_1653501b162659e389e43fa17beb0fd632a10f09fbe6d3b529b5eb36ad6bb8bb->enter($__internal_1653501b162659e389e43fa17beb0fd632a10f09fbe6d3b529b5eb36ad6bb8bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -69,7 +69,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
         <strong>Updated:</strong> ";
         // line 16
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "updatedAt", array()), "d/m/Y H:i:s"), "html", null, true);
-        echo " ::
+        echo "
     </div>
     <div id=\"article-intro\" style=\"padding: 20px;font-size: medium;font-weight: bold\">
         ";
@@ -144,7 +144,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 44)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_16de8c10ebee5e5f36737beaced4e446009e10b4d405602405b36f8ebca5cba4->leave($__internal_16de8c10ebee5e5f36737beaced4e446009e10b4d405602405b36f8ebca5cba4_prof);
+        $__internal_1653501b162659e389e43fa17beb0fd632a10f09fbe6d3b529b5eb36ad6bb8bb->leave($__internal_1653501b162659e389e43fa17beb0fd632a10f09fbe6d3b529b5eb36ad6bb8bb_prof);
 
     }
 
@@ -178,7 +178,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*     <div>*/
 /*         <strong>Author:</strong> <a href="{{ path('app_articles_byUser', {'username': article.author.username}) }}">@{{ article.author }}</a> ::*/
 /*         <strong>Created:</strong> {{ article.createdAt|date("d/m/Y H:i:s") }} ::*/
-/*         <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }} ::*/
+/*         <strong>Updated:</strong> {{ article.updatedAt|date("d/m/Y H:i:s") }}*/
 /*     </div>*/
 /*     <div id="article-intro" style="padding: 20px;font-size: medium;font-weight: bold">*/
 /*         {{ article.intro }}*/

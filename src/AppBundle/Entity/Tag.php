@@ -13,6 +13,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Tag
 {
+    const PAGINATION_ITEMS = 2;
+
     /**
      * @var integer
      *

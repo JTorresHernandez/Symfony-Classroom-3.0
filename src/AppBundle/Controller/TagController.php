@@ -20,7 +20,7 @@ class TagController extends Controller
 
         $tagsQuery = $tagRepo->queryFindAllTags();
 
-        $tags = $this->get('knp_paginator')->paginate($tagsQuery, $request->query->getInt('page', 1), 2);
+        $tags = $this->get('knp_paginator')->paginate($tagsQuery, $request->query->getInt('page', 1), Tag::PAGINATION_ITEMS);
 
         return $this->render(':tag:tags.html.twig', [
             'tags' => $tags,

@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Article;
+use AppBundle\Entity\Comment;
 use AppBundle\Entity\Tag;
 use AppBundle\Form\ArticleType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -28,7 +29,7 @@ class ArticleController extends Controller
         $query = $articleRepo->queryAllArticles();
 
         $paginator = $this->get('knp_paginator');
-        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), 2);
+        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), Article::PAGINATION_ITEMS);
 
         $response = $this->render(':article:articles.html.twig', [
             'articles'  => $articles,
@@ -125,7 +126,7 @@ class ArticleController extends Controller
         $query = $commentRepo->queryCommentsByArticle($article->getId());
 
         $paginator = $this->get('knp_paginator');
-        $comments = $paginator->paginate($query, $request->query->getInt('page', 1), 5);
+        $comments = $paginator->paginate($query, $request->query->getInt('page', 1), Comment::PAGINATION_ITEMS);
 
         return $this->render(':article:article.html.twig', [
             'article'   => $article,
@@ -144,7 +145,7 @@ class ArticleController extends Controller
         $query = $articleRepo->queryArticlesByTagId($tag->getId());
 
         $paginator = $this->get('knp_paginator');
-        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), 2);
+        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), Article::PAGINATION_ITEMS);
 
         return $this->render(':article:articles.html.twig', [
             'articles'  => $articles,
@@ -163,7 +164,7 @@ class ArticleController extends Controller
         $query = $articleRepo->queryArticlesByUserId($user->getId());
 
         $paginator = $this->get('knp_paginator');
-        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), 2);
+        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), Article::PAGINATION_ITEMS);
 
         return $this->render(':article:articles.html.twig', [
             'articles'  => $articles,
