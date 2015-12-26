@@ -5,3 +5,8 @@ services:
         tags:
             - { name: security.voter }
         public: false
+
+    twig.extension.date:
+        class: Twig_Extensions_Extension_Date
+        tags:
+            - { name: twig.extension }
