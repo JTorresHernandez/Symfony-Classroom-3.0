@@ -33,7 +33,7 @@
         <div style="margin: 10px 0;float: right">
             {{ article.comments.count }} <a href="{{ path('app_article_show', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-310-comments.png') }}" /></a>
             {% if show_content is not defined and article.comments.count > 0 %}
-                <a href="{{ path('app_articles_byUser', {'username': article.comments.first.author}) }}">@{{ article.comments.first.author }}</a> {{ article.comments.first.createdAt|time_diff }}
+                <a href="{{ path('app_articles_byUser', {'username': article.comments.last.author}) }}">@{{ article.comments.last.author }}</a> {{ article.comments.last.createdAt|time_diff }}
             {% endif %}
         </div>
         <div style="clear: both"></div>

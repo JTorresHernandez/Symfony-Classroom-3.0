@@ -15,8 +15,8 @@ class __TwigTemplate_be320732426c1e1cd9bea5d8cce7dd7f57308768dc1ff153596521dffd2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_77966a532e7b204c531db3d3a55257a863651fc36324a9f05e384515fd0ecb3d = $this->env->getExtension("native_profiler");
-        $__internal_77966a532e7b204c531db3d3a55257a863651fc36324a9f05e384515fd0ecb3d->enter($__internal_77966a532e7b204c531db3d3a55257a863651fc36324a9f05e384515fd0ecb3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_497ef5d3957c9603c1234fe38cfac6c591a436f5a4d907ee99fbf5a9755a2558 = $this->env->getExtension("native_profiler");
+        $__internal_497ef5d3957c9603c1234fe38cfac6c591a436f5a4d907ee99fbf5a9755a2558->enter($__internal_497ef5d3957c9603c1234fe38cfac6c591a436f5a4d907ee99fbf5a9755a2558_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -127,11 +127,11 @@ class __TwigTemplate_be320732426c1e1cd9bea5d8cce7dd7f57308768dc1ff153596521dffd2
         if (( !array_key_exists("show_content", $context) && ($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "count", array()) > 0))) {
             // line 36
             echo "                <a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byUser", array("username" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "first", array()), "author", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byUser", array("username" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "last", array()), "author", array()))), "html", null, true);
             echo "\">@";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "first", array()), "author", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "last", array()), "author", array()), "html", null, true);
             echo "</a> ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('date')->diff($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "first", array()), "createdAt", array())), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('date')->diff($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "comments", array()), "last", array()), "createdAt", array())), "html", null, true);
             echo "
             ";
         }
@@ -161,7 +161,7 @@ class __TwigTemplate_be320732426c1e1cd9bea5d8cce7dd7f57308768dc1ff153596521dffd2
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 48)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_77966a532e7b204c531db3d3a55257a863651fc36324a9f05e384515fd0ecb3d->leave($__internal_77966a532e7b204c531db3d3a55257a863651fc36324a9f05e384515fd0ecb3d_prof);
+        $__internal_497ef5d3957c9603c1234fe38cfac6c591a436f5a4d907ee99fbf5a9755a2558->leave($__internal_497ef5d3957c9603c1234fe38cfac6c591a436f5a4d907ee99fbf5a9755a2558_prof);
 
     }
 
@@ -215,7 +215,7 @@ class __TwigTemplate_be320732426c1e1cd9bea5d8cce7dd7f57308768dc1ff153596521dffd2
 /*         <div style="margin: 10px 0;float: right">*/
 /*             {{ article.comments.count }} <a href="{{ path('app_article_show', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-310-comments.png') }}" /></a>*/
 /*             {% if show_content is not defined and article.comments.count > 0 %}*/
-/*                 <a href="{{ path('app_articles_byUser', {'username': article.comments.first.author}) }}">@{{ article.comments.first.author }}</a> {{ article.comments.first.createdAt|time_diff }}*/
+/*                 <a href="{{ path('app_articles_byUser', {'username': article.comments.last.author}) }}">@{{ article.comments.last.author }}</a> {{ article.comments.last.createdAt|time_diff }}*/
 /*             {% endif %}*/
 /*         </div>*/
 /*         <div style="clear: both"></div>*/

@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Article;
 use AppBundle\Entity\Comment;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -77,6 +78,9 @@ class CommentController extends Controller
         ]);
     }
 
+    /**
+     * @Cache(smaxage=30)
+     */
     public function lastCommentsAction()
     {
         $m = $this->getDoctrine()->getManager();

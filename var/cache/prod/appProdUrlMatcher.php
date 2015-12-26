@@ -302,9 +302,9 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
         }
 
-        if (0 === strpos($pathinfo, '/comment')) {
+        if (0 === strpos($pathinfo, '/comments')) {
             // app_comment_new
-            if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/comments/new') && preg_match('#^/comments/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 if ($this->context->getMethod() != 'POST') {
                     $allow[] = 'POST';
                     goto not_app_comment_new;
@@ -315,7 +315,7 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             not_app_comment_new:
 
             // app_comment_edit
-            if (0 === strpos($pathinfo, '/comment/edit') && preg_match('#^/comment/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/comments/edit') && preg_match('#^/comments/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_edit')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::editAction',));
             }
 

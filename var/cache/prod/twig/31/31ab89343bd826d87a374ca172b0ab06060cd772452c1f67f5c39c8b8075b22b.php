@@ -124,11 +124,11 @@ class __TwigTemplate_e1b9a92084b27a4bdb5d98fe9b064d07966ade4583eaf0ca3f2e13d0ad7
         if (( !array_key_exists("show_content", $context) && ($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "count", array()) > 0))) {
             // line 36
             echo "                <a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byUser", array("username" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "first", array()), "author", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("app_articles_byUser", array("username" => $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "last", array()), "author", array()))), "html", null, true);
             echo "\">@";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "first", array()), "author", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "last", array()), "author", array()), "html", null, true);
             echo "</a> ";
-            echo twig_escape_filter($this->env, $this->env->getExtension('date')->diff($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "first", array()), "createdAt", array())), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('date')->diff($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["article"]) ? $context["article"] : null), "comments", array()), "last", array()), "createdAt", array())), "html", null, true);
             echo "
             ";
         }
@@ -209,7 +209,7 @@ class __TwigTemplate_e1b9a92084b27a4bdb5d98fe9b064d07966ade4583eaf0ca3f2e13d0ad7
 /*         <div style="margin: 10px 0;float: right">*/
 /*             {{ article.comments.count }} <a href="{{ path('app_article_show', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-310-comments.png') }}" /></a>*/
 /*             {% if show_content is not defined and article.comments.count > 0 %}*/
-/*                 <a href="{{ path('app_articles_byUser', {'username': article.comments.first.author}) }}">@{{ article.comments.first.author }}</a> {{ article.comments.first.createdAt|time_diff }}*/
+/*                 <a href="{{ path('app_articles_byUser', {'username': article.comments.last.author}) }}">@{{ article.comments.last.author }}</a> {{ article.comments.last.createdAt|time_diff }}*/
 /*             {% endif %}*/
 /*         </div>*/
 /*         <div style="clear: both"></div>*/

@@ -15,8 +15,8 @@ class __TwigTemplate_04b62e3d540e055090c82929138005fe676494990e4497cf9756c02e011
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_949097a5b9332720d195568ea19b22a302ab188d7c9508ad0dd8e01396d14a24 = $this->env->getExtension("native_profiler");
-        $__internal_949097a5b9332720d195568ea19b22a302ab188d7c9508ad0dd8e01396d14a24->enter($__internal_949097a5b9332720d195568ea19b22a302ab188d7c9508ad0dd8e01396d14a24_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_pagination.html.twig"));
+        $__internal_579739577df505cbf8809e2fd3f028da5abf578a66e39f5819cd16d5da8a3be7 = $this->env->getExtension("native_profiler");
+        $__internal_579739577df505cbf8809e2fd3f028da5abf578a66e39f5819cd16d5da8a3be7->enter($__internal_579739577df505cbf8809e2fd3f028da5abf578a66e39f5819cd16d5da8a3be7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_pagination.html.twig"));
 
         // line 19
         echo "
@@ -194,7 +194,7 @@ class __TwigTemplate_04b62e3d540e055090c82929138005fe676494990e4497cf9756c02e011
 ";
         }
         
-        $__internal_949097a5b9332720d195568ea19b22a302ab188d7c9508ad0dd8e01396d14a24->leave($__internal_949097a5b9332720d195568ea19b22a302ab188d7c9508ad0dd8e01396d14a24_prof);
+        $__internal_579739577df505cbf8809e2fd3f028da5abf578a66e39f5819cd16d5da8a3be7->leave($__internal_579739577df505cbf8809e2fd3f028da5abf578a66e39f5819cd16d5da8a3be7_prof);
 
     }
 

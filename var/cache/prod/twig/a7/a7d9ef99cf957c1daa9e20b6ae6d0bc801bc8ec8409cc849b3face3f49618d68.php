@@ -37,13 +37,12 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
         echo "</title>
 
     ";
-        // line 14
-        echo "    ";
+        // line 13
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 19
+        // line 18
         echo "
     <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 20
+        // line 19
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
 
@@ -65,7 +64,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
                 <span class=\"icon-bar\"></span>
             </button>
             <a class=\"navbar-brand\" href=\"";
-        // line 39
+        // line 38
         echo $this->env->getExtension('routing')->getPath("app_article_articles");
         echo "\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
 <path fill=\"#AAAAAA\" d=\"M12,0.9C5.8,0.9,0.9,5.8,0.9,12s5,11.1,11.1,11.1s11.1-5,11.1-11.1S18.2,0.9,12,0.9z M18.5,6.9
@@ -79,7 +78,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
     c-0.4-0.4-1.1-1.4-0.7-2.6C6.3,9,6.6,8.6,6.9,8.2c0.9-0.6,1.8-0.7,2.8-0.6c1.2,0.4,1.8,1.1,2.6,1.8c0.5-1.2,1-2.4,1.8-3.5
     C15,5,16,4.3,17.2,4.2c1.3,0.2,2.2,0.7,2.2,1.6C19.4,6.2,19.2,6.9,18.5,6.9z\"></path>
 </svg></a><a class=\"navbar-brand\" href=\"";
-        // line 50
+        // line 49
         echo $this->env->getExtension('routing')->getPath("app_article_articles");
         echo "\">Symfony Classroom</a>
         </div>
@@ -93,30 +92,11 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 
             <ul class=\"nav navbar-nav navbar-right\">
                 <div class=\"navbar-form navbar-right\">
-                ";
-        // line 62
-        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 63
-            echo "                    <a class=\"btn btn-success\" href=\"";
-            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
-            echo "\">Sign out</a>
-                    <a class=\"btn btn-danger\" href=\"";
-            // line 64
-            echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
-            echo "</a>
-                ";
-        } elseif ((($this->getAttribute($this->getAttribute(        // line 65
-(isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_security_login") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register"))) {
-            // line 66
-            echo "                    ";
-            echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("UserBundle:HoritzontalLogin:horitzontalLogin"));
-            echo "
-                ";
-        }
-        // line 68
-        echo "                </div>
+                    ";
+        // line 61
+        echo $this->env->getExtension('http_kernel')->renderFragmentStrategy("esi", $this->env->getExtension('http_kernel')->controller("UserBundle:HoritzontalLogin:horitzontalLogin"));
+        echo "
+                </div>
             </ul>
         </div><!-- /.navbar-collapse -->
 
@@ -126,11 +106,11 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 <div class=\"container\">
     <ul>
         ";
-        // line 77
+        // line 71
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashBag", array()), "get", array(0 => "messages"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 78
+            // line 72
             echo "            <li>";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "</li>
@@ -139,7 +119,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 80
+        // line 74
         echo "    </ul>
 </div>
 
@@ -148,13 +128,13 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
     <div class=\"row\">
         <div class=\"col-md-8\">
             ";
-        // line 87
+        // line 81
         $this->displayBlock('body', $context, $blocks);
-        // line 88
+        // line 82
         echo "        </div>
         <div class=\"col-md-4\">
             ";
-        // line 90
+        // line 84
         $this->displayBlock('sidebar', $context, $blocks);
         // line 111
         echo "        </div>
@@ -166,16 +146,16 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 </div> <!-- /container -->
 
 ";
-        // line 120
+        // line 119
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 123
+        // line 122
         echo "
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>
 <script>window.jQuery || document.write('<script src=\"";
-        // line 128
+        // line 127
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"><\\/script>')</script>
 </body>
@@ -187,105 +167,82 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
     {
     }
 
-    // line 14
+    // line 13
     public function block_stylesheets($context, array $blocks = array())
     {
+        // line 14
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
         // line 15
-        echo "        ";
-        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
-            // asset "7f116c3_0"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3_0") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3_part_1_bootstrap.min_1.css");
-            // line 16
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-            // asset "7f116c3_1"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3_1") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3_part_1_custom_2.css");
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-            // asset "7f116c3_2"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3_2") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3_part_1_dashboard_3.css");
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-            // asset "7f116c3_3"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3_3") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3_part_1_ie10-viewport-bug-workaround_4.css");
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-            // asset "7f116c3_4"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3_4") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3_part_1_jumbotron_5.css");
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-        } else {
-            // asset "7f116c3"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7f116c3") : $this->env->getExtension('asset')->getAssetUrl("css/7f116c3.css");
-            echo "        <link rel=\"stylesheet\" href=\"";
-            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
-            echo "\" />
-        ";
-        }
-        unset($context["asset_url"]);
-        // line 18
-        echo "    ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/jumbotron.css"), "html", null, true);
+        echo "\" />
+        <link rel=\"stylesheet\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("css/custom.css"), "html", null, true);
+        echo "\" />
+    ";
     }
 
-    // line 87
+    // line 81
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 90
+    // line 84
     public function block_sidebar($context, array $blocks = array())
     {
-        // line 91
+        // line 85
         echo "                <div class=\"container-fluid\">
                     ";
-        // line 92
+        // line 86
         if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-            // line 93
+            // line 87
             echo "                        <div class=\"row margin-bottom-md\">
                             <div class=\"col-md-12\">
                                 <a class=\"btn btn-default\" style=\"font-size:x-large;width: 100%\" href=\"";
-            // line 95
+            // line 89
             echo $this->env->getExtension('routing')->getPath("app_admin_index_index");
             echo "\">Dashboard</a>
                             </div>
                         </div>
                     ";
         }
-        // line 99
+        // line 93
         echo "                    <div class=\"row margin-bottom-md\">
                         <div class=\"col-md-12\">
                             <a class=\"btn btn-default\" style=\"font-size:x-large;width: 100%\" href=\"";
-        // line 101
+        // line 95
         echo $this->env->getExtension('routing')->getPath("app_article_new");
         echo "\">Submit a new article</a>
                         </div>
                     </div>
-                    <div class=\"row\">
+                    <div class=\"row margin-bottom-md\">
                         <div class=\"col-md-12\">
                             <a class=\"btn btn-default\" style=\"font-size:x-large;width: 100%\" href=\"";
-        // line 106
+        // line 100
         echo $this->env->getExtension('routing')->getPath("app_tags_tags");
         echo "\">Tags</a>
+                        </div>
+                    </div>
+                    <div class=\"row bg-success\">
+                        <div class=\"col-md-12\">
+                            <div class=\"margin-bottom-md\"></div>
+                            ";
+        // line 106
+        echo $this->env->getExtension('http_kernel')->renderFragmentStrategy("esi", $this->env->getExtension('http_kernel')->controller("AppBundle:Comment:lastComments"));
+        echo "
                         </div>
                     </div>
                 </div>
             ";
     }
 
-    // line 120
+    // line 119
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 121
+        // line 120
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
@@ -304,7 +261,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 
     public function getDebugInfo()
     {
-        return array (  289 => 121,  286 => 120,  277 => 106,  269 => 101,  265 => 99,  258 => 95,  254 => 93,  252 => 92,  249 => 91,  246 => 90,  241 => 87,  237 => 18,  199 => 16,  194 => 15,  191 => 14,  186 => 11,  179 => 128,  172 => 123,  170 => 120,  160 => 111,  158 => 90,  154 => 88,  152 => 87,  143 => 80,  134 => 78,  130 => 77,  119 => 68,  113 => 66,  111 => 65,  105 => 64,  100 => 63,  98 => 62,  83 => 50,  69 => 39,  47 => 20,  44 => 19,  41 => 14,  36 => 11,  24 => 1,);
+        return array (  246 => 120,  243 => 119,  234 => 106,  225 => 100,  217 => 95,  213 => 93,  206 => 89,  202 => 87,  200 => 86,  197 => 85,  194 => 84,  189 => 81,  183 => 16,  179 => 15,  174 => 14,  171 => 13,  166 => 11,  159 => 127,  152 => 122,  150 => 119,  140 => 111,  138 => 84,  134 => 82,  132 => 81,  123 => 74,  114 => 72,  110 => 71,  97 => 61,  82 => 49,  68 => 38,  46 => 19,  43 => 18,  41 => 13,  36 => 11,  24 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -319,11 +276,10 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 /* */
 /*     <title>{% block title %}{% endblock %}</title>*/
 /* */
-/*     {# This must be rewritten for symfony 3#}*/
 /*     {% block stylesheets %}*/
-/*         {% stylesheets 'css/*' filter='cssrewrite' %}*/
-/*         <link rel="stylesheet" href="{{ asset_url }}" />*/
-/*         {% endstylesheets %}*/
+/*         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}" />*/
+/*         <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />*/
 /*     {% endblock %}*/
 /* */
 /*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
@@ -368,12 +324,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 /* */
 /*             <ul class="nav navbar-nav navbar-right">*/
 /*                 <div class="navbar-form navbar-right">*/
-/*                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}*/
-/*                     <a class="btn btn-success" href="{{ path('fos_user_security_logout') }}">Sign out</a>*/
-/*                     <a class="btn btn-danger" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>*/
-/*                 {% elseif app.request.get('_route') != 'fos_user_security_login' and app.request.get('_route') != 'fos_user_registration_register' %}*/
-/*                     {{ render(controller('UserBundle:HoritzontalLogin:horitzontalLogin'))}}*/
-/*                 {% endif %}*/
+/*                     {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin')) }}*/
 /*                 </div>*/
 /*             </ul>*/
 /*         </div><!-- /.navbar-collapse -->*/
@@ -410,9 +361,15 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 /*                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>*/
 /*                         </div>*/
 /*                     </div>*/
-/*                     <div class="row">*/
+/*                     <div class="row margin-bottom-md">*/
 /*                         <div class="col-md-12">*/
 /*                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_tags_tags') }}">Tags</a>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                     <div class="row bg-success">*/
+/*                         <div class="col-md-12">*/
+/*                             <div class="margin-bottom-md"></div>*/
+/*                             {{ render_esi(controller('AppBundle:Comment:lastComments')) }}*/
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
@@ -425,7 +382,6 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 /*     </footer>*/
 /* </div> <!-- /container -->*/
 /* */
-/* {# This must be rewritten for symfony 3#}*/
 /* {% block javascripts %}*/
 /* <script src="{{ asset('js/bootstrap.min.js') }}"></script>*/
 /* {% endblock %}*/

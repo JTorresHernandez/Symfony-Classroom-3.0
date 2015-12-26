@@ -58,12 +58,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <div class="navbar-form navbar-right">
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <a class="btn btn-success" href="{{ path('fos_user_security_logout') }}">Sign out</a>
-                    <a class="btn btn-danger" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>
-                {% elseif app.request.get('_route') != 'fos_user_security_login' and app.request.get('_route') != 'fos_user_registration_register' %}
-                    {{ render(controller('UserBundle:HoritzontalLogin:horitzontalLogin'))}}
-                {% endif %}
+                    {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin')) }}
                 </div>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -108,7 +103,7 @@
                     <div class="row bg-success">
                         <div class="col-md-12">
                             <div class="margin-bottom-md"></div>
-                            {{ render(controller('AppBundle:Comment:lastComments')) }}
+                            {{ render_esi(controller('AppBundle:Comment:lastComments')) }}
                         </div>
                     </div>
                 </div>
