@@ -43,4 +43,14 @@ class CommentRepository extends EntityRepository
             ->execute()
         ;
     }
+
+    public function lastComments()
+    {
+        return $this->createQueryBuilder('c')
+            ->addOrderBy('c.createdAt', 'DESC')
+            ->setMaxResults(5)
+            ->getQuery()
+            ->execute()
+        ;
+    }
 }

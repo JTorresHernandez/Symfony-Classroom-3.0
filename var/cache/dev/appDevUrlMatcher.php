@@ -27,6 +27,42 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
+        if (0 === strpos($pathinfo, '/css/7f116c3')) {
+            // _assetic_7f116c3
+            if ($pathinfo === '/css/7f116c3.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_7f116c3',);
+            }
+
+            if (0 === strpos($pathinfo, '/css/7f116c3_part_1_')) {
+                // _assetic_7f116c3_0
+                if ($pathinfo === '/css/7f116c3_part_1_bootstrap.min_1.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_7f116c3_0',);
+                }
+
+                // _assetic_7f116c3_1
+                if ($pathinfo === '/css/7f116c3_part_1_custom_2.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_7f116c3_1',);
+                }
+
+                // _assetic_7f116c3_2
+                if ($pathinfo === '/css/7f116c3_part_1_dashboard_3.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_7f116c3_2',);
+                }
+
+                // _assetic_7f116c3_3
+                if ($pathinfo === '/css/7f116c3_part_1_ie10-viewport-bug-workaround_4.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => 3,  '_format' => 'css',  '_route' => '_assetic_7f116c3_3',);
+                }
+
+                // _assetic_7f116c3_4
+                if ($pathinfo === '/css/7f116c3_part_1_jumbotron_5.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '7f116c3',  'pos' => 4,  '_format' => 'css',  '_route' => '_assetic_7f116c3_4',);
+                }
+
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
@@ -375,9 +411,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/comment')) {
+        if (0 === strpos($pathinfo, '/comments')) {
             // app_comment_new
-            if (0 === strpos($pathinfo, '/comment/new') && preg_match('#^/comment/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/comments/new') && preg_match('#^/comments/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 if ($this->context->getMethod() != 'POST') {
                     $allow[] = 'POST';
                     goto not_app_comment_new;
@@ -388,7 +424,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             not_app_comment_new:
 
             // app_comment_edit
-            if (0 === strpos($pathinfo, '/comment/edit') && preg_match('#^/comment/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/comments/edit') && preg_match('#^/comments/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_comment_edit')), array (  '_controller' => 'AppBundle\\Controller\\CommentController::editAction',));
             }
 

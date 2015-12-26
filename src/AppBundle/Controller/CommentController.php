@@ -76,4 +76,13 @@ class CommentController extends Controller
             'form'      => $form->createView(),
         ]);
     }
+
+    public function lastCommentsAction()
+    {
+        $m = $this->getDoctrine()->getManager();
+        $commentRepo = $m->getRepository('AppBundle:Comment');
+        $comments = $commentRepo->lastComments();
+
+        return $this->render(':comment:last.html.twig', ['comments' => $comments]);
+    }
 }

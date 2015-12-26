@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new \Trascastro\UserBundle\UserBundle(),
             new \FOS\UserBundle\FOSUserBundle(),
             new \Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new \Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new AppBundle\AppBundle(),
         );
 
@@ -27,7 +28,6 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
-            $bundles[] = new \Symfony\Bundle\AsseticBundle\AsseticBundle();
         }
 
         return $bundles;

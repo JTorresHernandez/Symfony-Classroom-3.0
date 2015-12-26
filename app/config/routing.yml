@@ -33,4 +33,4 @@ app.admin.comments:
 app.comments:
     resource: "@AppBundle/Controller/CommentController.php"
     type: annotation
-    prefix: /comment
+    prefix: /comments

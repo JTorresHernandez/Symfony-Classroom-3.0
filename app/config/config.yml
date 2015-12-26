@@ -41,6 +41,12 @@ twig:
     form_themes:
         - 'form-templates/bootstrap_3_layout.html.twig'
 
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+
 # Doctrine Configuration
 doctrine:
     dbal:

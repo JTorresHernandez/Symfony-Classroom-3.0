@@ -18,13 +18,13 @@
       <parameter key="UserBundle">Trascastro\UserBundle\UserBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
-      <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appTestDebugProjectContainer</parameter>
@@ -353,7 +353,6 @@
     <parameter key="knp_paginator.template.filtration">KnpPaginatorBundle:Pagination:filtration.html.twig</parameter>
     <parameter key="knp_paginator.template.sortable">KnpPaginatorBundle:Pagination:sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">2</parameter>
-    <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="assetic.asset_factory.class">Symfony\Bundle\AsseticBundle\Factory\AssetFactory</parameter>
     <parameter key="assetic.asset_manager.class">Assetic\Factory\LazyAssetManager</parameter>
     <parameter key="assetic.asset_manager_cache_warmer.class">Symfony\Bundle\AsseticBundle\CacheWarmer\AssetManagerCacheWarmer</parameter>
@@ -380,13 +379,13 @@
       <parameter>UserBundle</parameter>
       <parameter>FOSUserBundle</parameter>
       <parameter>KnpPaginatorBundle</parameter>
+      <parameter>AsseticBundle</parameter>
       <parameter>AppBundle</parameter>
       <parameter>DebugBundle</parameter>
       <parameter>WebProfilerBundle</parameter>
       <parameter>SensioDistributionBundle</parameter>
       <parameter>SensioGeneratorBundle</parameter>
       <parameter>DoctrineFixturesBundle</parameter>
-      <parameter>AsseticBundle</parameter>
     </parameter>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
@@ -404,12 +403,14 @@
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
     <parameter key="assetic.reactjsx.bin">/usr/bin/jsx</parameter>
+    <parameter key="assetic.filter.cssrewrite.class">Assetic\Filter\CssRewriteFilter</parameter>
     <parameter key="assetic.twig_extension.functions" type="collection"/>
     <parameter key="assetic.controller.class">Symfony\Bundle\AsseticBundle\Controller\AsseticController</parameter>
     <parameter key="assetic.routing_loader.class">Symfony\Bundle\AsseticBundle\Routing\AsseticLoader</parameter>
     <parameter key="assetic.cache.class">Assetic\Cache\FilesystemCache</parameter>
     <parameter key="assetic.use_controller_worker.class">Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker</parameter>
     <parameter key="assetic.request_listener.class">Symfony\Bundle\AsseticBundle\EventListener\RequestListener</parameter>
+    <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -477,6 +478,9 @@
     </parameter>
   </parameters>
   <services>
+    <service id="twig.extension.date" class="Twig_Extensions_Extension_Date">
+      <tag name="twig.extension"/>
+    </service>
     <service id="gedmo.listener.sluggable" class="Gedmo\Sluggable\SluggableListener">
       <tag name="doctrine.event_subscriber" connection="default"/>
       <call method="setAnnotationReader">
@@ -2046,7 +2050,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>567dd545e0d176.43174950</argument>
+            <argument>567ec3595e0c53.94598342</argument>
           </service>
         </argument>
       </argument>
@@ -2359,7 +2363,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>567dd545e0d176.43174950</argument>
+            <argument>567ec3595e0c53.94598342</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2477,6 +2481,9 @@
           <argument key="thousands_separator">,</argument>
         </argument>
       </argument>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.date"/>
+      </call>
       <call method="addExtension">
         <argument type="service">
           <service class="Symfony\Bridge\Twig\Extension\LogoutUrlExtension" public="false">
@@ -2614,21 +2621,6 @@
       </call>
       <call method="addExtension">
         <argument type="service">
-          <service class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
-            <tag name="twig.extension"/>
-            <argument type="service" id="var_dumper.cloner"/>
-          </service>
-        </argument>
-      </call>
-      <call method="addExtension">
-        <argument type="service">
-          <service class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
-            <tag name="twig.extension"/>
-          </service>
-        </argument>
-      </call>
-      <call method="addExtension">
-        <argument type="service">
           <service class="Symfony\Bundle\AsseticBundle\Twig\AsseticExtension" public="false">
             <tag name="twig.extension"/>
             <tag name="assetic.templating.twig"/>
@@ -2647,19 +2639,34 @@
               <argument>UserBundle</argument>
               <argument>FOSUserBundle</argument>
               <argument>KnpPaginatorBundle</argument>
+              <argument>AsseticBundle</argument>
               <argument>AppBundle</argument>
               <argument>DebugBundle</argument>
               <argument>WebProfilerBundle</argument>
               <argument>SensioDistributionBundle</argument>
               <argument>SensioGeneratorBundle</argument>
               <argument>DoctrineFixturesBundle</argument>
-              <argument>AsseticBundle</argument>
             </argument>
             <argument type="service">
               <service class="Symfony\Bundle\AsseticBundle\DefaultValueSupplier" public="false">
                 <argument type="service" id="service_container"/>
               </service>
             </argument>
+          </service>
+        </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service">
+          <service class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
+            <tag name="twig.extension"/>
+            <argument type="service" id="var_dumper.cloner"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service">
+          <service class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
+            <tag name="twig.extension"/>
           </service>
         </argument>
       </call>
@@ -3148,117 +3155,11 @@
       <tag name="twig.extension"/>
       <argument type="service" id="knp_paginator.helper.processor"/>
     </service>
-    <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
-      <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
-      <argument>null</argument>
-      <argument>UTF-8</argument>
-      <argument>null</argument>
-      <argument>null</argument>
-    </service>
-    <service id="debug.dump_listener" class="Symfony\Component\HttpKernel\EventListener\DumpListener">
-      <tag name="kernel.event_subscriber"/>
-      <argument type="service" id="var_dumper.cloner"/>
-      <argument type="service" id="data_collector.dump"/>
-    </service>
-    <service id="var_dumper.cloner" class="Symfony\Component\VarDumper\Cloner\VarCloner">
-      <call method="setMaxItems">
-        <argument>2500</argument>
-      </call>
-      <call method="setMaxString">
-        <argument>-1</argument>
-      </call>
-    </service>
-    <service id="var_dumper.cli_dumper" class="Symfony\Component\VarDumper\Dumper\CliDumper">
-      <argument>null</argument>
-      <argument>UTF-8</argument>
-    </service>
-    <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController">
-      <argument type="service" id="router" on-invalid="null"/>
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument type="collection">
-        <argument key="data_collector.request" type="collection">
-          <argument>request</argument>
-          <argument>@WebProfiler/Collector/request.html.twig</argument>
-        </argument>
-        <argument key="data_collector.time" type="collection">
-          <argument>time</argument>
-          <argument>@WebProfiler/Collector/time.html.twig</argument>
-        </argument>
-        <argument key="data_collector.memory" type="collection">
-          <argument>memory</argument>
-          <argument>@WebProfiler/Collector/memory.html.twig</argument>
-        </argument>
-        <argument key="data_collector.form" type="collection">
-          <argument>form</argument>
-          <argument>@WebProfiler/Collector/form.html.twig</argument>
-        </argument>
-        <argument key="data_collector.exception" type="collection">
-          <argument>exception</argument>
-          <argument>@WebProfiler/Collector/exception.html.twig</argument>
-        </argument>
-        <argument key="data_collector.logger" type="collection">
-          <argument>logger</argument>
-          <argument>@WebProfiler/Collector/logger.html.twig</argument>
-        </argument>
-        <argument key="data_collector.events" type="collection">
-          <argument>events</argument>
-          <argument>@WebProfiler/Collector/events.html.twig</argument>
-        </argument>
-        <argument key="data_collector.router" type="collection">
-          <argument>router</argument>
-          <argument>@WebProfiler/Collector/router.html.twig</argument>
-        </argument>
-        <argument key="data_collector.translation" type="collection">
-          <argument>translation</argument>
-          <argument>@WebProfiler/Collector/translation.html.twig</argument>
-        </argument>
-        <argument key="data_collector.security" type="collection">
-          <argument>security</argument>
-          <argument>@Security/Collector/security.html.twig</argument>
-        </argument>
-        <argument key="data_collector.twig" type="collection">
-          <argument>twig</argument>
-          <argument>@WebProfiler/Collector/twig.html.twig</argument>
-        </argument>
-        <argument key="data_collector.doctrine" type="collection">
-          <argument>db</argument>
-          <argument>@Doctrine/Collector/db.html.twig</argument>
-        </argument>
-        <argument key="swiftmailer.data_collector" type="collection">
-          <argument>swiftmailer</argument>
-          <argument>@Swiftmailer/Collector/swiftmailer.html.twig</argument>
-        </argument>
-        <argument key="data_collector.dump" type="collection">
-          <argument>dump</argument>
-          <argument>@Debug/Profiler/dump.html.twig</argument>
-        </argument>
-        <argument key="data_collector.config" type="collection">
-          <argument>config</argument>
-          <argument>@WebProfiler/Collector/config.html.twig</argument>
-        </argument>
-      </argument>
-      <argument>bottom</argument>
-    </service>
-    <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController">
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument type="service" id="router" on-invalid="null"/>
-    </service>
-    <service id="web_profiler.controller.exception" class="Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController">
-      <argument type="service" id="profiler" on-invalid="null"/>
-      <argument type="service" id="twig"/>
-      <argument>true</argument>
-    </service>
-    <service id="sensio_distribution.security_checker" class="SensioLabs\Security\SecurityChecker"/>
-    <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">
-      <tag name="console.command"/>
-      <argument type="service" id="sensio_distribution.security_checker"/>
-    </service>
     <service id="assetic.filter_manager" class="Symfony\Bundle\AsseticBundle\FilterManager">
       <argument type="service" id="service_container"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="cssrewrite">assetic.filter.cssrewrite</argument>
+      </argument>
     </service>
     <service id="assetic.asset_manager" class="Assetic\Factory\LazyAssetManager">
       <argument type="service" id="assetic.asset_factory"/>
@@ -3563,6 +3464,33 @@
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
+                  <argument>AsseticBundle</argument>
+                  <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/AsseticBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>AsseticBundle</argument>
+                  <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/vendor/symfony/assetic-bundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
                   <argument>AppBundle</argument>
                   <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/AppBundle/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
@@ -3718,33 +3646,6 @@
       </call>
       <call method="addResource">
         <argument type="service">
-          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
-            <tag name="assetic.templating.twig"/>
-            <tag name="assetic.formula_resource" loader="twig"/>
-            <argument type="collection">
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>AsseticBundle</argument>
-                  <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/app/Resources/AsseticBundle/views</argument>
-                  <argument>/\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>AsseticBundle</argument>
-                  <argument>/Users/ismael/Dropbox/Instructor/Symfony-Classroom-3.0/vendor/symfony/assetic-bundle/Resources/views</argument>
-                  <argument>/\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-            </argument>
-          </service>
-        </argument>
-        <argument>twig</argument>
-      </call>
-      <call method="addResource">
-        <argument type="service">
           <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
             <tag name="assetic.templating.twig"/>
             <tag name="assetic.formula_resource" loader="twig"/>
@@ -3775,6 +3676,9 @@
         </argument>
       </call>
     </service>
+    <service id="assetic.filter.cssrewrite" class="Assetic\Filter\CssRewriteFilter">
+      <tag name="assetic.filter" alias="cssrewrite"/>
+    </service>
     <service id="assetic.controller" class="Symfony\Bundle\AsseticBundle\Controller\AsseticController">
       <argument type="service" id="assetic.asset_manager"/>
       <argument type="service">
@@ -3787,6 +3691,114 @@
     </service>
     <service id="assetic.request_listener" class="Symfony\Bundle\AsseticBundle\EventListener\RequestListener">
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+    </service>
+    <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
+      <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
+      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
+      <argument>null</argument>
+      <argument>UTF-8</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+    </service>
+    <service id="debug.dump_listener" class="Symfony\Component\HttpKernel\EventListener\DumpListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="var_dumper.cloner"/>
+      <argument type="service" id="data_collector.dump"/>
+    </service>
+    <service id="var_dumper.cloner" class="Symfony\Component\VarDumper\Cloner\VarCloner">
+      <call method="setMaxItems">
+        <argument>2500</argument>
+      </call>
+      <call method="setMaxString">
+        <argument>-1</argument>
+      </call>
+    </service>
+    <service id="var_dumper.cli_dumper" class="Symfony\Component\VarDumper\Dumper\CliDumper">
+      <argument>null</argument>
+      <argument>UTF-8</argument>
+    </service>
+    <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController">
+      <argument type="service" id="router" on-invalid="null"/>
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument type="collection">
+        <argument key="data_collector.request" type="collection">
+          <argument>request</argument>
+          <argument>@WebProfiler/Collector/request.html.twig</argument>
+        </argument>
+        <argument key="data_collector.time" type="collection">
+          <argument>time</argument>
+          <argument>@WebProfiler/Collector/time.html.twig</argument>
+        </argument>
+        <argument key="data_collector.memory" type="collection">
+          <argument>memory</argument>
+          <argument>@WebProfiler/Collector/memory.html.twig</argument>
+        </argument>
+        <argument key="data_collector.form" type="collection">
+          <argument>form</argument>
+          <argument>@WebProfiler/Collector/form.html.twig</argument>
+        </argument>
+        <argument key="data_collector.exception" type="collection">
+          <argument>exception</argument>
+          <argument>@WebProfiler/Collector/exception.html.twig</argument>
+        </argument>
+        <argument key="data_collector.logger" type="collection">
+          <argument>logger</argument>
+          <argument>@WebProfiler/Collector/logger.html.twig</argument>
+        </argument>
+        <argument key="data_collector.events" type="collection">
+          <argument>events</argument>
+          <argument>@WebProfiler/Collector/events.html.twig</argument>
+        </argument>
+        <argument key="data_collector.router" type="collection">
+          <argument>router</argument>
+          <argument>@WebProfiler/Collector/router.html.twig</argument>
+        </argument>
+        <argument key="data_collector.translation" type="collection">
+          <argument>translation</argument>
+          <argument>@WebProfiler/Collector/translation.html.twig</argument>
+        </argument>
+        <argument key="data_collector.security" type="collection">
+          <argument>security</argument>
+          <argument>@Security/Collector/security.html.twig</argument>
+        </argument>
+        <argument key="data_collector.twig" type="collection">
+          <argument>twig</argument>
+          <argument>@WebProfiler/Collector/twig.html.twig</argument>
+        </argument>
+        <argument key="data_collector.doctrine" type="collection">
+          <argument>db</argument>
+          <argument>@Doctrine/Collector/db.html.twig</argument>
+        </argument>
+        <argument key="swiftmailer.data_collector" type="collection">
+          <argument>swiftmailer</argument>
+          <argument>@Swiftmailer/Collector/swiftmailer.html.twig</argument>
+        </argument>
+        <argument key="data_collector.dump" type="collection">
+          <argument>dump</argument>
+          <argument>@Debug/Profiler/dump.html.twig</argument>
+        </argument>
+        <argument key="data_collector.config" type="collection">
+          <argument>config</argument>
+          <argument>@WebProfiler/Collector/config.html.twig</argument>
+        </argument>
+      </argument>
+      <argument>bottom</argument>
+    </service>
+    <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController">
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument type="service" id="router" on-invalid="null"/>
+    </service>
+    <service id="web_profiler.controller.exception" class="Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController">
+      <argument type="service" id="profiler" on-invalid="null"/>
+      <argument type="service" id="twig"/>
+      <argument>true</argument>
+    </service>
+    <service id="sensio_distribution.security_checker" class="SensioLabs\Security\SecurityChecker"/>
+    <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">
+      <tag name="console.command"/>
+      <argument type="service" id="sensio_distribution.security_checker"/>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>

@@ -10,7 +10,6 @@
 
     <title>{% block title %}{% endblock %}</title>
 
-    {# This must be rewritten for symfony 3#}
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/jumbotron.css') }}" />
@@ -101,9 +100,15 @@
                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_article_new') }}">Submit a new article</a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row margin-bottom-md">
                         <div class="col-md-12">
                             <a class="btn btn-default" style="font-size:x-large;width: 100%" href="{{ path('app_tags_tags') }}">Tags</a>
+                        </div>
+                    </div>
+                    <div class="row bg-success">
+                        <div class="col-md-12">
+                            <div class="margin-bottom-md"></div>
+                            {{ render(controller('AppBundle:Comment:lastComments')) }}
                         </div>
                     </div>
                 </div>
@@ -116,7 +121,6 @@
     </footer>
 </div> <!-- /container -->
 
-{# This must be rewritten for symfony 3#}
 {% block javascripts %}
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 {% endblock %}

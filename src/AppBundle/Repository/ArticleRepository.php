@@ -16,7 +16,7 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     public function queryAllArticles()
     {
         return $this->createQueryBuilder('a')
-            ->addOrderBy('comments.createdAt', 'DESC')
+            ->addOrderBy('a.createdAt', 'DESC')
             ->leftJoin('a.tags', 'tags')
             ->addSelect('tags')
             ->leftJoin('a.author', 'author')

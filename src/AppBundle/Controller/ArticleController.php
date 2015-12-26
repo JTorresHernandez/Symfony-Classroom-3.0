@@ -18,7 +18,6 @@ class ArticleController extends Controller
 {
     /**
      * @Route("/", name="app_article_articles")
-     * @Cache(maxage=60)
      */
     public function articlesAction(Request $request)
     {
