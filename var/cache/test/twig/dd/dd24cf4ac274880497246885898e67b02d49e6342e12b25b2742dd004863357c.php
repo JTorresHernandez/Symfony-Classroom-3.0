@@ -15,8 +15,8 @@ class __TwigTemplate_a041416d779e65b6b3e3b84878b370cc8b34407b11c41ff7a6904be61dd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_48a3944cdbce5c39384b2b26ffd30928dbf674a543487c42a39949bac730e51f = $this->env->getExtension("native_profiler");
-        $__internal_48a3944cdbce5c39384b2b26ffd30928dbf674a543487c42a39949bac730e51f->enter($__internal_48a3944cdbce5c39384b2b26ffd30928dbf674a543487c42a39949bac730e51f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:show-comment.html.twig"));
+        $__internal_9c1482301e17f9b54bb1eaeac38620bc02a6c10d106456eff74d28be2ea13949 = $this->env->getExtension("native_profiler");
+        $__internal_9c1482301e17f9b54bb1eaeac38620bc02a6c10d106456eff74d28be2ea13949->enter($__internal_9c1482301e17f9b54bb1eaeac38620bc02a6c10d106456eff74d28be2ea13949_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:show-comment.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-md\">
@@ -63,7 +63,7 @@ class __TwigTemplate_a041416d779e65b6b3e3b84878b370cc8b34407b11c41ff7a6904be61dd
 </div>
 ";
         
-        $__internal_48a3944cdbce5c39384b2b26ffd30928dbf674a543487c42a39949bac730e51f->leave($__internal_48a3944cdbce5c39384b2b26ffd30928dbf674a543487c42a39949bac730e51f_prof);
+        $__internal_9c1482301e17f9b54bb1eaeac38620bc02a6c10d106456eff74d28be2ea13949->leave($__internal_9c1482301e17f9b54bb1eaeac38620bc02a6c10d106456eff74d28be2ea13949_prof);
 
     }
 

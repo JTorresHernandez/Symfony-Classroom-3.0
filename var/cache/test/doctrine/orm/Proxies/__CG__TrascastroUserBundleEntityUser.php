@@ -36,7 +36,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+            return ['__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt'];
         }
 
-        return array('__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt');
+        return ['__isInitialized__', 'id', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'createdAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'updatedAt', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'articles', '' . "\0" . 'Trascastro\\UserBundle\\Entity\\User' . "\0" . 'comments', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'locked', 'expired', 'expiresAt', 'roles', 'credentialsExpired', 'credentialsExpireAt'];
     }
 
     /**
@@ -97,7 +97,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -179,7 +179,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', []);
 
         return parent::setCreatedAt();
     }
@@ -190,7 +190,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', []);
 
         return parent::getCreatedAt();
     }
@@ -201,7 +201,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setUpdatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', []);
 
         return parent::setUpdatedAt();
     }
@@ -212,7 +212,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getUpdatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', []);
 
         return parent::getUpdatedAt();
     }
@@ -223,7 +223,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }
@@ -234,7 +234,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getArticles()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArticles', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArticles', []);
 
         return parent::getArticles();
     }
@@ -245,7 +245,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setArticles($articles)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setArticles', array($articles));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setArticles', [$articles]);
 
         return parent::setArticles($articles);
     }
@@ -256,7 +256,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function addRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRole', array($role));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addRole', [$role]);
 
         return parent::addRole($role);
     }
@@ -267,7 +267,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function serialize()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', []);
 
         return parent::serialize();
     }
@@ -278,7 +278,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function unserialize($serialized)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', array($serialized));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', [$serialized]);
 
         return parent::unserialize($serialized);
     }
@@ -289,7 +289,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function eraseCredentials()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', []);
 
         return parent::eraseCredentials();
     }
@@ -304,7 +304,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -315,7 +315,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getUsername()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', []);
 
         return parent::getUsername();
     }
@@ -326,7 +326,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getUsernameCanonical()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsernameCanonical', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsernameCanonical', []);
 
         return parent::getUsernameCanonical();
     }
@@ -337,7 +337,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getSalt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', []);
 
         return parent::getSalt();
     }
@@ -348,7 +348,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getEmail()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', []);
 
         return parent::getEmail();
     }
@@ -359,7 +359,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getEmailCanonical()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmailCanonical', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmailCanonical', []);
 
         return parent::getEmailCanonical();
     }
@@ -370,7 +370,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getPassword()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', []);
 
         return parent::getPassword();
     }
@@ -381,7 +381,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getPlainPassword()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlainPassword', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlainPassword', []);
 
         return parent::getPlainPassword();
     }
@@ -392,7 +392,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getLastLogin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastLogin', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastLogin', []);
 
         return parent::getLastLogin();
     }
@@ -403,7 +403,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getConfirmationToken()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getConfirmationToken', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getConfirmationToken', []);
 
         return parent::getConfirmationToken();
     }
@@ -414,7 +414,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getRoles()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', []);
 
         return parent::getRoles();
     }
@@ -425,7 +425,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function hasRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasRole', array($role));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasRole', [$role]);
 
         return parent::hasRole($role);
     }
@@ -436,7 +436,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isAccountNonExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonExpired', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonExpired', []);
 
         return parent::isAccountNonExpired();
     }
@@ -447,7 +447,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isAccountNonLocked()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonLocked', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAccountNonLocked', []);
 
         return parent::isAccountNonLocked();
     }
@@ -458,7 +458,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isCredentialsNonExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsNonExpired', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsNonExpired', []);
 
         return parent::isCredentialsNonExpired();
     }
@@ -469,7 +469,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isCredentialsExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsExpired', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isCredentialsExpired', []);
 
         return parent::isCredentialsExpired();
     }
@@ -480,7 +480,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isEnabled()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isEnabled', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isEnabled', []);
 
         return parent::isEnabled();
     }
@@ -491,7 +491,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isExpired()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExpired', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExpired', []);
 
         return parent::isExpired();
     }
@@ -502,7 +502,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isLocked()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isLocked', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isLocked', []);
 
         return parent::isLocked();
     }
@@ -513,7 +513,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isSuperAdmin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isSuperAdmin', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isSuperAdmin', []);
 
         return parent::isSuperAdmin();
     }
@@ -524,7 +524,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function removeRole($role)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeRole', array($role));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeRole', [$role]);
 
         return parent::removeRole($role);
     }
@@ -535,7 +535,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setUsername($username)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsername', array($username));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsername', [$username]);
 
         return parent::setUsername($username);
     }
@@ -546,7 +546,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setUsernameCanonical($usernameCanonical)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsernameCanonical', array($usernameCanonical));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUsernameCanonical', [$usernameCanonical]);
 
         return parent::setUsernameCanonical($usernameCanonical);
     }
@@ -557,7 +557,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setCredentialsExpireAt(\DateTime $date = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpireAt', array($date));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpireAt', [$date]);
 
         return parent::setCredentialsExpireAt($date);
     }
@@ -568,7 +568,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setCredentialsExpired($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpired', array($boolean));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCredentialsExpired', [$boolean]);
 
         return parent::setCredentialsExpired($boolean);
     }
@@ -579,7 +579,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setEmail($email)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', array($email));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', [$email]);
 
         return parent::setEmail($email);
     }
@@ -590,7 +590,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setEmailCanonical($emailCanonical)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmailCanonical', array($emailCanonical));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmailCanonical', [$emailCanonical]);
 
         return parent::setEmailCanonical($emailCanonical);
     }
@@ -601,7 +601,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setEnabled($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEnabled', array($boolean));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEnabled', [$boolean]);
 
         return parent::setEnabled($boolean);
     }
@@ -612,7 +612,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setExpired($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpired', array($boolean));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpired', [$boolean]);
 
         return parent::setExpired($boolean);
     }
@@ -623,7 +623,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setExpiresAt(\DateTime $date = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', array($date));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', [$date]);
 
         return parent::setExpiresAt($date);
     }
@@ -634,7 +634,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setPassword($password)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', array($password));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', [$password]);
 
         return parent::setPassword($password);
     }
@@ -645,7 +645,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setSuperAdmin($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSuperAdmin', array($boolean));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSuperAdmin', [$boolean]);
 
         return parent::setSuperAdmin($boolean);
     }
@@ -656,7 +656,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setPlainPassword($password)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlainPassword', array($password));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlainPassword', [$password]);
 
         return parent::setPlainPassword($password);
     }
@@ -667,7 +667,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setLastLogin(\DateTime $time = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastLogin', array($time));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastLogin', [$time]);
 
         return parent::setLastLogin($time);
     }
@@ -678,7 +678,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setLocked($boolean)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocked', array($boolean));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocked', [$boolean]);
 
         return parent::setLocked($boolean);
     }
@@ -689,7 +689,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setConfirmationToken($confirmationToken)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setConfirmationToken', array($confirmationToken));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setConfirmationToken', [$confirmationToken]);
 
         return parent::setConfirmationToken($confirmationToken);
     }
@@ -700,7 +700,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setPasswordRequestedAt(\DateTime $date = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPasswordRequestedAt', array($date));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPasswordRequestedAt', [$date]);
 
         return parent::setPasswordRequestedAt($date);
     }
@@ -711,7 +711,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getPasswordRequestedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPasswordRequestedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPasswordRequestedAt', []);
 
         return parent::getPasswordRequestedAt();
     }
@@ -722,7 +722,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function isPasswordRequestNonExpired($ttl)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isPasswordRequestNonExpired', array($ttl));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isPasswordRequestNonExpired', [$ttl]);
 
         return parent::isPasswordRequestNonExpired($ttl);
     }
@@ -733,7 +733,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function setRoles(array $roles)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRoles', array($roles));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setRoles', [$roles]);
 
         return parent::setRoles($roles);
     }
@@ -744,7 +744,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getGroups()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroups', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroups', []);
 
         return parent::getGroups();
     }
@@ -755,7 +755,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function getGroupNames()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupNames', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupNames', []);
 
         return parent::getGroupNames();
     }
@@ -766,7 +766,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function hasGroup($name)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasGroup', array($name));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasGroup', [$name]);
 
         return parent::hasGroup($name);
     }
@@ -777,7 +777,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function addGroup(\FOS\UserBundle\Model\GroupInterface $group)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addGroup', array($group));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addGroup', [$group]);
 
         return parent::addGroup($group);
     }
@@ -788,7 +788,7 @@ class User extends \Trascastro\UserBundle\Entity\User implements \Doctrine\ORM\P
     public function removeGroup(\FOS\UserBundle\Model\GroupInterface $group)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeGroup', array($group));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeGroup', [$group]);
 
         return parent::removeGroup($group);
     }

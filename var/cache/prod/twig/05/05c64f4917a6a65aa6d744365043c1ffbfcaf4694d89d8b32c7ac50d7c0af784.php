@@ -28,8 +28,8 @@ class __TwigTemplate_8f7d8b88bb564359a60768651fbf9dc58f611e6190c42c171475ed348be
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
             echo "</a>
 ";
-        } elseif ((($this->getAttribute($this->getAttribute(        // line 4
-(isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_security_login") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register"))) {
+        } elseif (((        // line 4
+(isset($context["route"]) ? $context["route"] : null) != "fos_user_security_login") && ((isset($context["route"]) ? $context["route"] : null) != "fos_user_registration_register"))) {
             // line 5
             echo "    <form action=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_check");
@@ -75,7 +75,7 @@ class __TwigTemplate_8f7d8b88bb564359a60768651fbf9dc58f611e6190c42c171475ed348be
 /* {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}*/
 /*     <a class="btn btn-success" href="{{ path('fos_user_security_logout') }}">Sign out</a>*/
 /*     <a class="btn btn-danger" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>*/
-/* {% elseif app.request.get('_route') != 'fos_user_security_login' and app.request.get('_route') != 'fos_user_registration_register' %}*/
+/* {% elseif route != 'fos_user_security_login' and route != 'fos_user_registration_register' %}*/
 /*     <form action="{{ path("fos_user_security_check") }}" method="post">*/
 /*         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">*/
 /*         <div class="form-group">*/

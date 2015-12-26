@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:profiler.css.twig */
+/* @WebProfiler/Profiler/profiler.css.twig */
 class __TwigTemplate_0d565f5329d951a307deb8c948e172e8d7dfaec801b3aecf4a20f836b11472e7 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,24 +15,29 @@ class __TwigTemplate_0d565f5329d951a307deb8c948e172e8d7dfaec801b3aecf4a20f836b11
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e2b6cd45d6746868b19149a76b3fa5c7a15a970a1861a86442027914ba88f9ff = $this->env->getExtension("native_profiler");
-        $__internal_e2b6cd45d6746868b19149a76b3fa5c7a15a970a1861a86442027914ba88f9ff->enter($__internal_e2b6cd45d6746868b19149a76b3fa5c7a15a970a1861a86442027914ba88f9ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:profiler.css.twig"));
+        $__internal_92889e78400ab23570766515e508b7a04407b46a1ceb182970f288ebfd5591c9 = $this->env->getExtension("native_profiler");
+        $__internal_92889e78400ab23570766515e508b7a04407b46a1ceb182970f288ebfd5591c9->enter($__internal_92889e78400ab23570766515e508b7a04407b46a1ceb182970f288ebfd5591c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
         // line 9
         echo "
 ";
-        // line 13
+        // line 11
+        $context["colors"] = array("success" => "#4F805D", "warning" => "#A46A1F", "error" => "#B0413E");
+        // line 12
+        echo "
+";
+        // line 16
         echo "html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0;font-size:2em}mark{color:#000;background:#ff0}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type=\"button\"],input[type=\"reset\"],input[type=\"submit\"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type=\"checkbox\"],input[type=\"radio\"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=\"number\"]::-webkit-inner-spin-button,input[type=\"number\"]::-webkit-outer-spin-button{height:auto}input[type=\"search\"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}input[type=\"search\"]::-webkit-search-cancel-button,input[type=\"search\"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}legend{padding:0;border:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}
 
 ";
-        // line 17
+        // line 20
         echo "body {
     background-color: #F9F9F9;
     color: #222;
     ";
-        // line 20
+        // line 23
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "sans_serif_font", array());
         echo "
     font-size: 14px;
@@ -105,16 +110,16 @@ abbr {
 
 code, pre {
     ";
-        // line 90
+        // line 93
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "monospace_font", array());
         echo "
 }
 
 ";
-        // line 95
+        // line 98
         echo "button {
     ";
-        // line 96
+        // line 99
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "sans_serif_font", array());
         echo "
 }
@@ -151,7 +156,7 @@ code, pre {
     text-decoration: underline;
 }
 ";
-        // line 132
+        // line 135
         echo "table, tr, th, td {
     background: #FFF;
     border-collapse: collapse;
@@ -160,7 +165,7 @@ code, pre {
 }
 table {
     ";
-        // line 139
+        // line 142
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "subtle_border_and_shadow", array());
         echo ";
     margin: 1em 0;
@@ -185,7 +190,7 @@ table thead th.key {
 table tbody th,
 table tbody td {
     ";
-        // line 161
+        // line 164
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "monospace_font", array());
         echo "
     border: 1px solid #E0E0E0;
@@ -194,7 +199,7 @@ table tbody td {
 
 table tbody td {
     ";
-        // line 167
+        // line 170
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "break_long_words", array());
         echo "
 }
@@ -208,7 +213,7 @@ table tbody ul {
 }
 
 ";
-        // line 180
+        // line 183
         echo ".block {
     display: block;
 }
@@ -223,7 +228,7 @@ table tbody ul {
 }
 .break-long-words {
     ";
-        // line 193
+        // line 196
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "break_long_words", array());
         echo "
 }
@@ -244,7 +249,7 @@ table tbody ul {
 }
 .font-normal {
     ";
-        // line 211
+        // line 214
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "sans_serif_font", array());
         echo "
     font-size: 14px;
@@ -270,12 +275,21 @@ table tbody ul {
     padding: 3px 7px;
     white-space: nowrap;
 }
-.label.status-success { background: #5E976E; color: #FFF; }
-.label.status-warning { background: #BC8034; color: #FFF; }
-.label.status-error   { background: #B0413E; color: #FFF; }
+.label.status-success { background: ";
+        // line 238
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "success", array());
+        echo "; color: #FFF; }
+.label.status-warning { background: ";
+        // line 239
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "warning", array());
+        echo "; color: #FFF; }
+.label.status-error   { background: ";
+        // line 240
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "error", array());
+        echo "; color: #FFF; }
 
 ";
-        // line 241
+        // line 244
         echo ".metrics {
     margin: 1em 0;
     overflow: auto;
@@ -287,7 +301,7 @@ table tbody ul {
 
 .metric {
     ";
-        // line 251
+        // line 254
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "subtle_border_and_shadow", array());
         echo ";
     min-width: 100px;
@@ -317,8 +331,8 @@ table tbody ul {
 }
 
 .metrics-horizontal .metric {
-    min-height: auto;
-    min-width: auto;
+    min-height: 0;
+    min-width: 0;
 }
 .metrics-horizontal .metric .value,
 .metrics-horizontal .metric .label {
@@ -341,10 +355,10 @@ table tbody ul {
 }
 
 ";
-        // line 304
+        // line 307
         echo ".card {
     ";
-        // line 305
+        // line 308
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "subtle_border_and_shadow", array());
         echo ";
     margin: 1em 0;
@@ -364,7 +378,7 @@ table tbody ul {
 }
 
 ";
-        // line 324
+        // line 327
         echo ".status-success {
     background: rgba(94, 151, 110, 0.3);
 }
@@ -385,15 +399,21 @@ tr.status-warning td {
     border-top: 1px solid #FAFAFA;
 }
 
-.status-warning .colored  {
-    color: #BC8034;
+.status-warning .colored {
+    color: ";
+        // line 348
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "warning", array());
+        echo ";
 }
 .status-error .colored  {
-    color: #B0413E;
+    color: ";
+        // line 351
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "error", array());
+        echo ";
 }
 
 ";
-        // line 353
+        // line 356
         echo ".highlight pre {
     margin: 0;
     white-space: pre-wrap;
@@ -410,7 +430,7 @@ tr.status-warning td {
 .highlight .error     { color: #C82829; }
 
 ";
-        // line 370
+        // line 373
         echo ".sf-icon {
     vertical-align: middle;
     background-repeat: no-repeat;
@@ -436,7 +456,7 @@ tr.status-warning td {
 
 
 ";
-        // line 396
+        // line 399
         echo ".container {
     max-width: 1300px;
     padding-right: 15px;
@@ -459,7 +479,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 419
+        // line 422
         echo "#header {
     background-color: #222;
     overflow: hidden;
@@ -495,7 +515,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 455
+        // line 458
         echo "#summary .status {
     background: #E0E0E0;
     border: solid rgba(0, 0, 0, 0.1);
@@ -513,9 +533,18 @@ tr.status-warning td {
     text-decoration: underline;
 }
 
-#summary .status-success { background: #5E976E; }
-#summary .status-warning { background: #BC8034; }
-#summary .status-error   { background: #B0413E; }
+#summary .status-success { background: ";
+        // line 475
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "success", array());
+        echo "; }
+#summary .status-warning { background: ";
+        // line 476
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "warning", array());
+        echo "; }
+#summary .status-error   { background: ";
+        // line 477
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "error", array());
+        echo ";   }
 
 #summary .status-success h2,
 #summary .status-success h2 a,
@@ -546,16 +575,16 @@ tr.status-warning td {
 }
 
 ";
-        // line 506
+        // line 509
         echo "#sidebar {
     background: #444;
     color: #CCC;
     float: left;
     margin-bottom: -99999px; ";
-        // line 511
+        // line 514
         echo "    margin-left: -100%;
     padding-bottom: 99999px; ";
-        // line 513
+        // line 516
         echo "    width: 220px;
 }
 #sidebar .module {
@@ -564,7 +593,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 522
+        // line 525
         echo "#sidebar #sidebar-shortcuts {
     background: #333;
     width: 220px;
@@ -591,7 +620,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 549
+        // line 552
         echo "#sidebar-search .form-group:first-of-type {
     padding-top: 20px;
 }
@@ -627,7 +656,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 585
+        // line 588
         echo "#menu-profiler {
     margin: 0;
     padding: 0;
@@ -716,14 +745,20 @@ tr.status-warning td {
 }
 
 #menu-profiler .label-status-warning .count {
-    background: #BC8034;
+    background: ";
+        // line 676
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "warning", array());
+        echo ";
 }
 #menu-profiler .label-status-error .count {
-    background: #B0413E;
+    background: ";
+        // line 679
+        echo $this->getAttribute((isset($context["colors"]) ? $context["colors"] : $this->getContext($context, "colors")), "error", array());
+        echo ";
 }
 
 ";
-        // line 681
+        // line 684
         echo "#timeline-control {
     background: #FFF;
     margin: 1em 0;
@@ -761,7 +796,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 719
+        // line 722
         echo ".tab-navigation {
     margin: 0 0 1em 0;
     padding: 0;
@@ -815,7 +850,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 773
+        // line 776
         echo ".sf-toggle-content {
     -moz-transition: display .25s ease;
     -webkit-transition: display .25s ease;
@@ -829,7 +864,7 @@ tr.status-warning td {
 }
 
 ";
-        // line 787
+        // line 790
         echo "#twig-dump pre {
     font-size: 12px;
     line-height: 1.7;
@@ -843,7 +878,7 @@ tr.status-warning td {
 #twig-dump .status-success { background: rgba(100, 189, 99, 0.2);     }
 
 ";
-        // line 801
+        // line 804
         echo "table.logs .metadata {
     color: #777;
     display: block;
@@ -865,7 +900,7 @@ table.logs .sf-call-stack abbr {
 }
 
 ";
-        // line 823
+        // line 826
         echo ".sql-runnable {
     background: #F5F5F5;
     margin: .5em 0;
@@ -873,7 +908,7 @@ table.logs .sf-call-stack abbr {
 }
 .queries-table pre {
     ";
-        // line 829
+        // line 832
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "break_long_words", array());
         echo "
     margin: 0;
@@ -881,7 +916,7 @@ table.logs .sf-call-stack abbr {
 }
 
 ";
-        // line 836
+        // line 839
         echo "#collector-content .sf-dump {
     margin-bottom: 2em;
 }
@@ -889,7 +924,7 @@ table.logs .sf-call-stack abbr {
 #collector-content .sf-dump code,
 #collector-content .sf-dump samp {
     ";
-        // line 842
+        // line 845
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "monospace_font", array());
         echo "
 }
@@ -936,10 +971,10 @@ table.logs .sf-call-stack abbr {
 }
 
 ";
-        // line 888
+        // line 891
         echo "#search-results td {
     ";
-        // line 889
+        // line 892
         echo $this->getAttribute((isset($context["mixins"]) ? $context["mixins"] : $this->getContext($context, "mixins")), "sans_serif_font", array());
         echo "
     vertical-align: middle;
@@ -954,7 +989,7 @@ table.logs .sf-call-stack abbr {
 }
 
 ";
-        // line 903
+        // line 906
         echo "
 .visible-small {
     display: none;
@@ -1004,13 +1039,13 @@ table.logs .sf-call-stack abbr {
 }
 ";
         
-        $__internal_e2b6cd45d6746868b19149a76b3fa5c7a15a970a1861a86442027914ba88f9ff->leave($__internal_e2b6cd45d6746868b19149a76b3fa5c7a15a970a1861a86442027914ba88f9ff_prof);
+        $__internal_92889e78400ab23570766515e508b7a04407b46a1ceb182970f288ebfd5591c9->leave($__internal_92889e78400ab23570766515e508b7a04407b46a1ceb182970f288ebfd5591c9_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:profiler.css.twig";
+        return "@WebProfiler/Profiler/profiler.css.twig";
     }
 
     public function isTraitable()
@@ -1020,7 +1055,7 @@ table.logs .sf-call-stack abbr {
 
     public function getDebugInfo()
     {
-        return array (  958 => 903,  943 => 889,  940 => 888,  893 => 842,  885 => 836,  877 => 829,  869 => 823,  847 => 801,  833 => 787,  819 => 773,  765 => 719,  727 => 681,  631 => 585,  595 => 549,  568 => 522,  559 => 513,  556 => 511,  550 => 506,  499 => 455,  463 => 419,  440 => 396,  414 => 370,  397 => 353,  368 => 324,  348 => 305,  345 => 304,  291 => 251,  279 => 241,  248 => 211,  227 => 193,  212 => 180,  198 => 167,  189 => 161,  164 => 139,  155 => 132,  118 => 96,  115 => 95,  109 => 90,  36 => 20,  31 => 17,  27 => 13,  24 => 9,  22 => 3,);
+        return array (  993 => 906,  978 => 892,  975 => 891,  928 => 845,  920 => 839,  912 => 832,  904 => 826,  882 => 804,  868 => 790,  854 => 776,  800 => 722,  762 => 684,  756 => 679,  750 => 676,  660 => 588,  624 => 552,  597 => 525,  588 => 516,  585 => 514,  579 => 509,  546 => 477,  542 => 476,  538 => 475,  519 => 458,  483 => 422,  460 => 399,  434 => 373,  417 => 356,  411 => 351,  405 => 348,  382 => 327,  362 => 308,  359 => 307,  305 => 254,  293 => 244,  288 => 240,  284 => 239,  280 => 238,  253 => 214,  232 => 196,  217 => 183,  203 => 170,  194 => 164,  169 => 142,  160 => 135,  123 => 99,  120 => 98,  114 => 93,  41 => 23,  36 => 20,  32 => 16,  29 => 12,  27 => 11,  24 => 9,  22 => 3,);
     }
 }
 /* {# Mixins*/
@@ -1031,6 +1066,9 @@ table.logs .sf-call-stack abbr {
 /*     'sans_serif_font': 'font-family: Helvetica, Arial, sans-serif;',*/
 /*     'subtle_border_and_shadow': 'background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);'*/
 /* } %}*/
+/* */
+/* {# when updating any of these colors, do the same in toolbar.css.twig #}*/
+/* {% set colors = { 'success': '#4F805D', 'warning': '#A46A1F', 'error': '#B0413E' } %}*/
 /* */
 /* {# Normalization*/
 /*    (normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css)*/
@@ -1257,9 +1295,9 @@ table.logs .sf-call-stack abbr {
 /*     padding: 3px 7px;*/
 /*     white-space: nowrap;*/
 /* }*/
-/* .label.status-success { background: #5E976E; color: #FFF; }*/
-/* .label.status-warning { background: #BC8034; color: #FFF; }*/
-/* .label.status-error   { background: #B0413E; color: #FFF; }*/
+/* .label.status-success { background: {{ colors.success|raw }}; color: #FFF; }*/
+/* .label.status-warning { background: {{ colors.warning|raw }}; color: #FFF; }*/
+/* .label.status-error   { background: {{ colors.error|raw }}; color: #FFF; }*/
 /* */
 /* {# Metrics*/
 /*    ------------------------------------------------------------------------- #}*/
@@ -1301,8 +1339,8 @@ table.logs .sf-call-stack abbr {
 /* }*/
 /* */
 /* .metrics-horizontal .metric {*/
-/*     min-height: auto;*/
-/*     min-width: auto;*/
+/*     min-height: 0;*/
+/*     min-width: 0;*/
 /* }*/
 /* .metrics-horizontal .metric .value,*/
 /* .metrics-horizontal .metric .label {*/
@@ -1366,11 +1404,11 @@ table.logs .sf-call-stack abbr {
 /*     border-top: 1px solid #FAFAFA;*/
 /* }*/
 /* */
-/* .status-warning .colored  {*/
-/*     color: #BC8034;*/
+/* .status-warning .colored {*/
+/*     color: {{ colors.warning|raw }};*/
 /* }*/
 /* .status-error .colored  {*/
-/*     color: #B0413E;*/
+/*     color: {{ colors.error|raw }};*/
 /* }*/
 /* */
 /* {# Syntax highlighting*/
@@ -1494,9 +1532,9 @@ table.logs .sf-call-stack abbr {
 /*     text-decoration: underline;*/
 /* }*/
 /* */
-/* #summary .status-success { background: #5E976E; }*/
-/* #summary .status-warning { background: #BC8034; }*/
-/* #summary .status-error   { background: #B0413E; }*/
+/* #summary .status-success { background: {{ colors.success|raw }}; }*/
+/* #summary .status-warning { background: {{ colors.warning|raw }}; }*/
+/* #summary .status-error   { background: {{ colors.error|raw }};   }*/
 /* */
 /* #summary .status-success h2,*/
 /* #summary .status-success h2 a,*/
@@ -1695,10 +1733,10 @@ table.logs .sf-call-stack abbr {
 /* }*/
 /* */
 /* #menu-profiler .label-status-warning .count {*/
-/*     background: #BC8034;*/
+/*     background: {{ colors.warning|raw }};*/
 /* }*/
 /* #menu-profiler .label-status-error .count {*/
-/*     background: #B0413E;*/
+/*     background: {{ colors.error|raw }};*/
 /* }*/
 /* */
 /* {# Timeline panel*/

@@ -94,7 +94,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
                 <div class=\"navbar-form navbar-right\">
                     ";
         // line 61
-        echo $this->env->getExtension('http_kernel')->renderFragmentStrategy("esi", $this->env->getExtension('http_kernel')->controller("UserBundle:HoritzontalLogin:horitzontalLogin"));
+        echo $this->env->getExtension('http_kernel')->renderFragmentStrategy("esi", $this->env->getExtension('http_kernel')->controller("UserBundle:HoritzontalLogin:horitzontalLogin", array("route" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "_route"), "method"))));
         echo "
                 </div>
             </ul>
@@ -324,7 +324,7 @@ class __TwigTemplate_4d1b1f14a3ef6d38a4fc6794daf1cb22b20cbe1d012fc68df2eca85fb53
 /* */
 /*             <ul class="nav navbar-nav navbar-right">*/
 /*                 <div class="navbar-form navbar-right">*/
-/*                     {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin')) }}*/
+/*                     {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin', {'route': app.request.get('_route')})) }}*/
 /*                 </div>*/
 /*             </ul>*/
 /*         </div><!-- /.navbar-collapse -->*/

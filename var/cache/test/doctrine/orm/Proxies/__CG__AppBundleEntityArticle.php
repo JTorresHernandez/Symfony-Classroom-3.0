@@ -36,7 +36,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'slug', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments');
+            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'slug', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'slug', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments');
+        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'title', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'slug', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'intro', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'content', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'tags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'newTags', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'createdAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'updatedAt', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'author', '' . "\0" . 'AppBundle\\Entity\\Article' . "\0" . 'comments'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setTitle($title)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTitle', array($title));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTitle', [$title]);
 
         return parent::setTitle($title);
     }
@@ -205,7 +205,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getTitle()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTitle', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTitle', []);
 
         return parent::getTitle();
     }
@@ -216,7 +216,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function addTag(\AppBundle\Entity\Tag $tag)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addTag', array($tag));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addTag', [$tag]);
 
         return parent::addTag($tag);
     }
@@ -227,7 +227,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function removeTag(\AppBundle\Entity\Tag $tag)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeTag', array($tag));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeTag', [$tag]);
 
         return parent::removeTag($tag);
     }
@@ -238,7 +238,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getTags()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTags', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTags', []);
 
         return parent::getTags();
     }
@@ -249,7 +249,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }
@@ -260,7 +260,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getNewTags()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNewTags', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNewTags', []);
 
         return parent::getNewTags();
     }
@@ -271,7 +271,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setNewTags($newTags)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNewTags', array($newTags));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNewTags', [$newTags]);
 
         return parent::setNewTags($newTags);
     }
@@ -282,7 +282,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getAuthor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAuthor', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAuthor', []);
 
         return parent::getAuthor();
     }
@@ -293,7 +293,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setAuthor($author)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAuthor', array($author));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAuthor', [$author]);
 
         return parent::setAuthor($author);
     }
@@ -304,7 +304,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', []);
 
         return parent::getCreatedAt();
     }
@@ -315,7 +315,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', []);
 
         return parent::setCreatedAt();
     }
@@ -326,7 +326,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getUpdatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', []);
 
         return parent::getUpdatedAt();
     }
@@ -337,7 +337,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setUpdatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', []);
 
         return parent::setUpdatedAt();
     }
@@ -348,7 +348,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getContent()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getContent', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getContent', []);
 
         return parent::getContent();
     }
@@ -359,7 +359,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setContent($content)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setContent', array($content));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setContent', [$content]);
 
         return parent::setContent($content);
     }
@@ -370,7 +370,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getIntro()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIntro', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIntro', []);
 
         return parent::getIntro();
     }
@@ -381,7 +381,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setIntro($intro)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIntro', array($intro));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIntro', [$intro]);
 
         return parent::setIntro($intro);
     }
@@ -392,7 +392,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function addComment(\AppBundle\Entity\Comment $comment)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComment', array($comment));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addComment', [$comment]);
 
         return parent::addComment($comment);
     }
@@ -403,7 +403,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function removeComment(\AppBundle\Entity\Comment $comment)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComment', array($comment));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeComment', [$comment]);
 
         return parent::removeComment($comment);
     }
@@ -414,7 +414,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getComments()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getComments', []);
 
         return parent::getComments();
     }
@@ -425,7 +425,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function getSlug()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', []);
 
         return parent::getSlug();
     }
@@ -436,7 +436,7 @@ class Article extends \AppBundle\Entity\Article implements \Doctrine\ORM\Proxy\P
     public function setSlug($slug)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', array($slug));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', [$slug]);
 
         return parent::setSlug($slug);
     }

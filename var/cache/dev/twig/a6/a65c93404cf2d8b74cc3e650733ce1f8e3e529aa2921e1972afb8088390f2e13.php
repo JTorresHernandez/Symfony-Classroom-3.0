@@ -15,8 +15,8 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5 = $this->env->getExtension("native_profiler");
-        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5->enter($__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
+        $__internal_abaf0cd4faba3aafdff83716d06442a62e08f0f8171bfe714b827870149d83eb = $this->env->getExtension("native_profiler");
+        $__internal_abaf0cd4faba3aafdff83716d06442a62e08f0f8171bfe714b827870149d83eb->enter($__internal_abaf0cd4faba3aafdff83716d06442a62e08f0f8171bfe714b827870149d83eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
 
         // line 1
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
@@ -59,7 +59,7 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
 ";
         }
         
-        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5->leave($__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5_prof);
+        $__internal_abaf0cd4faba3aafdff83716d06442a62e08f0f8171bfe714b827870149d83eb->leave($__internal_abaf0cd4faba3aafdff83716d06442a62e08f0f8171bfe714b827870149d83eb_prof);
 
     }
 
