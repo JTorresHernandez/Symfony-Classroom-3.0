@@ -58,7 +58,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <div class="navbar-form navbar-right">
-                    {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin')) }}
+                    {{ render_esi(controller('UserBundle:HoritzontalLogin:horitzontalLogin', {'route': app.request.get('_route')})) }}
                 </div>
             </ul>
         </div><!-- /.navbar-collapse -->

@@ -14,6 +14,7 @@ namespace AppBundle\DataFixtures\ORM;
 
 
 use AppBundle\Entity\Article;
+use AppBundle\Entity\Comment;
 use AppBundle\Entity\Tag;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -87,6 +88,17 @@ class LoadData implements FixtureInterface
         ');
         $m->persist($a3);
 
+        $a4 = new Article();
+        $a4->setTitle('Functional Testing');
+        $a4->setAuthor($user1);
+        $a4->setIntro('
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?
+        ');
+        $a4->setContent('
+            Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that\'s what you see at a toy store. And you must think you\'re in a toy store, because you\'re here shopping for an infant named Jeb.
+        ');
+        $m->persist($a4);
+
         $t1 = new Tag();
         $t1->setName('Boston Celtics');
 
@@ -104,6 +116,14 @@ class LoadData implements FixtureInterface
 
         $t6 = new Tag();
         $t6->setName('Programming');
+
+        $c0 = new Comment();
+        $c0
+            ->setArticle($a0)
+            ->setAuthor($user1)
+            ->setComment('Love this article')
+        ;
+        $m->persist($c0);
 
         $a0
             ->addTag($t5)
@@ -123,6 +143,12 @@ class LoadData implements FixtureInterface
         ;
 
         $a3
+            ->addTag($t4)
+            ->addTag($t5)
+            ->addTag($t6)
+        ;
+
+        $a4
             ->addTag($t4)
             ->addTag($t5)
             ->addTag($t6)

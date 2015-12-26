@@ -15,8 +15,8 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_37cb252e971f14c5432b190f6a218e565f6d99062ee7885783f31e6f20f3b962 = $this->env->getExtension("native_profiler");
-        $__internal_37cb252e971f14c5432b190f6a218e565f6d99062ee7885783f31e6f20f3b962->enter($__internal_37cb252e971f14c5432b190f6a218e565f6d99062ee7885783f31e6f20f3b962_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
+        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5 = $this->env->getExtension("native_profiler");
+        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5->enter($__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Security:horitzontal-login.html.twig"));
 
         // line 1
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
@@ -31,8 +31,8 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</a>
 ";
-        } elseif ((($this->getAttribute($this->getAttribute(        // line 4
-(isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_security_login") && ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method") != "fos_user_registration_register"))) {
+        } elseif (((        // line 4
+(isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")) != "fos_user_security_login") && ((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")) != "fos_user_registration_register"))) {
             // line 5
             echo "    <form action=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_check");
@@ -59,7 +59,7 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
 ";
         }
         
-        $__internal_37cb252e971f14c5432b190f6a218e565f6d99062ee7885783f31e6f20f3b962->leave($__internal_37cb252e971f14c5432b190f6a218e565f6d99062ee7885783f31e6f20f3b962_prof);
+        $__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5->leave($__internal_e9ac98c801b2ebbf8589f66294a736067b6cf5ef6cddaf346cb07213813e40f5_prof);
 
     }
 
@@ -81,7 +81,7 @@ class __TwigTemplate_8468caa06b306de05c4d997daa21ac02827298cedb77f988f31efbce749
 /* {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}*/
 /*     <a class="btn btn-success" href="{{ path('fos_user_security_logout') }}">Sign out</a>*/
 /*     <a class="btn btn-danger" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a>*/
-/* {% elseif app.request.get('_route') != 'fos_user_security_login' and app.request.get('_route') != 'fos_user_registration_register' %}*/
+/* {% elseif route != 'fos_user_security_login' and route != 'fos_user_registration_register' %}*/
 /*     <form action="{{ path("fos_user_security_check") }}" method="post">*/
 /*         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">*/
 /*         <div class="form-group">*/
