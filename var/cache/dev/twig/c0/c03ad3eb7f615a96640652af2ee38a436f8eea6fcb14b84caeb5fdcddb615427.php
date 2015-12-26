@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a73da4b0560f7f2ac1c6fd464f9d14ba485f7a7885797d985195bfb4b322da38 = $this->env->getExtension("native_profiler");
-        $__internal_a73da4b0560f7f2ac1c6fd464f9d14ba485f7a7885797d985195bfb4b322da38->enter($__internal_a73da4b0560f7f2ac1c6fd464f9d14ba485f7a7885797d985195bfb4b322da38_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_1124344604eb07d57471e718228cf14b88c75db6be906cc777cf6026463e8a1b = $this->env->getExtension("native_profiler");
+        $__internal_1124344604eb07d57471e718228cf14b88c75db6be906cc777cf6026463e8a1b->enter($__internal_1124344604eb07d57471e718228cf14b88c75db6be906cc777cf6026463e8a1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -147,7 +147,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 45)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_a73da4b0560f7f2ac1c6fd464f9d14ba485f7a7885797d985195bfb4b322da38->leave($__internal_a73da4b0560f7f2ac1c6fd464f9d14ba485f7a7885797d985195bfb4b322da38_prof);
+        $__internal_1124344604eb07d57471e718228cf14b88c75db6be906cc777cf6026463e8a1b->leave($__internal_1124344604eb07d57471e718228cf14b88c75db6be906cc777cf6026463e8a1b_prof);
 
     }
 

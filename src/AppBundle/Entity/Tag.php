@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Tag
 {
-    const PAGINATION_ITEMS = 2;
+    const PAGINATION_ITEMS = 5;
 
     /**
      * @var integer

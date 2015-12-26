@@ -37,7 +37,7 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
     public function queryFindAllTags()
     {
         return $this->createQueryBuilder('tag')
-            ->addOrderBy('tag.name', 'DESC')
+            ->addOrderBy('tag.name', 'ASC')
             ->leftJoin('tag.articles', 'articles')
             ->addSelect('articles')
             ->getQuery()

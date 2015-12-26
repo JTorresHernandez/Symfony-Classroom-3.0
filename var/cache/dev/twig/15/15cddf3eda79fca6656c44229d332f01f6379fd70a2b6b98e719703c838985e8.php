@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:search.html.twig */
+/* @WebProfiler/Profiler/search.html.twig */
 class __TwigTemplate_7ae20da7ad718f9f1cb7dc7e1f36bf07c3d7f1e91453b9c0b446de2097c52daf extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_7ae20da7ad718f9f1cb7dc7e1f36bf07c3d7f1e91453b9c0b446de2097c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8b35044389cbc454cc5a15f50205f385bb67ea808e90f68f64bc2dbb34ecb748 = $this->env->getExtension("native_profiler");
-        $__internal_8b35044389cbc454cc5a15f50205f385bb67ea808e90f68f64bc2dbb34ecb748->enter($__internal_8b35044389cbc454cc5a15f50205f385bb67ea808e90f68f64bc2dbb34ecb748_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
+        $__internal_636a35b9ea90c54c2c629fe2bf1fc5b771741611f8c6fa1a3f08e5b6bf6ee14a = $this->env->getExtension("native_profiler");
+        $__internal_636a35b9ea90c54c2c629fe2bf1fc5b771741611f8c6fa1a3f08e5b6bf6ee14a->enter($__internal_636a35b9ea90c54c2c629fe2bf1fc5b771741611f8c6fa1a3f08e5b6bf6ee14a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/search.html.twig"));
 
         // line 1
         echo "<div id=\"sidebar-search\">
@@ -118,13 +118,13 @@ class __TwigTemplate_7ae20da7ad718f9f1cb7dc7e1f36bf07c3d7f1e91453b9c0b446de2097c
 </div>
 ";
         
-        $__internal_8b35044389cbc454cc5a15f50205f385bb67ea808e90f68f64bc2dbb34ecb748->leave($__internal_8b35044389cbc454cc5a15f50205f385bb67ea808e90f68f64bc2dbb34ecb748_prof);
+        $__internal_636a35b9ea90c54c2c629fe2bf1fc5b771741611f8c6fa1a3f08e5b6bf6ee14a->leave($__internal_636a35b9ea90c54c2c629fe2bf1fc5b771741611f8c6fa1a3f08e5b6bf6ee14a_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:search.html.twig";
+        return "@WebProfiler/Profiler/search.html.twig";
     }
 
     public function isTraitable()

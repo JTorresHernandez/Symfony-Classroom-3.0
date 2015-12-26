@@ -15,8 +15,8 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_713b4f427708e9e03a28a39957272c55889e1578c98858cf54eeed3f10c3dd19 = $this->env->getExtension("native_profiler");
-        $__internal_713b4f427708e9e03a28a39957272c55889e1578c98858cf54eeed3f10c3dd19->enter($__internal_713b4f427708e9e03a28a39957272c55889e1578c98858cf54eeed3f10c3dd19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
+        $__internal_5689bac79b9c467f11e89f85d5035ae392ea84e3bca31b1ee4b2f71aeed374c7 = $this->env->getExtension("native_profiler");
+        $__internal_5689bac79b9c467f11e89f85d5035ae392ea84e3bca31b1ee4b2f71aeed374c7->enter($__internal_5689bac79b9c467f11e89f85d5035ae392ea84e3bca31b1ee4b2f71aeed374c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:article_content.html.twig"));
 
         // line 1
         echo "<div class=\"rounded-box margin-bottom-lg\"> ";
@@ -147,7 +147,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
             $this->loadTemplate(":comment:showCommentsByArticle.html.twig", ":article:article_content.html.twig", 45)->display(array_merge($context, array("comments" => (isset($context["comments"]) ? $context["comments"] : $this->getContext($context, "comments")))));
         }
         
-        $__internal_713b4f427708e9e03a28a39957272c55889e1578c98858cf54eeed3f10c3dd19->leave($__internal_713b4f427708e9e03a28a39957272c55889e1578c98858cf54eeed3f10c3dd19_prof);
+        $__internal_5689bac79b9c467f11e89f85d5035ae392ea84e3bca31b1ee4b2f71aeed374c7->leave($__internal_5689bac79b9c467f11e89f85d5035ae392ea84e3bca31b1ee4b2f71aeed374c7_prof);
 
     }
 
@@ -170,7 +170,7 @@ class __TwigTemplate_74f14fe99030e32c9188050ce044531ad680d48ce66e3006caabb7a99c3
 /*     <div style="float: right;">*/
 /*         {# Without voter #}*/
 /*         {# if article.author == app.user or is_granted('ROLE_ADMIN') #}*/
-/*         {% if is_granted('EDIT', article) %} {# using voter #}*/
+/*         {% if is_granted('EDIT', article) %} {# using voter const: constant('AppBundle\\Security\\ArticleVoter::EDIT_ARTICLE') #}*/
 /*             <a href="{{ path('app_article_edit', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-151-edit.png') }}" alt="edit article" /></a>*/
 /*             {% if is_granted('ROLE_ADMIN') %}*/
 /*                 <a href="{{ path('app_admin_article_remove', {'slug': article.slug}) }}"><img src="{{ asset('icons/glyphicons-198-remove.png') }}" alt="remove article" /></a>*/

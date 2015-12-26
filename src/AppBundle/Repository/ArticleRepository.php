@@ -10,12 +10,19 @@ namespace AppBundle\Repository;
  */
 class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * Ordered by last comment date
+     */
     public function queryAllArticles()
     {
         return $this->createQueryBuilder('a')
-            ->addOrderBy('a.createdAt', 'DESC')
+            ->addOrderBy('comments.createdAt', 'DESC')
             ->leftJoin('a.tags', 'tags')
             ->addSelect('tags')
+            ->leftJoin('a.author', 'author')
+            ->addSelect('author')
+            ->leftJoin('a.comments', 'comments')
+            ->addSelect('comments')
             ->getQuery()
         ;
     }

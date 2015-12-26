@@ -20,7 +20,7 @@ class Article
     /**
      * it rarely changes, so better define it as a constant than a parameter under parameters.yml
      */
-    const PAGINATION_ITEMS = 2;
+    const PAGINATION_ITEMS = 4;
 
     /**
      * @var integer

@@ -30,7 +30,14 @@ class ArticleController extends Controller
         $query = $articleRepo->queryAllArticles();
 
         $paginator = $this->get('knp_paginator');
-        $articles = $paginator->paginate($query, $request->query->getInt('page', 1), Article::PAGINATION_ITEMS);
+        $articles = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            Article::PAGINATION_ITEMS,
+            [
+                'wrap-queries' => true, // https://github.com/KnpLabs/knp-components/blob/master/doc/pager/config.md
+            ]
+        );
 
         $response = $this->render(':article:articles.html.twig', [
             'articles'  => $articles,
