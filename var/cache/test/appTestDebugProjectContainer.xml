@@ -2051,7 +2051,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
-            <argument type="service" id="fos_user.user_provider.username"/>
+            <argument type="service" id="fos_user.user_provider.username_email"/>
             <argument type="service" id="security.user_checker.main"/>
             <argument>main</argument>
             <argument type="service" id="security.encoder_factory"/>
@@ -2060,7 +2060,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>567f061e559f57.67211551</argument>
+            <argument>56802227ee99e5.47196070</argument>
           </service>
         </argument>
       </argument>
@@ -2238,7 +2238,7 @@
           <service class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
             <argument type="service" id="security.token_storage"/>
             <argument type="collection">
-              <argument type="service" id="fos_user.user_provider.username"/>
+              <argument type="service" id="fos_user.user_provider.username_email"/>
             </argument>
             <argument>main</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2373,7 +2373,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>567f061e559f57.67211551</argument>
+            <argument>56802227ee99e5.47196070</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3037,7 +3037,7 @@
       <argument type="service" id="security.authentication.session_strategy"/>
       <argument type="service" id="service_container"/>
     </service>
-    <service id="fos_user.user_provider.username" class="FOS\UserBundle\Security\UserProvider" public="false">
+    <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
       <argument type="service" id="fos_user.user_manager"/>
     </service>
     <service id="fos_user.util.user_manipulator" class="FOS\UserBundle\Util\UserManipulator">

@@ -131,7 +131,7 @@ class appTestDebugProjectContainer extends Container
             'fos_user.security.interactive_login_listener' => 'getFosUser_Security_InteractiveLoginListenerService',
             'fos_user.security.login_manager' => 'getFosUser_Security_LoginManagerService',
             'fos_user.user_manager' => 'getFosUser_UserManagerService',
-            'fos_user.user_provider.username' => 'getFosUser_UserProvider_UsernameService',
+            'fos_user.user_provider.username_email' => 'getFosUser_UserProvider_UsernameEmailService',
             'fos_user.username_form_type' => 'getFosUser_UsernameFormTypeService',
             'fos_user.util.email_canonicalizer' => 'getFosUser_Util_EmailCanonicalizerService',
             'fos_user.util.token_generator' => 'getFosUser_Util_TokenGeneratorService',
@@ -2544,7 +2544,7 @@ class appTestDebugProjectContainer extends Container
 
         $p = new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/login', false);
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username')), 'main', $a, $c), 2 => $m, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $l, 'main', $n, $o, array('csrf_parameter' => '_csrf_token', 'check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\BasicAuthenticationListener($b, $f, 'main', $p, $a), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '567f061e559f57.67211551', $a, $f), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'main', $p, NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username_email')), 'main', $a, $c), 2 => $m, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $l, 'main', $n, $o, array('csrf_parameter' => '_csrf_token', 'check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\BasicAuthenticationListener($b, $f, 'main', $p, $a), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '56802227ee99e5.47196070', $a, $f), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'main', $p, NULL, NULL, $a, false));
     }
 
     /**
@@ -3806,7 +3806,7 @@ class appTestDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'fos_user.user_provider.username' service.
+     * Gets the 'fos_user.user_provider.username_email' service.
      *
      * This service is shared.
      * This method always returns the same instance of the service.
@@ -3815,11 +3815,11 @@ class appTestDebugProjectContainer extends Container
      * If you want to be able to request this service from the container directly,
      * make it public, otherwise you might end up with broken code.
      *
-     * @return \FOS\UserBundle\Security\UserProvider A FOS\UserBundle\Security\UserProvider instance.
+     * @return \FOS\UserBundle\Security\EmailUserProvider A FOS\UserBundle\Security\EmailUserProvider instance.
      */
-    protected function getFosUser_UserProvider_UsernameService()
+    protected function getFosUser_UserProvider_UsernameEmailService()
     {
-        return $this->services['fos_user.user_provider.username'] = new \FOS\UserBundle\Security\UserProvider($this->get('fos_user.user_manager'));
+        return $this->services['fos_user.user_provider.username_email'] = new \FOS\UserBundle\Security\EmailUserProvider($this->get('fos_user.user_manager'));
     }
 
     /**
@@ -3877,7 +3877,7 @@ class appTestDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username'), $this->get('security.user_checker.main'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('567f061e559f57.67211551')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username_email'), $this->get('security.user_checker.main'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('56802227ee99e5.47196070')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
